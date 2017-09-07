@@ -281,12 +281,18 @@ ul {
 
 .loc1 {
 	display: block;
-	margin: 0 4%;
+	margin: 5% 5.2%;
 	float: left;
 }
 
 .loc2 {
 	display: block;
-	margin: 0;
+	margin: 5% 5.2%;
+	float: left;
+}
+
+.loc3 {
+	display: block;
+	margin: 5% 5.2%;
 	float: left;
 }
