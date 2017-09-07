@@ -1,0 +1,263 @@
+body{
+	background-image: url("images/background.png");
+	background-size: 100%;
+	margin: 0;
+}
+
+.container {
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.content {
+	background: #fafafa;
+	max-width: 100%;
+	height: 67px;
+}
+
+.logo {
+	max-width: 1020px;
+    max-height: 52px;
+	margin: 0 10% 0 1%;
+	padding-top: .6%; 
+}
+
+.logo > #logo {
+	max-width: 12%;
+	max-height: 46px;
+	float: left;
+}
+
+#hamburger {
+	max-width: 18px;
+	padding-top: 50%;
+}
+
+#hamburger:hover, #hamburger.clicked {
+	max-width: 20px;
+	cursor: pointer;
+
+	-webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+#flags {
+	max-width: 23px;
+	padding-top: 20%;
+	margin-left: 266%;
+}
+
+#arrow {
+    width: 14.5px;
+    margin: -2px 0 0 276%;
+}
+
+#arrow:hover, #arrow.clicked {
+	cursor: pointer;
+	margin-top: 5%;
+
+	-webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+#flags:hover, #flags.clicked {
+	cursor: pointer;
+	margin-bottom: 5%;
+
+	-webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+.language {
+	position: relative;
+	display: block;
+	float: right;
+}
+
+.language > .navbar > .navbar-inner > .nav > li > a {
+	padding: 8px;
+}
+
+nav{
+	display: block;
+}
+
+.nav{
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav > li > a {
+  display: block;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+  font-size: 25px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.nav > li > a > img {
+  max-width: 30px;
+}
+
+.nav > li > a > img:hover {
+	max-width: 30px;
+}
+
+.navbar .nav {
+	margin: 2% auto 0;
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+}
+
+.navbar .nav > li {
+  float: left;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #080808;
+  font-size: 13px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+	text-decoration: none;
+	background-color: transparent;
+	font-size: 15px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+	text-decoration: none;
+	font-size: 15px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.navbar{
+	max-width: 940px;
+	padding-top: 2px;
+	*position: relative;
+	*z-index: 2;
+	margin-bottom: 20px;
+	overflow: visible;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover {
+	color: #ee7202;
+	box-shadow: none;
+	padding-bottom: 0;
+/*	font-family: "Theano Didot";*/
+	z-index: 23;
+/*
+	-webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;*/
+}
+
+.mini{
+	padding: 0;
+	margin: 0;
+	margin-left: 52.9%; 
+}
+
+.navbar-inner {
+	max-width: 900px;
+	z-index: 16;
+
+  display: inline-block;
+  background-color: #fafafa;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+#hiddenNB {
+	margin-top: -2%;
+	background-color: #fafafa;
+	opacity: 0;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+
+	-webkit-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+     -moz-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+       -o-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+          transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+}
+
+#hiddenNB > nav > .nav {
+	margin: 0;
+}
+
+#hiddenL {
+	max-height: 36px;
+	margin-top: -16px;
+	background-color: #fafafa;
+	opacity: 0;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+
+	-webkit-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+     -moz-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+       -o-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+          transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+}
+
+.navbar .nav > .four > a {
+	padding-left: 0;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover {
+	box-shadow: none;
+/*	font-family: "Theano Didot";*/
+	z-index: 23;
+/*
+	-webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;*/
+}
+
+.navbar .nav > li > a, .navbar .nav > li > a:hover {
+	display: inline-block;
+	text-shadow: none;
+/*	font-family: "Theano Didot";*/
+	z-index: 23;
+/*
+	-webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;*/
+}
+
+.navbar .divider-vertical {
+	height: 16px;
+	margin: 10px 0;
+	border-right: 1px solid #000;
+	border-left: none;
+}

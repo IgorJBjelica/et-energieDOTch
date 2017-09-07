@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript">
+		function hideShow(id){
+			if(document.getElementById(id).style.opacity != 0){
+				document.getElementById(id).style.opacity = 0;
+				if (id == "hiddenL") 
+					document.getElementById(id).style.margin = "-16px 0 0 0";
+				else
+					document.getElementById(id).style.margin = "-1% 0 0 0";
+			}
+			else {
+				document.getElementById(id).style.opacity = 1;
+				if (id == "hiddenL") 
+					document.getElementById(id).style.margin = "-1% 0 0 0";
+				else
+					document.getElementById(id).style.margin = 0;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<div class="container">
+			<div class="content">					
+				<div class="logo">
+					<img id="logo" src="images/logo.png" alt="ET energie & handel" />
+
+					<div class="navbar mini">
+						<div class="navbar-inner">
+							<nav>
+								<ul class="nav">
+									<li class="one active">
+										<a class="navi" href="#">Home</a>
+									</li>
+
+									<li class="divider-vertical"></li>
+
+									<li class="two">
+										<a href="">Kontakt</a>
+									</li>
+
+									<li class="divider-vertical"></li>
+
+									<li class="three">
+										<a href="">Login</a>
+									</li>
+
+									<li class="four">
+										<img id="hamburger" src="images/list-menu.svg" onclick="hideShow('hiddenNB')">
+									</li>
+
+									<li class="five">
+										<img id="flags" src="images/de.gif" onclick="hideShow('hiddenL')">
+										<img id="arrow" src="images/darrow.svg" onclick="hideShow('hiddenL')">
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- Navbar inner end -->
+					</div>
+					<!-- Navbar Mini end -->
+
+					<div class="language">
+						<div class="navbar">
+							<div class="navbar-inner" id="hiddenL">
+								<ul class="nav">
+									<li>
+										<a href=""><img src="images/de.gif"></a>
+									</li>
+
+									<li class="divider-vertical"></li>
+									
+									<li>
+										<a href=""><img src="images/en.gif"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Language dropdown end -->
+				</div>
+
+				<!-- NAVIGATION -->
+				<div class="navbar">
+					<div class="navbar-inner" id="hiddenNB">
+						<nav>
+							<ul class="nav">
+								<li class="onee active">
+									<a class="navi" href="#">Home</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="twoo">
+									<a href="">Beleuchtung</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="threee">
+									<a href="">Heizung...</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="fourr">
+									<a href="">Sanitär</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="fivee">
+									<a href="">Impressum</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="six">
+									<a href="">AGB</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="eight">
+									<a href="">Photovoltaik</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="nine">
+									<a href="">Solarthermie</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="ten">
+									<a href="">Holz- und Pelletkessel</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!-- navbar-inner -->
+				</div>
+				<!-- end navbar -->
+			</div>
+		</div>
+	</center>
+</body>
+</html>
