@@ -1,7 +1,7 @@
 body{
 	background-image: url("images/background.png");
 	background-size: 100%;
-	background-color: grey;
+	background-color: #1c1c1b;
 	background-repeat: no-repeat;
 	margin: 0;
 }
@@ -12,7 +12,7 @@ body{
 /*************************************************************Navbar**************************************************************/
 .content {
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
-	background: #fafafa;
+	background: #ffffff;
 	max-width: 100%;
 	height: 67px;
 }
@@ -80,10 +80,11 @@ body{
 	position: relative;
 	display: block;
 	float: right;
+	z-index: 4;
 }
 
 .language > .navbar > .navbar-inner > .nav > li > a {
-	padding: 8px;
+	padding: 0;
 }
 
 nav{
@@ -99,24 +100,13 @@ nav{
   display: block;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: #eeeeee;
-  font-size: 25px;
-
-	-webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-}
-
 .nav > li > a > img {
   max-width: 30px;
+  margin: 8px;
 }
 
 .nav > li > a > img:hover {
-	max-width: 30px;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .navbar .nav {
@@ -134,8 +124,8 @@ nav{
 .navbar .nav > li > a {
   float: none;
   padding: 10px 10px 10px;
-  color: #080808;
-  font-size: 13px;
+  color: #1c1c1b;
+  font-size: .81em;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -144,7 +134,7 @@ nav{
 .navbar .nav > li > a:hover {
 	text-decoration: none;
 	background-color: transparent;
-	font-size: 15px;
+	font-size: .9em;
 
 	-webkit-transition: all 0.2s ease-in-out;
        -moz-transition: all 0.2s ease-in-out;
@@ -155,7 +145,7 @@ nav{
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
 	text-decoration: none;
-	font-size: 15px;
+	font-size: .9em;
 
 	-webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
@@ -173,7 +163,7 @@ nav{
 }
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover {
-	color: #ee7202;
+	color: #ef7926;
 	box-shadow: none;
 	padding-bottom: 0;
 /*	font-family: "Theano Didot";*/
@@ -194,7 +184,7 @@ nav{
 	max-width: 900px;
 
   display: inline-block;
-  background-color: #fafafa;
+  background-color: #ffffff;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -202,7 +192,7 @@ nav{
 
 #hiddenNB {
 	margin-top: -2%;
-	background-color: #fafafa;
+	background-color: #ffffff;
 	opacity: 0;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 
@@ -219,7 +209,7 @@ nav{
 #hiddenL {
 	max-height: 36px;
 	margin-top: -16px;
-	background-color: #fafafa;
+	background-color: #ffffff;
 	opacity: 0;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 
@@ -264,7 +254,10 @@ nav{
 /******************************************************************Kontakt*********************************************************/
 
 .main {
+	font-family: Verdana;
+	font-size: .75em;
 	background-color: #ffffff;
+	opacity: .9;
 	box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 	position: absolute;
 	top: 67px;
@@ -272,4 +265,28 @@ nav{
 	width: 80%;
 	height: 2080px;
 	z-index: 2;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.title {
+	color: #65b3c3;
+    display: block;
+    margin: 5% 75% 2% 12%;
+    float: left;
+}
+
+.loc1 {
+	display: block;
+	margin: 0 4%;
+	float: left;
+}
+
+.loc2 {
+	display: block;
+	margin: 0;
+	float: left;
 }
