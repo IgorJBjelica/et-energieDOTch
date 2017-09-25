@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<script type="text/javascript">
 // SHOW AND HIDE NAVBARS //
 		function hideShow(id){
@@ -31,6 +32,24 @@
 					element.style.margin = 0;
 			}
 		}
+
+// SHOW HIDE MODAL //
+		function modalShow(id) {
+			var modal = document.getElementById('myModal');
+			var img = document.getElementById('map1');
+			var modalImg = document.getElementById("img1");
+			var captionText = document.getElementById("caption");
+
+			modal.style.display = "block";
+			modalImg.src = img.src;
+			captionText.innerHTML = img.alt;
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() { 
+    			modal.style.display = "none";
+			}
+		}
 	</script>
 </head>
 
@@ -45,8 +64,8 @@
 						<div class="navbar-inner">
 							<nav>
 								<ul class="nav">
-									<li class="one active">
-										<a class="navi" href="#">Home</a>
+									<li class="one">
+										<a class="navi" href="index.html">Home</a>
 									</li>
 
 									<li class="divider-vertical"></li>
@@ -57,8 +76,8 @@
 
 									<li class="divider-vertical"></li>
 
-									<li class="three">
-										<a href="login.html">Login</a>
+									<li class="three active">
+										<a href="#">Login</a>
 									</li>
 
 									<li class="four">
@@ -101,6 +120,7 @@
 					<div class="navbar-inner" id="hiddenNB">
 						<nav>
 							<ul class="nav">
+
 								<li class="twoo">
 									<a href="heizung.html">Heizung</a>
 								</li>
@@ -168,24 +188,15 @@
 			<!-- END CONTENT -->
 
 			<div class="main1">
-				<div class="concon">
-					<strong class="title">HOME</strong><br /><br /><br />
-					<b>Moderne Energiegewinnung: ökonomisch, regenerativ, umweltfreundlich</b><br /><br />
+				<div class="loginContainer">
+					<form class="loginForm">
+						<input type="text" name="benutzername" placeholder="Benutzername"><br />
+						<input type="text" name="passwort" required="true" placeholder="Passwort"><br />
 					
-					<p>
-Produktion und Vertrieb von Heizungs-, Solar- u. Sanitäranlagen.  ET Energie & Handel GmbH hat sich in den letzten Jahren durch eine eigene Produktion und verschiedene Firmenbeteiligungen im In- und Ausland im Bereich Sonnenkollektoren, Absorberfertigung, Photovoltaik und Anbindungsleitungen zu einem konkurrenzfähigen Anbieter entwickelt. 
-					</p><br /><br />
-					<p>Unser Leistungsprofil:</p>
-					<ul class="ulKontakt">
-						<li>LED Beleuchtungslösungen für den Innen- und Außenbereich</li>
-						<li>LED Präsentationswände</li>
-						<li>Solaranlagen zur Warmwasserbereitung und Heizungsunterstützung</li>
-						<li>Photovoltaikanlagen</li>
-						<li>Komplettheizsysteme (Holz/ Pellets, Öl-/Gas-Brennwert)</li>
-						<li>Planung und Montage</li>
-						<li>Attraktive Designs und Lösungen für Ihren Sanitärbedarf</li>
-						<li>Neu: Wärmepumpen und PV</li>
-					</ul>
+						<input type="submit" class="button" id="login" name="login" value="Login">
+						<input type="reset" class="linkButton" name="reset" value="Reset">
+					</form>
+					<a href="register.html">Noch nicht registriert?</a>
 				</div>
 
 				<div class="footer" id="footer1">

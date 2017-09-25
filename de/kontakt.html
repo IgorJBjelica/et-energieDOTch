@@ -3,27 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<script type="text/javascript">
+// SHOW AND HIDE NAVBARS //
 		function hideShow(id){
-			if(document.getElementById(id).style.opacity != 0){
-				document.getElementById(id).style.opacity = 0;
-				if (id == "hiddenL") 
-					document.getElementById(id).style.margin = "-16px 0 0 0";
+			var element = document.getElementById(id);
+
+			if(element.style.opacity != 0){
+				element.style.opacity = 0;
+				element.style.visibility = "hidden";
+
+				if (id == "hiddenL") {
+					element.style.margin = "-16px 0 0 0";
+					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
+				}
 				else
-					document.getElementById(id).style.margin = "-1% 0 0 0";
+					element.style.margin = "-1% 0 0 0";
 			}
 			else {
-				document.getElementById(id).style.opacity = 1;
-				if (id == "hiddenL") 
-					document.getElementById(id).style.margin = "-1% 0 0 0";
+				element.style.opacity = 1;
+				element.style.visibility = "visible";
+
+				if (id == "hiddenL") {
+					element.style.margin = "-1% 0 0 0";
+					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
+				}
 				else
-					document.getElementById(id).style.margin = 0;
+					element.style.margin = 0;
+			}
+		}
+
+// SHOW HIDE MODAL //
+		function modalShow(id) {
+			var modal = document.getElementById('myModal');
+			var img = document.getElementById(id);
+			var modalImg = document.getElementById("img1");
+			var captionText = document.getElementById("caption");
+
+			modal.style.display = "block";
+			modalImg.src = img.src;
+			captionText.innerHTML = img.alt;
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() { 
+    			modal.style.display = "none";
 			}
 		}
 	</script>
 </head>
 
-<body>
+<body class="body2">
 	<center>
 		<div class="container">
 			<div class="content">					
@@ -41,17 +71,17 @@
 									<li class="divider-vertical"></li>
 
 									<li class="two active">
-										<a href="kontakt.html">Kontakt</a>
+										<a href="#">Kontakt</a>
 									</li>
 
 									<li class="divider-vertical"></li>
 
 									<li class="three">
-										<a href="">Login</a>
+										<a href="login.html">Login</a>
 									</li>
 
 									<li class="four">
-										<img id="hamburger" src="images/list-menu.svg" onclick="hideShow('hiddenNB')">
+										<img id="hamburger" src="images/list-menu.png" onclick="hideShow('hiddenNB')">
 									</li>
 
 									<li class="five">
@@ -90,56 +120,63 @@
 					<div class="navbar-inner" id="hiddenNB">
 						<nav>
 							<ul class="nav">
-								<li class="onee">
-									<a class="navi" href="#">Home</a>
-								</li>
-
-								<li class="divider-vertical"></li>
 
 								<li class="twoo">
-									<a href="">Beleuchtung</a>
+									<a href="heizung.html">Heizung</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="threee">
-									<a href="">Heizung...</a>
+									<a href="sanitar.html">Sanitär</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="fourr">
-									<a href="">Sanitär</a>
+									<a href="beleuchtung.html">Beleuchtung</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="fivee">
-									<a href="">Impressum</a>
+									<a href="pv.html">PV</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="six">
-									<a href="">AGB</a>
+									<a href="solarthermie.html">Solarthermie</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="seven">
+									<a href="" title="Neuheiten/Sonderlösungen">N/S</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="eight">
-									<a href="">Photovoltaik</a>
+									<a href="agb.html">AGB</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="nine">
-									<a href="">Solarthermie</a>
+									<a href="impressum.html">Impressum</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="ten">
-									<a href="">Holz- und Pelletkessel</a>
+									<a href="stellen.html">Stellenangebote</a>
+								</li>
+
+								<li class="divider-vertical"></li>
+
+								<li class="eleven">
+									<a href="download.html">Downloads</a>
 								</li>
 							</ul>
 						</nav>
@@ -152,13 +189,12 @@
 
 			<div class="main">
 				<div class="info">
-					<div class="title">
-						<strong>KONTAKT</strong>
-					</div>
+
+					<strong class="title">KONTAKT</strong>
 					<!-- end title -->
 
 					<div class="locations">
-						<div class="loc1">
+						<div class="loc">
 							<ul>
 								<li>Firmensitz Schweiz / Kanton Obwalden</li>
 								<li>&nbsp;</li>
@@ -168,44 +204,56 @@
 								<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 302</li>
 								<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 303</li>
 								<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@et-energie.ch</li>
+								<li>&nbsp;</li>
+								<li>Servicetelefon rund um die Uhr:</li>
+								<li>+41 (0)76 57 99 465</li>
+								<li>Ansprechpartner: Rainer Berkmann</li>
 							</ul>
 						</div>
 						<!-- loc1 end -->
-						<div class="loc2">
+						<div class="loc">
 							<ul>
-								<li>Firmensitz Schweiz / Kanton Obwalden</li>
+								<li>Zweigniederlassung Kempten / Allgäu</li>
 								<li>&nbsp;</li>
 								<li>ET Energie & Handel GmbH</li>
-								<li>Geschäftsführer Rainer Berkmann</li>
-								<li>Sonnenbergstr. 18 • CH - 6060 Sarnen</li>
-								<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 302</li>
-								<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 303</li>
-								<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@et-energie.ch</li>
+								<li>&nbsp;</li>
+								<li>Dieselstraße 45 • D - 87437 Kempten</li>
+								<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 0</li>
+								<li>&nbsp;&nbsp;Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 70</li>
+								<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@et-energie.ch</li>
+								<li>&nbsp;</li>
+								<li>Servicetelefon rund um die Uhr:</li>
+								<li>+49 (0)717 33 25 346</li>
+								<li>Ansprechpartner: Rainer Berkmann</li> 
 							</ul>
 						</div>
 						<!-- loc2 end -->
-						<div class="loc3">
+						<div class="loc">
 							<ul>
-								<li>Firmensitz Schweiz / Kanton Obwalden</li>
+								<li>Zweigniederlassung Italien / Südtirol</li>
 								<li>&nbsp;</li>
-								<li>ET Energie & Handel GmbH</li>
+								<li>IKARUS SRL</li>
 								<li>Geschäftsführer Rainer Berkmann</li>
-								<li>Sonnenbergstr. 18 • CH - 6060 Sarnen</li>
-								<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 302</li>
-								<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41(0)41  51 10 303</li>
-								<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@et-energie.ch</li>
+								<li>Winkelweg 29 • I - 39012 Meran</li>
+								<li>&nbsp;&nbsp;Tel.:&nbsp;&nbsp;&nbsp;+49 (0)831 52 38 707 0</li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;Fax:&nbsp;&nbsp;&nbsp;+49 (0)831 52 38 707 70</li>
+								<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@ikarus-solar.de</li>
+								<li>&nbsp;</li>
+								<li>Servicetelefon rund um die Uhr:</li>
+								<li>+39 (0)328 72 71 201</li>
+								<li>Ansprechpartner: Viktor Rohde</li>
 							</ul>
 						</div>
 						<!-- loc3 end -->
 
-						<div class="map" id="map1">
-							<img src="images/Anfahrtsbeschreibung.gif" />
+						<div class="map">
+							<img id="map1" src="images/Map-Sarnen.png" alt="Map of Sarnen" onclick="modalShow('map1')" />
 						</div>
-						<div class="map" id="map2">
-							<img src="images/Anfahrtsbeschreibung.gif" />
+						<div class="map">
+							<img id="map2" src="images/Map-Kempten.png" alt="Map of Kampten" onclick="modalShow('map2')" />
 						</div>
-						<div class="map" id="map3">
-							<img src="images/Anfahrtsbeschreibung.gif" />
+						<div class="map">
+							<img id="map3" src="images/Map-Meran.png" alt="Map of Merano" onclick="modalShow('map3')" />
 						</div>
 					</div>
 					<!-- LOCATIONS END -->
@@ -213,47 +261,99 @@
 					<div class="text">
 						<strong>Öffnungszeiten Zweigniederlassung in Kempten</strong>
 						<p>
-							Montag bis Donnerstag		7.30 - 12.00 Uhr und 13.00 - 17.00 Uhr <br />
-							Freitag					7.30 - 13.00 Uhr
-						</p>
+							Montag bis Donnerstag<span class="space">7.30 - 12.00 Uhr und 13.00 - 17.00 Uhr</span> <br />
+							Freitag<span class="moreSpace">7.30 - 13.30 Uhr</span>
+						</p><br />
 
 						<strong>Warenannahmezeiten</strong>
 						<p>
-							Montag					10.00 - 12.00 Uhr und 13.00 - 17.00 Uhr <br />
-							Dienstag bis Donnerstag		  7.00 - 12.00 Uhr und 13.00 - 17.00 Uhr <br />
-							Freitag					  7.00 - 13.00 Uhr</p>
-						<p>
-							Die angegebenen Annahmezeiten sind generell einzuhalten. Ist dies aus dispositionstechnischen Gründen 
-							nicht möglich, benachrichtigen Sie uns bitte vorab telefonisch. 
-							Wir möchten Sie bitten, am Montag Warenzustellungen vor 10 Uhr zu vermeiden.
-						</p>
+							Montag bis Donnerstag	<span id="space1">7.30 - 11.45 Uhr und 13.00 - 16.45 Uhr</span> <br />
+							Freitag<span id="moreSpace1">7.00 - 13.00 Uhr</span></p>
+						<pre>
+Die angegebenen Annahmezeiten sind generell einzuhalten. Ist dies aus dispositionstechnischen<br />Gründen nicht möglich, benachrichtigen Sie uns bitte vorab telefonisch
+						</pre>
 
-						<strong>Anfahrtsbeschreibung - So finden Sie den Weg zu unserer Zweigniederlassung Kempten</strong>
+						<strong>Anfahrtsbeschreibung - So finden Sie den Weg zu unserer Zweigniederlassung Kempten</strong><br /><br />
 						<b>Anfahrt über A7 von Norden oder Süden</b>
-						<ul>
-							<li>Kempten liegt direkt an der A7</li>
-							<li>Ausfahrt "Kempten-Leubas" (Nr. 133) in Richtung Kempten benutzen</li>
-							<li>An der 1. Ampelkreuzung rechts abbiegen</li>
-							<li>in die "Dieselstraße". An dieser Kreuzung befindet sich das große Einkaufszentrum "FENEPARK"</li>
-							<li>Nach ca. 1,5 km (hinter dem "Müllheizkraftwerk") haben Sie uns erreicht.</li>
+						<ul class="ulKontakt">
+							<li>- Kempten liegt direkt an der A7</li>
+							<li>- Ausfahrt "Kempten-Leubas" (Nr. 133) in Richtung Kempten benutzen</li>
+							<li>- An der 1. Ampelkreuzung rechts abbiegen</li>
+							<li>- in die "Dieselstraße". An dieser Kreuzung befindet sich das große Einkaufszentrum "FENEPARK"</li>
+							<li>- Nach ca. 1,5 km (hinter dem "Müllheizkraftwerk") haben Sie uns erreicht.</li>
 						</ul>
 
 						<b>Anfahrt von München über B12 von A96</b>
-						<ul>
-							<li>Am Berliner Platz rechts abbiegen in "Kaufbeurer Straße"</li>
-							<li>An 3. Ampel links in "Dieselstraße" abbiegen. An dieser Kreuzung befindet sich rechts das große	<br />  Einkaufszentrum "FENEPARK"</li>
-							<li>Nach ca. 1,5 km (hinter dem "Müllheizkraftwerk") haben Sie uns erreicht</li>
+						<ul class="ulKontakt">
+							<li>- Am Berliner Platz rechts abbiegen in "Kaufbeurer Straße"</li>
+							<li>- An 3. Ampel links in "Dieselstraße" abbiegen. An dieser Kreuzung befindet sich rechts das große	<br />  
+							<span class="sp">Einkaufszentrum "FENEPARK"</span></li>
+							<li>- Nach ca. 1,5 km (hinter dem "Müllheizkraftwerk") haben Sie uns erreicht</li>
 						</ul>
 
-						<a href=""> Hier geht´s zur Google Maps Karte,...</a>
+						<a href="https://drive.google.com/open?id=1FH2DSp9zO4Bg65EmvveLoDrM8sw&usp=sharing"> Hier geht´s zur Google Maps Karte,...</a>
 					</div>
 				</div>
 				<!-- END INFO -->
 
-				<div class="popup">
-					<div class="gallery">
+				<div id="myModal" class="modal">
+					<span class="close">&times;</span>
+
+					<img class="modalContent" id="img1">
+
+					<div id="caption"></div>
+				</div>
+				<!-- END MODAL -->
+
+				<div class="formContainer">
+					<strong class="kf">Kontaktformular</strong><br class="lh" />
+					<span>Bitte nutzen Sie unser Kontaktformular (* Pflichtfeld):</span>
+					<form action="https://formspree.io/dzigi.91@gmail.com" method="POST" enctype="text/plain">						
 						
-					</div>
+						<label>Anrede</label>
+						<input type="text" name="anrede"><br />
+							
+						<label>Name*</label>
+						<input type="text" name="name" required="true"><br />
+							
+						<label>Vorname</label>
+						<input type="text" name="vorname"><br />
+							
+						<label>Firma</label>
+						<input type="text" name="firma"><br />
+							
+						<label>Straße</label>
+						<input type="text" name="straße"><br />
+							
+						<label>PLZ / Ort</label>
+						<input type="text" name="plzOrt"><br />
+							
+						<label>Land</label>
+						<input type="text" name="land"><br />
+							
+						<label>Deutschland</label>
+						<input type="text" name="deutschland"><br />
+							
+						<label>Telefon</label>
+						<input type="tel" name="telefon" pattern="[0-9]{15}"><br />
+							
+						<label>Telefax</label>
+						<input type="tel" name="telefax"><br />
+							
+						<label>Email*</label>
+						<input type="email" name="email" required="true"><br />
+							
+						<label>Nachricht*</label>
+						<textarea name="nachricht" cols="35" rows="5" required="true"></textarea><br />
+						<input type="submit" class="button" id="send" name="submit" value="Send">
+						<input type="reset" class="button" name="reset" value="Reset">
+					</form>
+				</div>
+				<!-- FORM END -->
+
+				<div class="footer">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
 				</div>
 			</div>
 			<!-- END MAIN -->

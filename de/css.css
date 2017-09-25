@@ -1,12 +1,44 @@
-body{
+.body2{
+	width: 100%;
+	height: 100%;
+	background-image: url("images/background.png"), url("images/background2.jpg");
+	background-size: 100%;
+	background-color: #ededed;
+	background-repeat: no-repeat, no-repeat;
+	background-position: 0% -171%, 0 -13.2%;
+	margin: 0;
+	font-size: 1.17em;
+	scroll-behavior: smooth;
+
+	overflow: -moz-scrollbars: none;
+		      -ms-overflow-style: none;
+}
+
+.body2::-webkit-scrollbar{
+	display: none;
+}
+
+.body1::-webkit-scrollbar{
+	display: none;
+}
+
+.body1{
+	width: 100%;
+	height: 100%;
 	background-image: url("images/background.png");
 	background-size: 100%;
-	background-color: #1c1c1b;
+	background-color: #ededed;
 	background-repeat: no-repeat;
+    background-position: 0 -8.6%;
 	margin: 0;
+	font-size: 1.17em;
+
+	overflow: -moz-scrollbars: none;
+		      -ms-overflow-style: none;
 }
 
 .container {
+	height: 100%;
 }
 
 /*************************************************************Navbar**************************************************************/
@@ -23,63 +55,74 @@ body{
 .logo {
 	max-width: 1020px;
     max-height: 52px;
-	margin: 0 10% 0 1%;
-	padding-top: .6%; 
+    margin: 0 auto 0;
+	padding-top: .7%;
 }
 
 .logo > #logo {
+	margin: .3% 0 0 2%;
 	max-width: 12%;
 	max-height: 46px;
 	float: left;
 }
 
 #hamburger {
-	max-width: 18px;
-	padding-top: 50%;
+	max-width: 20px;
+	padding-top: 66%;
 }
 
-#hamburger:hover, #hamburger.clicked {
-	max-width: 20px;
+#hamburger:hover, #hamburger.clicked, #hamburger:focus {
 	cursor: pointer;
+	padding-top: 58%;
 
-	-webkit-transition: all 0.2s ease-in-out;
-       -moz-transition: all 0.2s ease-in-out;
-         -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
+		    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
+
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+
+.five {
+	margin-left: 40%;
+	float: left;
+	display: block;
+	height: 25px;
 }
 
 #flags {
 	max-width: 23px;
 	padding-top: 20%;
-	margin-left: 266%;
 }
 
 #arrow {
     width: 14.5px;
-    margin: -2px 0 0 276%;
 }
 
 #arrow:hover, #arrow.clicked {
 	cursor: pointer;
-	margin-top: 5%;
+	opacity: 1;
 
-	-webkit-transition: all 0.2s ease-in-out;
-       -moz-transition: all 0.2s ease-in-out;
-         -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 }
 
 #flags:hover, #flags.clicked {
 	cursor: pointer;
 	margin-bottom: 5%;
 
-	-webkit-transition: all 0.2s ease-in-out;
-       -moz-transition: all 0.2s ease-in-out;
-         -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 }
 
 .language {
+	margin: .4% .2% 0 0;
 	position: relative;
 	display: block;
 	float: right;
@@ -113,10 +156,10 @@ nav{
 }
 
 .navbar .nav {
-	margin: 2% auto 0;
+	margin: -.5% auto 0;
 	position: relative;
 	left: 0;
-	display: block;
+	display: inline-flex;
 	float: left;
 }
 
@@ -137,27 +180,30 @@ nav{
 .navbar .nav > li > a:hover {
 	text-decoration: none;
 	background-color: transparent;
-	font-size: .9em;
+	text-shadow: 0 4px 1px rgba(0, 0, 0, 0.4);
+	padding-top: 8px;
+	/*font-size: .9em;*/
 
-	-webkit-transition: all 0.2s ease-in-out;
-       -moz-transition: all 0.2s ease-in-out;
-         -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 }
 
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
 	text-decoration: none;
-	font-size: .9em;
+	text-shadow: 0 4px 1px rgba(0, 0, 0, 0.4);
+	padding-top: 8px;
 
-	-webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 }
 
 .navbar{
-	max-width: 940px;
+	max-width: 908px;
 	padding-top: 2px;
 	position: relative;
 	margin-bottom: 20px;
@@ -168,18 +214,16 @@ nav{
 	color: #ef7926;
 	box-shadow: none;
 	padding-bottom: 0;
-/*	font-family: "Theano Didot";*/
-/*
-	-webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;*/
 }
 
 .mini{
 	padding: 0;
 	margin: 0;
 	margin-left: 52.9%; 
+}
+
+.mini > .navbar-inner {
+	padding-top: 1.5%;
 }
 
 .navbar-inner {
@@ -197,11 +241,12 @@ nav{
 	background-color: #ffffff;
 	opacity: 0;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+	visibility: hidden;
 
-	-webkit-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-     -moz-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-       -o-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-          transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+	-webkit-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+       -moz-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+         -o-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+            transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
 }
 
 #hiddenNB > nav > .nav {
@@ -214,11 +259,12 @@ nav{
 	background-color: #ffffff;
 	opacity: 0;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+	visibility: hidden;
 
-	-webkit-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-     -moz-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-       -o-transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-          transition: margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+	-webkit-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+       -moz-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+         -o-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
+            transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
 }
 
 .navbar .nav > .four > a {
@@ -229,43 +275,73 @@ nav{
 	box-shadow: none;
 /*	font-family: "Theano Didot";*/
 /*
-	-webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;*/
+	-webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;*/
 }
 
 .navbar .nav > li > a, .navbar .nav > li > a:hover {
 	display: inline-block;
-	text-shadow: none;
 /*	font-family: "Theano Didot";*/
 /*
-	-webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;*/
+	-webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;*/
 }
 
-.navbar .divider-vertical {
+.divider-vertical {
 	height: 16px;
 	margin: 10px 0;
 	border-right: 1px solid #000;
 	border-left: none;
 }
 
+/******************************************************************Home*********************************************************/
+
+.concon {
+	margin-top: 10%;
+	width: 80%;
+	text-align: left;
+}
+
+.concon > strong {
+	margin: 0;
+}
+
+.concon > p {
+	line-height: 1.5em;
+}
+
 /******************************************************************Kontakt*********************************************************/
 
 .main {
-	font-family: Verdana;
+	font-family: 'PT Sans', sans-serif;
 	font-size: .75em;
-	background-color: #ffffff;
-	opacity: .9;
+	background-color: rgba(255, 255, 255, .9);
 	position: absolute;
 	top: 67px;
 	left: 10%;
 	width: 80%;
-	height: 2080px;
+	max-height: 4041px;
 	z-index: 2;
+}
+
+.main1 {
+	font-family: 'PT Sans', sans-serif;
+	font-size: .75em;
+	background-color: rgba(255, 255, 255, .9);
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	height: 100%;
+	z-index: 2;
+}
+
+a {
+	text-decoration: none;
+	color: #023778;
 }
 
 ul {
@@ -273,49 +349,535 @@ ul {
 	padding: 0;
 }
 
+pre {
+	margin: 3% auto 0 0;
+	text-align: left;
+	line-height: 1.8em;
+	font-family: 'PT Sans', sans-serif;
+}
+
+strong {
+	color: #65b3c3;
+    font-size: 1.1em;
+}
+
+br {
+	line-height: 1.5em;
+}
+
 .title {
+	font-size: 1.3em;
+	font-weight: 300;
+	text-align: left;
 	color: #65b3c3;
     display: block;
-    margin: 5% 75% 2% 12%;
+    margin: 4% 0 0 5%;
+    width: 100%;
     float: left;
 }
 
-.loc1 {
+.locations > .loc {
 	display: block;
-	margin: 3% 5.2%;
-	float: left;
-}
-
-.loc2 {
-	display: block;
-	margin: 3% 5.2%;
-	float: left;
-}
-
-.loc3 {
-	display: block;
-	margin: 3% 5.2%;
+	margin: 3% 5.2% 1%;
 	float: left;
 }
 
 .map {
 	max-width: 30%;
-    margin: 0 0 0 3%;
+    margin: 0 0 5% 2%;
     float: left;
 }
 
-.map > img {
-	max-width: 70%;
+.map img {
+	max-width: 45%;
+	border-radius: 20px;
+	border: 1px solid black;
+
+	-webkit-transition: all 0.3s ease-in-out;
+       -moz-transition: all 0.3s ease-in-out;
+         -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+
+.map > img:hover {
+	cursor: pointer;
+	opacity: .7;
+	box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    margin-top: 4%;
+    padding-top: 5%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modalContent {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 580px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modalContent, #caption {    
+    -webkit-animation-name: zoom;
+       -moz-animation-name: zoom;
+         -o-animation-name: zoom;
+            animation-name: zoom;
+
+    -webkit-animation-duration: 0.6s;
+       -moz-animation-duration: 0.6s;
+         -o-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@-moz-keyframes zoom {
+    from {-moz-transform:scale(0)} 
+    to {-moz-transform:scale(1)}
+}
+
+@-o-keyframes zoom {
+    from {-o-transform:scale(0)} 
+    to {-o-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 3em;
+    font-weight: lighter;
+
+	-webkit-transition: 0.3s;
+       -moz-transition: 0.3s;
+         -o-transition: 0.3s;
+            transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modalContent {
+        width: 100%;
+    }
 }
 
 .text {
+	width: 90%;
 	position: relative;
 	float: left;
-	margin: 3% auto 0 2%;
+	margin: 5% auto 0 5.2%;
 	text-align: left;
-/*
-  font-size: 18px;
-  font-family: "Verdana";
-  color: rgb(101, 179, 195);
-  line-height: 1.333;*/
+}
+
+.space {
+	margin-left: 9em;
+}
+
+.moreSpace {
+	margin-left: 15.9em;
+}
+
+#moreSpace0 {
+	margin-left: 15.3em;
+}
+
+#space1 {
+	margin-left: 8.5em;
+}
+
+#moreSpace1 {
+	margin-left: 16.2em;
+}
+
+.ulKontakt {
+	margin-left: 6%;
+	line-height: 1.6em;
+}
+
+.sp {
+	margin-left: 1.6%;
+}
+
+/********************************************************KONTAKT FORMULAR***********************************************************************/
+
+.formContainer {
+	float: left;
+	width: 100%;
+	text-align: left;
+    margin: 9% auto 0 6%
+}
+
+form {
+	float: left;
+	width: 100%;
+}
+
+.kf {
+	font-size: 1.2em;
+}
+
+.lh {
+	line-height: 3em;
+}
+
+label {
+	float: left;
+	width: 10%;
+	margin-right: 2%;
+	text-align: right;
+	padding-top: .6%;
+}
+
+input {
+	line-height: 1.5em;
+	margin-bottom: 1%;
+	width: 20em;
+	border: none;
+	background-color: rgba(218, 218, 218, .9);
+}
+
+textarea {
+	border: none;
+	background-color: rgba(218, 218, 218, .9);
+}
+
+.button {
+	margin-top: .5%;
+	width: 13%;
+	border: 1px #535353 solid;
+	background-color: #65b3c3;
+	opacity: .65;
+}
+
+#send {
+	margin-left: 11.85%;
+}
+
+/***************************************************************FOOTER*********************************************************************************/
+
+.footer{
+	background-color: #1c1c1b;
+	color: #fff;
+    font-size: .8em;
+    position: relative;
+    width: 100%;
+    margin: 12.5% auto 0;
+	float: left;
+}
+
+.footer > p {
+	margin-bottom: 1%;
+}
+
+#footer1 {
+	position: absolute;
+	bottom: 0;
+	font-size: .63em;
+}
+
+/****************************************************************LOGIN*********************************************************************************/
+
+.loginContainer {
+	width: 50%;
+	margin-top: 20%;
+}
+
+.loginForm {
+	margin-bottom: 5%;
+}
+
+.loginForm input:nth-child(-n+3) {
+	padding: .9% 1% .9% 1%;
+}
+
+.loginForm > .button {
+	width: 37%;
+	height: 2em;
+}
+
+.linkButton {
+	text-align: left;
+	color: #023778;
+	width: 15%;
+	background-color: transparent;
+}
+
+/****************************************************************SANITAR*******************************************************************************/
+
+.main > .text > ul{
+	margin-top: 0;
+}
+
+#txt {
+	margin-top: 3%;
+	width: 75%;
+}
+
+/****************************************************************BELEUCHTUNG***************************************************************************/
+
+.nobcgr {
+	background-image: none;
+}
+
+#txt1 {
+	margin-top: 3%;
+	width: 80%
+}
+
+.main > #txt1 > .shadow {
+	background-image: url('images/LEDBeleuchtung.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 1042px;
+	height: 408px;
+	margin: .8% auto 1% -6.4%;
+
+	-webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
+		    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main > #txt1 > ul > li {
+	margin-left: 4%;
+}
+
+.main > #txt1 > ul {
+	margin-bottom: 5%;
+}
+
+/*********************************************************************PV*******************************************************************************/
+
+#second {
+	visibility: hidden;
+}
+
+#third {
+	visibility: hidden;
+}
+
+.pvNavbar {
+	margin-top: 2%;
+	width: 100%;
+	display: inline-block;
+}
+
+.pvNavbar > .inner {
+	max-width: 900px;
+	display: inline-block;
+	border-bottom: 1px #000 dashed;
+}
+
+.pvNavbar > .inner > ul > li {
+	display: inline-block;
+	padding: 2px;
+}
+
+.pvNavbar > .inner > ul > li > a {
+	float: none;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.pvNavbar > .inner > ul > li > .line {
+	width: 0;
+	height: 1px;
+	margin-left: 5px;
+	background-color: #023778;
+}
+
+.inner > ul > li > a:hover ~ .line, .inner > ul > li > a:focus ~ .line {
+	width: 90%;
+
+	-webkit-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+       -moz-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+         -o-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+            transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+}
+
+.pvNavbar > .inner > ul > .divider-vertical {
+	margin: -4px 0;
+}
+
+a.act {
+	color: #ef7926;
+}
+
+div.act {
+	background-color: #ef7926;
+}
+
+table {
+	margin: 2% 0 5% 0;
+	width: 80%;
+}
+
+td {
+	padding: 3px;
+	margin-right: 5%;
+	vertical-align: text-top;
+}
+
+.pics {
+	width: 100%;
+}
+
+.pic {
+	display: inline-block;
+	width: 22%;
+	margin-right: 2.686%;
+}
+
+.pic > img {
+	width: 100%;
+}
+
+.smallStrong {
+	font-weight: 100;
+}
+
+#second > .footer {
+	margin-top: 28.5%;
+}
+
+/**********************************************************************GALLERY*************************************************************************/
+
+.gallery {
+  width: 90%;
+  margin: 2% auto;
+  padding: 5px;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 200px;
+  transition: .1s transform;
+  transform: translateZ(0);
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .8s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**********************************************************************AGB*************************************************************************/
+
+.textAGB {
+	float: left;
+	margin: 0 5%;
+}
+
+/******************************************************************IMPRESSUM***********************************************************************/
+
+.textIM {
+	width: 60%;
+	position: relative;
+	float: left;
+	margin: 5% auto 0 5.2%;
+	text-align: left;
+}
+
+/******************************************************************STELLEN***********************************************************************/
+
+.textST {
+	width: 60%;
+	position: relative;
+	float: left;
+	margin: 2% auto 0 5.2%;
+	text-align: left;
+}
+
+.symbol {
+	float: right;
+	margin-right: 10%;
+}
+
+.pullRight {
+	float: right;
+	margin-right: 22%;
+}
+
+.pullLeft {
+	float: left;
+}
+
+.textST > ul > li {
+	margin-left: 4%;
+}
+
+.textST ~ .footer {
+	margin-top: 8%;
+}
+
+/******************************************************************STELLEN***********************************************************************/
+
+.textDO {
+	width: 40%;
+	position: relative;
+	float: left;
+	margin: 2% auto 0 5.2%;
+	text-align: left;
+}
+
+.textDO ~ img {
+	margin-right: 8%;
 }
