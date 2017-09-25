@@ -647,7 +647,38 @@ textarea {
 
 #txt {
 	margin-top: 3%;
-	width: 75%;
+	width: 90%;
+}
+
+.picSa > img {
+	width: 100%;
+	border-radius: 30px;
+}
+
+.row {
+	margin-top: 1%;
+	width: 100%;
+	display: flex;
+}
+
+.lists {
+	width: 30%;
+	margin: 0 3%;
+}
+
+.lists > img {
+	width: 80%;
+	margin-bottom: 10%;
+}
+
+.lists > ul > li {
+	margin: 2% 0;
+}
+
+#uber {
+	margin-top: 10%;
+	width: 100%;
+	text-align: left;
 }
 
 /****************************************************************BELEUCHTUNG***************************************************************************/
@@ -868,7 +899,7 @@ td {
 	margin-top: 8%;
 }
 
-/******************************************************************STELLEN***********************************************************************/
+/******************************************************************DOWNLOAD***********************************************************************/
 
 .textDO {
 	width: 40%;
@@ -880,4 +911,32 @@ td {
 
 .textDO ~ img {
 	margin-right: 8%;
+}
+
+.footer.download {
+	margin-top: 30.5%;
+}
+
+/******************************************************************HEIZUNG***********************************************************************/
+
+.textHe {
+	width: 70%;
+	position: relative;
+	float: left;
+	margin: 2% auto 0 5.2%;
+	text-align: left;
+}
+
+#second > .heizungSecond {
+	margin-top: 36.8%;
+}
+
+.hLists {
+	margin: 0 2%;
+	float: left;
+}
+
+.dark {
+	background-color: #dadada;
+	padding: 1%;
 }

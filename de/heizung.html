@@ -31,10 +31,29 @@
 					element.style.margin = 0;
 			}
 		}
+
+		function change(id){
+			var el = document.getElementById(id);
+			var c = document.getElementsByClassName('main x');
+
+			if(el.id == 'second')
+				document.body.style.position = "fixed";
+			else
+				document.body.style.position = "absolute";
+
+
+			for (var i = c.length - 1; i >= 0; i--) {
+				
+				if(c[i].id == el.id)
+					el.style.visibility = 'visible';
+				else
+					c[i].style.visibility = 'hidden';
+			}
+		}
 	</script>
 </head>
 
-<body class="body1">
+<body class="body2">
 	<center>
 		<div class="container">
 			<div class="content">					
@@ -167,7 +186,114 @@
 			</div>
 			<!-- END CONTENT -->
 
+			<div class="main x" id="first">
+				<div class="pvNavbar">
+					<div class="inner">
+						<ul>
+							<li>
+								<a class="act" onclick="change('first')">Holz- und Pelletkessel</a>
+								<div class="line act"></div>
+							</li>
 
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a  onclick="change('second')">Förderprogramm</a>
+								<div class="line"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- END INNER -->
+				</div>
+				<!-- END NAVBAR -->
+
+				<strong class="title">Holz- und Pelletkessel</strong>
+				<div class="textHe">
+					<div class="row">
+						<div class="hLists">
+							<b>Holzkessel</b>
+							<ul>
+								<li>· ATTACK SLX</li>
+							</ul>
+						</div>
+
+						<div class="hLists">
+							<b>Pelletkessel</b>
+							<ul>
+								<li>· ATTACK Pellet 30 Automatic</li>
+							</ul>
+						</div>
+					</div>
+
+					<strong>ATTACK SLX</strong>
+					<p>
+						Der "ATTACK SLX" in der Version "Profi" und "Lambda" ist ein sparsamer und umweltschonender Holzvergaserkessel. Er eignet sich für den Einsatz in Ein- und Mehrfamilienhäusern sowie in kleineren Betrieben und Werkstätten. Als Brennstoff dient trockenes Holz. Bei voller Nutzung der Brennkammer besteht die Möglichkeit einer ununterbrochenen Verbrennung über 8 bis 12 Stunden hinweg. 
+					</p>
+
+					<strong class="smallStrong">ATTACK SLX Profi</strong>
+					<p>
+						Der Holzvergaserkessel "SLX Profi" wird durch eine elektronische Regelung der Kesseltemperatur gesteuert. Die modulierende Betriebsweise des Kessels passt sich dem tatsächlichen Wärmebedarf an.
+					</p>
+
+					<strong class="smallStrong">ATTACK SLX Lambda</strong>
+					<p>
+						Der "SLX Lambda" ist mit einer fortschrittlichen Steuerung zur Optimierung des Verbrennungsvorgangs ausgestattet. Sie kann mithilfe der Sauerstoffmessung per Lambdasonde automatisch Kesseltemperatur, Abgastemperatur, Primär- und Sekundärluftzufuhr regulieren. Hierdurch werden die besten Emissionswerte und ein besonders hoher Wirkungsgrad erreicht. Alle 
+wichtigen Parameter werden auf dem mehrzeiligen Display des Reglers angezeigt und können damit individuell eingestellt werden.
+					</p>
+
+					<br><br>
+					<div class="dark">
+						<b>Staatliche Förderungen</b>
+						<p>
+							Unsere Holzvergaser-Kessel sind qualitativ hochwertig und erfüllen sämtliche Bedingungen für staatliche Förderungen durch die BAFA.
+						</p>
+					</div>
+				</div>
+				<!-- END TEXT -->
+
+				<div class="footer">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
+				</div>
+			</div>
+			<!-- END FIRST MAIN X -->
+
+			<div class="main x" id="second">
+				<div class="pvNavbar">
+					<div class="inner">
+						<ul>
+							<li>
+								<a onclick="change('first')">Holz- und Pelletkessel</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a  class="act" onclick="change('second')">Förderprogramm</a>
+								<div class="line"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- END INNER -->
+				</div>
+				<!-- END NAVBAR -->
+
+				<div class="text">
+					<strong>Informationen zu den aktuellen Förderprogrammen</strong>
+					<p>
+						Hier können Sie sich über die aktuellen Förderrichtlinien in Deutschland informieren:<br>
+						<a href="">Zur Webseite des Bundesamtes für Wirtschaft und Ausfuhrkontrolle (BAFA)...</a>
+					</p>
+				</div>
+				<!-- END TEXT -->
+
+				<div class="footer heizungSecond">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
+				</div>
+			</div>
+			<!-- END SECOND MAIN X -->
 		</div>
 		<!-- END CONTAINER -->
 	</center>
