@@ -590,7 +590,7 @@ textarea {
 	margin-left: 11.85%;
 }
 
-/***************************************************************FOOTER*********************************************************************************/
+/***************************************************************FOOTER**************************************************************************/
 
 .footer{
 	background-color: #1c1c1b;
@@ -612,7 +612,7 @@ textarea {
 	font-size: .63em;
 }
 
-/****************************************************************LOGIN*********************************************************************************/
+/****************************************************************LOGIN***************************************************************************/
 
 .loginContainer {
 	width: 50%;
@@ -639,7 +639,7 @@ textarea {
 	background-color: transparent;
 }
 
-/****************************************************************SANITAR*******************************************************************************/
+/****************************************************************SANITAR***************************************************************************/
 
 .main > .text > ul{
 	margin-top: 0;
@@ -681,7 +681,7 @@ textarea {
 	text-align: left;
 }
 
-/****************************************************************BELEUCHTUNG***************************************************************************/
+/****************************************************************BELEUCHTUNG************************************************************************/
 
 .nobcgr {
 	background-image: none;
@@ -713,7 +713,7 @@ textarea {
 	margin-bottom: 5%;
 }
 
-/*********************************************************************PV*******************************************************************************/
+/*********************************************************************PV*****************************************************************************/
 
 #second {
 	visibility: hidden;
@@ -732,6 +732,11 @@ textarea {
 .pvNavbar > .inner {
 	max-width: 900px;
 	display: inline-block;
+}
+
+.pvNavbar > .inner > ul:nth-child(-n+1) {
+	margin: 1% 0;
+	padding-bottom: 3%;
 	border-bottom: 1px #000 dashed;
 }
 
@@ -807,7 +812,7 @@ td {
 	margin-top: 28.5%;
 }
 
-/**********************************************************************GALLERY*************************************************************************/
+/**********************************************************************GALLERY**********************************************************************/
 
 .gallery {
   width: 90%;
@@ -850,14 +855,14 @@ td {
   clear: both;
 }
 
-/**********************************************************************AGB*************************************************************************/
+/**********************************************************************AGB************************************************************************/
 
 .textAGB {
 	float: left;
 	margin: 0 5%;
 }
 
-/******************************************************************IMPRESSUM***********************************************************************/
+/******************************************************************IMPRESSUM**********************************************************************/
 
 .textIM {
 	width: 60%;
@@ -914,7 +919,7 @@ td {
 }
 
 .footer.download {
-	margin-top: 30.5%;
+	margin-top: 30.3%;
 }
 
 /******************************************************************HEIZUNG***********************************************************************/
@@ -927,16 +932,163 @@ td {
 	text-align: left;
 }
 
+.textHe > .row {
+	margin-bottom: 10%;
+}
+
 #second > .heizungSecond {
 	margin-top: 36.8%;
 }
 
 .hLists {
-	margin: 0 2%;
+	margin: 3% 4%;
 	float: left;
 }
 
 .dark {
+	width: 98%;
+	display: inline-block;
 	background-color: #dadada;
 	padding: 1%;
+}
+
+table.dark {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+table.dark tr:nth-child(odd) {
+	background-color: #ededed;
+}
+
+table.dark > tbody > tr > td{
+	padding: 5px 2px;
+}
+
+table.dark > tbody > tr > th {
+	font-weight: 100;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+i {
+	margin-left: 2%;
+	font-size: .85em;
+}
+
+.innerText {
+	width: 60%;
+	float: left;
+}
+
+.image {
+	float: right;
+	width: 20%
+}
+
+.pvNavbar > .inner > .lower {
+	font-size: .87em;
+	margin: 0;
+}
+
+.pvNavbar > ul.lower > li {
+	display: inline-block;
+	padding: 2px;
+}
+
+.pvNavbar > ul.lower > li > a {
+	float: none;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.pvNavbar > ul.lower > li > .line {
+	width: 0;
+	height: 1px;
+	margin-left: 5px;
+	background-color: #023778;
+}
+
+ul.lower > li > a:hover ~ .line, ul.lower > li > a:focus ~ .line {
+	width: 90%;
+
+	-webkit-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+       -moz-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+         -o-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+            transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
+}
+
+ul.lower > .divider-vertical {
+	margin: -4px 0;
+	height: 13px;
+}
+
+/****************************************************************SOLARTHERMIE********************************************************************/
+
+ul.soul {
+	margin-left: 3%;
+}
+
+ul.soul > li {
+	padding: 2px;
+}
+
+/****************************************************************IN PROGRESS********************************************************************/
+
+.wrapper {
+	padding-top: 15%;
+	margin-top: 5%;
+}
+
+.candy {
+	padding: 2% 5%;
+	border: 1px black solid;
+	width: 30%;
+}
+
+.up {
+	width: 30%;
+	height: 5%;
+	position: absolute;
+	top: 35%;
+	left: 35.5%;
+	background-color: white;
+}
+
+.down {
+	width: 30%;
+	height: 5%;
+	position: absolute;
+	top: 55%;
+	left: 35.5%;
+	background-color: white;
+}
+
+.left {
+	width: 5%;
+	height: 15%;
+	position: absolute;
+	top: 40.5%;
+	left: 25.5%;
+	background-color: white;
+}
+
+.right { 
+	width: 5%;
+	height: 15%;
+	position: absolute;
+	top: 40.5%;
+	left: 65.5%;
+	background-color: white;
+}
+
+h2, h4 {
+	text-transform: uppercase;
+}
+
+.progress {
+	background-image: url('images/logo.png');
+	background-repeat: no-repeat;
+	background-position: top;
 }
