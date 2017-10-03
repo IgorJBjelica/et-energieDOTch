@@ -41,7 +41,6 @@
 			else
 				document.body.style.position = "absolute";
 
-
 			for (var i = c.length - 1; i >= 0; i--) {
 				
 				if(c[i].id == el.id)
@@ -50,10 +49,38 @@
 					c[i].style.visibility = 'hidden';
 			}
 		}
+
+		function loadFirst(id){
+			document.getElementById(id).style.visibility = 'visible';
+		}
+
+		function testScroll(){
+			var el = document.getElementsByClassName('main x');
+
+			for(var i = 0; i < el.length; i++){
+				if(el[i].style.visibility == 'visible')
+					switch(el[i].id){
+						case 'first':{
+							if((document.body.scrollTop > 287) || (document.documentElement.scrollTop > 287))
+								document.documentElement.scrollTop = 286;
+						}break;
+
+						case 'fourth':{
+							if((document.body.scrollTop > 1879) || (document.documentElement.scrollTop > 1879))
+								document.documentElement.scrollTop = 1878;
+						}break;
+
+						case 'fifth':{
+							if((document.body.scrollTop > 1562) || (document.documentElement.scrollTop > 1562))
+								document.documentElement.scrollTop = 1561;
+						}break;
+					}
+			}
+		}
 	</script>
 </head>
 
-<body class="body1 nobcgr">
+<body class="body1 nobcgr" onload="loadFirst('first')" onscroll="testScroll()">
 	<center>
 		<div class="container">
 			<div class="content">					
@@ -205,7 +232,7 @@
 
 						<ul class="lower">
 							<li>
-								<a class="act" onclick="change('third')">Sonnenkollektoren</a>
+								<a onclick="change('third')">Sonnenkollektoren</a>
 								<div class="line act"></div>
 							</li>
 
@@ -287,15 +314,36 @@
 					<div class="inner">
 						<ul>
 							<li>
-								<a onclick="change('first')">Holz- und Pelletkessel</a>
+								<a onclick="change('first')">Produkte</a>
 								<div class="line act"></div>
 							</li>
 
 							<li class="divider-vertical"></li>
 									
 							<li>
-								<a  class="act" onclick="change('second')">Förderprogramm</a>
+								<a class="act" onclick="change('second')">Förderprogramm</a>
 								<div class="line"></div>
+							</li>
+						</ul>
+
+						<ul class="lower">
+							<li>
+								<a onclick="change('third')">Sonnenkollektoren</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fourth')">Speicher</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fifth')">Anbindungen und Zubehör</a>
+								<div class="line act"></div>
 							</li>
 						</ul>
 					</div>
@@ -307,17 +355,903 @@
 					<strong>Informationen zu den aktuellen Förderprogrammen</strong>
 					<p>
 						Hier können Sie sich über die aktuellen Förderrichtlinien in Deutschland informieren:<br>
-						<a href="">Zur Webseite des Bundesamtes für Wirtschaft und Ausfuhrkontrolle (BAFA)...</a>
+						<a href="http://www.bafa.de/DE/Home/home_node.html" target="_blank">Zur Webseite des Bundesamtes für Wirtschaft und Ausfuhrkontrolle (BAFA)...</a>
 					</p>
 				</div>
 				<!-- END TEXT -->
 
-				<div class="footer heizungSecond">
+				<div class="footer solarSecond">
 					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
 					</p>
 				</div>
 			</div>
 			<!-- END SECOND MAIN X -->
+
+			<div class="main x" id="third">
+				<div class="pvNavbar">
+					<div class="inner">
+						<ul>
+							<li>
+								<a class="act" onclick="change('first')">Produkte</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a  onclick="change('second')">Förderprogramm</a>
+								<div class="line"></div>
+							</li>
+						</ul>
+
+						<ul class="lower">
+							<li>
+								<a class="act" onclick="change('third')">Sonnenkollektoren</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fourth')">Speicher</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fifth')">Anbindungen und Zubehör</a>
+								<div class="line act"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- END INNER -->
+				</div>
+				<!-- END NAVBAR -->
+
+				<strong class="title">Solarthermie</strong>
+				<div class="text">
+					<b>Solarpakete zur Warmwasserbereitung und Heizungsunterstützung</b>
+					<div class="row">
+						<div class="hLists">
+							<strong>Solarthermie - Kollektoren</strong>
+							<ul>
+								<li>· Rahmenkollektoren</li>
+								<li>· Indachkollektoren</li>
+								<li>· Röhrenkollektoren</li>
+							</ul>
+						</div>
+
+						<div class="hLists">
+							<b>Solarthermie - Speicher</b>
+							<ul>
+								<li>· Solarspeicher</li>
+								<li>· Pufferspeicher</li>
+								<li>· Antilegionellen - Kombispeicher</li>
+								<li>· Hygiene - Schichtkombispeicher</li>
+							</ul>
+						</div>
+					</div>
+
+					<strong>SONNENKOLLEKTOREN</strong><br>
+					<b>RAHMENKOLLEKTOREN</b>
+
+					<table>
+						<tr>
+							<th>Typ</th>
+							<th>DIMAS SOL 20</th>
+							<th>DIMAS SOL 25</th>
+						</tr>
+						<tr>
+							<td>Gesamtfläche</td>
+							<td>2,02 m²</td>
+							<td>2,52 m²</td>
+						</tr>
+						<tr>
+							<td>Gewicht unbefüllt</td>
+							<td>31 kg</td>
+							<td>44 kg</td>
+						</tr>
+						<tr>
+							<td>Art. Nr.</td>
+							<td>111001</td>
+							<td>111005</td>
+						</tr>
+						<tr>
+							<td>Technische Daten</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>L / B / H mm</td>
+							<td>2006 x 1007 x 103</td>
+							<td>2006 x 1257 x 103</td>
+						</tr>
+						<tr>
+							<td>Gesamtfläche</td>
+							<td>2,02 m²</td>
+							<td>2,52 m²</td>
+						</tr>
+						<tr>
+							<td>Absorberfläche</td>
+							<td>1,83 m²</td>
+							<td>2,33 m²</td>
+						</tr>
+						<tr>
+							<td>Absorbervolumenkapazität</td>
+							<td>1,6 l</td>
+							<td>1,9 l</td>
+						</tr>
+						<tr>
+							<td>Absorbertyp</td>
+							<td>Vollflächenabsorber</td>
+							<td>Vollflächenabsorber</td>
+						</tr>
+						<tr>
+							<td>Wärmeträger</td>
+							<td>Propylenglykol</td>
+							<td>Propylenglykol</td>
+						</tr>
+						<tr>
+							<td>max. Betriebsdruck</td>
+							<td>10 bar</td>
+							<td>10 bar</td>
+						</tr>
+						<tr>
+							<td>Anschluss CU ø 22</td>
+							<td>x2 oder x4</td>
+							<td>x2 oder x4</td>
+						</tr>
+						<tr>
+							<td>Solarglas</td>
+							<td>Sicherheitsweißglas</td>
+							<td>Sicherheitsweißglas</td>
+						</tr>
+						<tr>
+							<td>Gehäuse</td>
+							<td>Aluminium</td>
+							<td>Aluminium</td>
+						</tr>
+					</table>
+
+					<div class="innerText">
+						<strong class="smallStrong">Produktbeschreibung</strong>
+						<ul>
+							<li>· Profilrahmen ohne Eckstöße aus seewasserbeständigem Aluminiumprofilmaterial</li>
+							<li>· Abdeckung mit strukturiertem Solarsicherheitsweißglas, mit dem Gehäuse elastisch &nbsp;&nbsp;verklebt mit UV- und hitzebeständigem Spezialkleber</li>
+							<li>· Aluminiumrahmen zur Einfassung des Sicherheitsglases und des Profilrahmens</li>
+							<li>· Wärmeträgertransport durch Doppelharfenabsorber mit zwei nach außen geführten &nbsp;&nbsp;Rohrleitungsanschlüssen</li>
+							<li>· Absorberfläche hochselektiv und vakuumbeschichtet. Vollständig auf die Doppelharfe &nbsp;&nbsp;lasergeschweißt und auf Langzeitbeständigkeit nach ISO / CD 12 592.2 geprüft</li>
+							<li>· Temperatur-, feuchte- und ausgasungsbeständige Mineralwolle als Wärmedämm- &nbsp;&nbsp;Material</li>
+							<li>· Gehäuserückwand aus Aluminium mit umlaufenden Dichtungen</li>
+							<li>· Kollektoranschluß mit Schneidringverschraubungen</li>
+							<li>· Freiaufstellung oder Aufdachmontage möglich, senkrechte oder waagrechte Montage.</li>
+						</ul>
+					</div>
+					<img class="rehme" src="images/rahmenkollektor.jpg" alt="Solarthermie">
+
+					<div class="portion">
+						<b>INDACHKOLLEKTOREN </b><br>
+						<strong class="smallStrong">INDACHMODULKOLLEKTOR IKASOL</strong>
+
+						<br>
+
+						<table class="noup">
+							<tr>
+								<td>Bruttofläche</td>
+								<td>2,08 m²</td>
+								<td>2,08 m²</td>
+							</tr>
+							<tr>
+								<td>Bauweise</td>
+								<td>Fertigmodul</td>
+								<td>Bausatz</td>
+							</tr>
+						</table>
+
+						<div class="innerText">
+							<p class="nodown">
+								Direktbefestigung der Wanne auf der Dachlattung. Alle Verbindungsleitungen sind geschützt und sicher unter dem Dach montiert. Verbindung zwischen Dachziegeln und Kollektorfeld erfolgt durch  professionelle Dachblechkonstruktion.
+							</p>
+							<ul class="noup">
+								<li>· Zur solaren Trinkwassererwärmung und Heizungsunterstützung</li>
+								<li>· Vorteilhaft bei Neubauten und Dachsanierung</li>
+								<li>· Doppelspareffekt durch Heizkosten- und Baukostenersparnis</li>
+							</ul>
+
+							<br><br><br>
+
+							<strong class="smallStrong">Produktbeschreibung</strong><br>
+							<p>
+								Mit rückseitiger Wanne aus wasserfest verleimten Holz, 50 mm Steinwoll-Isolierung, hochselektiv  beschichtetem Absorber, Glasleisten, Schrauben- und Verbinderset sowie SolarSicherheitsglasscheiben  und Eindeckrahmen.
+							</p>
+						</div>
+
+						<img class="rehme noup" src="images/ST-Ikasol1.jpg" alt="IKASOL Indachkollektor (Fertigmodul)">
+						<span id="imageText">IKASOL Indachkollektor (Fertigmodul)</span>
+
+						<table class="dark wide">
+							<tr>
+								<td>Bauartzulassung</td>
+								<td>02-328-049</td>
+							</tr>
+							<tr>
+								<td>CE-zertifiziert nach EG-Richtlinie</td>
+								<td>97/23/EG</td>
+							</tr>
+							<tr>
+								<td>Prüfzeichen RAL UZ 73 Blauer Engel</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>IKASOL 2.08:</td>
+								<td>Keymark-Reg.-Nr.  011-75498 F.</td>
+							</tr>
+							<tr>
+								<td>Kollektorfunktionsgarantie</td>
+								<td>10 Jahre*</td>
+							</tr>
+							<tr>
+								<td colspan="2">* bei Einhaltung der technischen Rahmenbedingungen für die Kollektorzusatzgarantie von 10 Jahren für die Kollektorfunktion</td>
+							</tr>
+						</table>
+
+						<br><br>
+
+						<strong class="smallStrong">Als Bausatz eignet sich der IKASOL Indachkollektor perfekt für Großflächenanlagen.</strong><br>
+						<p>
+							Optisch bildet der Kollektor im Bausatz eine bessere Einheit mit dem Dach. Da das Solarglas, anders als beim Fertigmodul, erst auf dem Dach montiert wird,  ist ein kostenintensiver Kran nicht erforderlich, denn mit den Einzelteilen ist leichter zu hantieren.
+						</p>
+						<img class="wide" src="images/indach-bausatz_montagebeispiel.jpg" alt="IKASOL Indachkollektor (Bausatz)">
+						<span>IKASOL Indachkollektor (Bausatz)</span>
+
+						<br><br><br>
+
+						<b>RÖHRENKOLLEKTOREN</b><br>
+						<strong class="smallStrong">POWERRÖHRE</strong>
+						<br>
+						<b>Ersatz</b>
+						<br>
+						<span>Bei uns erhalten Sie Ersatzröhren und Ersatzteile für die Powerröhre. Fragen Sie einfach an.</span>
+
+						<br><br>
+
+						<div class="innerText">
+							<strong class="smallStrong">HOCHLEISTUNGSHEATPIPE</strong>
+							<br>
+							<b>Anwendung</b>
+							<br>
+							<span>Geeignet für Aufdach- und Flachdach-Montage.</span>
+							<br><br><br>
+							<b>Modul</b>
+							<br>
+							<span>
+								IHP65, hocheffiziente Heatpipe mit Stecksystem für einfache Montage (Trockenanbindung). Borosilikatglas-Kollektor mit Sunselect-Beschichtung für einen ganzjährig hohen Wirkungsgrad. Multifunktionale Vakuum-Röhren für die Warmwasserbereitung, Heizungsunterstützung und Gebäudeklimatisierung.
+							</span>
+						</div>
+
+						<img class="pullRight" src="images/Heatpipe.gif" alt="Heatpipe">
+
+						<br><br><br>
+
+						<table class="power">
+							<tr>
+								<th>TYP</th>
+								<th>HEATPIPE 20</th>
+								<th>HEATPIPE 30</th>
+							</tr>
+							<tr>
+								<td>Röhrenanzahl</td>
+								<td>20</td>
+								<td>30</td>
+							</tr>
+							<tr>
+								<td>Bruttofläche</td>
+								<td>2,9 m²</td>
+								<td>4,3 m²</td>
+							</tr>
+							<tr>
+								<td>Absorberfläche</td>
+								<td>2,0 m²</td>
+								<td>3,0 m²</td>
+							</tr>
+							<tr>
+								<td>Aperturfläche</td>
+								<td>2,1 m²</td>
+								<td>3,2 m²</td>
+							</tr>
+							<tr>
+								<td>Gewicht (unbefüllt)</td>
+								<td>55 kg</td>
+								<td>86 kg</td>
+							</tr>
+							<tr>
+								<td>Wärmeträger</td>
+								<td>Tyfocor HTL</td>
+								<td>Tyfocor HTL</td>
+							</tr>
+							<tr>
+								<td>Füllmenge (Modul)</td>
+								<td>0,9 l</td>
+								<td>1,35 l</td>
+							</tr>
+							<tr>
+								<td>max. Betriebsdruck</td>
+								<td>6 bar</td>
+								<td>6 bar</td>
+							</tr>
+							<tr>
+								<td>empfohlener Betriebsdruck</td>
+								<td>3 bar</td>
+								<td>3 bar</td>
+							</tr>
+							<tr>
+								<td>Einbaumaße (L x B x T) mm</td>
+								<td>1980 x 1450 x 165</td>
+								<td>1980 x 2150 x 165</td>
+							</tr>
+							<tr>
+								<td>Art. Nr.</td>
+								<td>136101</td>
+								<td>136102</td>
+							</tr>
+							<tr>
+								<td>Die Produkte sind BAFA förderfähig!</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<img src="images/info-symbol.png" alt="information">
+						<div class="innerText pullRight">
+							<strong class="smallStrong">Was für die Heatpipe spricht:</strong>
+							<ul>
+								<li>· Sehr gute Eignung für Anlagen mit hoher Schneelast</li>
+								<li>· Besonders hoher Wirkungsgrad</li>
+								<li>· Einfache, schnelle Montage</li>
+								<li>· Komfortables Stecksystem (einfacher Austausch der Röhren durch Trockenanbindung)</li>
+							</ul>
+						</div>
+						<br>
+						<i class="pullRight">Irrtümer / Technische Änderungen vorbehalten</i>
+					</div>
+					<!-- END PORTION -->
+				</div>
+				<!-- END TEXT -->
+
+				<div class="footer solarThird">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
+				</div>
+			</div>
+			<!-- END THIRD MAIN X -->
+
+			<div class="main x" id="fourth">
+				<div class="pvNavbar">
+					<div class="inner">
+						<ul>
+							<li>
+								<a class="act" onclick="change('first')">Produkte</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a  onclick="change('second')">Förderprogramm</a>
+								<div class="line"></div>
+							</li>
+						</ul>
+
+						<ul class="lower">
+							<li>
+								<a onclick="change('third')">Sonnenkollektoren</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a class="act" onclick="change('fourth')">Speicher</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fifth')">Anbindungen und Zubehör</a>
+								<div class="line act"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- END INNER -->
+				</div>
+				<!-- END NAVBAR -->
+
+				<strong class="title">Solarthermie</strong>
+				<div class="text">
+					<b>Solarpakete zur Warmwasserbereitung und Heizungsunterstützung</b>
+					<div class="row">
+						<div class="hLists">
+							<b>Solarthermie - Kollektoren</b>
+							<ul>
+								<li>· Rahmenkollektoren</li>
+								<li>· Indachkollektoren</li>
+								<li>· Röhrenkollektoren</li>
+							</ul>
+						</div>
+
+						<div class="hLists">
+							<strong>Solarthermie - Speicher</strong>
+							<ul>
+								<li>· Solarspeicher</li>
+								<li>· Pufferspeicher</li>
+								<li>· Antilegionellen - Kombispeicher</li>
+								<li>· Hygiene - Schichtkombispeicher</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="innerText pullRightText">
+						<strong class="smallStrong">SOLARSPEICHER - EMAILLIERT</strong>
+
+						<br><br>
+						
+						<b>Anwendung</b>
+						<p>
+							Warmwasserspeicher in stehender Ausführung für die zentrale Brauchwasserversorgung. Durch die beiden fest eingeschweißten, voneinander unabhängig arbeitenden Glattrohrwärmetauscher eignet sich der Speicher hervorragend zur Verbindung mit externen Wärmequellen wie Solaranlagen, Heizkessel, Fernwärme oder einem optional einsetzbaren E-Heizstab. Speziell für Solaranlagen mit Unterstützung einer weiteren Wärmequelle konzipiert, robust, umfassender Korrosionsschutz, effiziente Wärmeübertragung, hervorragende Wärmedämmung.
+						</p>
+
+						<b>Technik</b>
+						<p>
+							Gütegesicherte Zweischicht-Emaillierung und serienmäßige Mg-Schutzanode. Zwei unabhängige Glattrohrwärmetauscher. Wärmedämmung für Speicher bis 500 l aus fest aufgeschäumten FCKWfreiem PUR Hartschaum und abnehmbarem Weichschaummantel mit PVC-Schutzfolie kaschiert. Betriebstemperatur bis zu 95 °C (Speicher). Druckbeständigkeit bis zu 10 bar (Behälter) und 16 bar (Wärmetauscher oben und unten). Serienmäßige Ausführung mit Reinigungsflansch und Muffe für EHeizstab; auf Langzeitbeständigkeit nach ISO / CD 12 592.2 geprüft. <br> Das Solarspeichersortiment der ET Energie und Handel GmbH mit ihren robust gebauten und hervorragend isolierten Speichern umfasst zahlreiche Varianten und Größen bis zu 2000 l.
+						</p>
+					</div>
+
+					<img class="pullLeft" src="images/Solarspeicher.gif" alt="Solarspeicher">
+
+					<div class="innerText pullRightText marginTopMore">
+						<strong class="smallStrong">PUFFERSPEICHER</strong>
+
+						<br><br>
+						
+						<b>Anwendung</b>
+						<p>
+							Vielseitig einsetzbarer Pufferspeicher. Alle Wärmeerzeuger wie Solarkollektoren, Öl-, Gas-, Holz- und Pelletkessel, E-Heizpatrone, Wärmepumpe usw. können betrieben werden. Das Sortiment der  ET Energie und Handel GmbH umfasst verschiedene Varianten und Größen bis 5000 l.
+						</p>
+
+						<b>Technik</b>
+						<p>
+							Ausgezeichnete Wärmeübertragung, hervorragende Wärmedämmung, für jede Anwendung der passende Speicher. Volumen bis zu 5000 l, Sonderspeicher auf Anfrage. Hohe Lebensdauer. Alle Pufferspeicher für Warmwasserheizungen sind nach DIN 4753 gefertigt. Lage und Anzahl der Anschlüsse sind für den jeweiligen Einsatzzweck optimal abgestimmt.
+						</p>
+					</div>
+
+					<img class="pullLeft  marginTopMore" src="images/Pufferspeicher.gif" alt="Pufferspeicher">
+
+					<br><br><br>
+
+					<div class="innerText pullRightText marginTopMore">
+						<strong class="smallStrong">ANTILEGIONELLEN KOMBISPEICHER</strong>
+
+						<br><br>
+						
+						<b>Anwendung</b>
+						<p>
+							Der Antilegionellen-Kombispeicher mit integriertem Trinkwasserbehälter ist die kostengünstige Lösung für Warmwasserwärmung und Heizungsunterstützung.
+						</p>
+
+						<b>Technik</b>
+						<p>
+							Bei Antilegionellen-Kombispeichern weisen die warmwasserberührten Flächen der Innenbehälter eine gütegesicherte Zweischicht-Emaillierung auf. Dadurch wird gewährleistet, dass das Wasser nur mit hygienisch einwandfreiem Material in Berührung kommt. Jeder Speicher ist zudem mit einer Magnesium-Schutzanode ausgestattet, welche zusammen mit der Emaillierung für einen zuverlässigen Korrosionsschutz sorgt. Der Pufferbehälter ist innen roh, außen korrosionsgeschützt durch Lackierung. Die Lage und Anzahl der Anschlüsse ist für den jeweiligen Einsatzzweck optimal abgestimmt. Alle Kombispeicher werden nach DIN 4753 gefertigt, die Innenbehälter sind zusätzlich nach DIN 4753 Teil 1 bis 6 geprüft und erfüllen die Anforderungen der "Verordnung über Allgemeine Bedingungen für die Versorgung mit Wasser" (AVB Wasser V § 12 Abs. 4). Der Speicher bietet einen umfassenden Korrosionsschutz, ausgezeichnete Wärmeübertragung, hervorragende Wärmedämmung und für jede Anwendung das passende Volumen bis zu 1500 l.
+						</p>
+					</div>
+
+					<img class="pullLeft marginTopMore" src="images/Antilegionellen-Kombiespeicher.gif" alt="Antilegionellen-Kombiespeicher">
+
+					<br><br><br>
+
+					<div class="innerText pullRightText marginTopMore">
+						<strong class="smallStrong">HYGIENE-SCHICHTKOMBISPEICHER HSK</strong>
+
+						<br><br>
+						
+						<b>Technische Lieferbeschreibung</b>
+						<p>
+							Der Hygiene-Schichtkombispeicher ist ein Pufferspeicher mit integriertem Edelstahlwellrohr. Zusätzlich ist er mit zwei Glattrohrwärmetauschern ausgestattet. 
+							<br><br>
+							Im unteren Bereich verfügt der Speicher über ein Schichtladerohr. Darüber wird das Rücklaufwasser im jeweiligen Temperaturniveau eingeschichtet. Aufgrund des geringen Trinkwasserinhaltes sind keine weiteren Vorsorgemaßnahmen gegen Legionellenbildung erforderlich. Als Wärmedämmung dient eine Weichschaumisolierung mit PVC-Mantel.
+						</p>
+						<table>
+							<tr>
+								<th>500 Liter</th>
+								<th>100 mm</th>
+							</tr>
+							<tr>
+								<th>800 bis 5000 Liter</th>
+								<th>120 mm</th>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td>Betriebsdruck</td>
+								<td>3 bar</td>
+							</tr>
+							<tr>
+								<td>Prüfdruck</td>
+								<td>6 bar</td>
+							</tr>
+							<tr>
+								<td>Material</td>
+								<td>St 37.2</td>
+							</tr>
+							<tr>
+								<td>Edelstahlwellrohr</td>
+								<td>AISI 316 L</td>
+							</tr>
+						</table>
+					</div>
+
+					<img class="pullLeft marginTopMore" src="images/Antilegionellen-Kombiespeicher.gif" alt="Antilegionellen-Kombiespeicher">
+
+					<table class="dark boldHead">
+						<tr>
+							<th>TYP HSK</th>
+							<th>500</th>
+							<th>800</th>
+							<th>1000</th>
+							<th>1250</th>
+							<th>1500</th>
+							<th>2000</th>
+						</tr>
+						<tr>
+							<td>Gesamtvolumen / l</td>
+							<td>488</td>
+							<td>805</td>
+							<td>897</td>
+							<td>1145</td>
+							<td>1485</td>
+							<td>1915</td>
+						</tr>
+						<tr>
+							<td>Wärmetauscher Solar / oben / m²</td>
+							<td>-</td>
+							<td>2,0</td>
+							<td>3,0</td>
+							<td>3,0</td>
+							<td>3,5</td>
+							<td>4,2</td>
+						</tr>
+						<tr>
+							<td>Wärmetauscher Solar / unten / m²</td>
+							<td>2,3</td>
+							<td>3,0</td>
+							<td>3,5</td>
+							<td>3,8</td>
+							<td>4,5</td>
+							<td>5,5</td>
+						</tr>
+						<tr>
+							<td>Höhe Gesamt / mm</td>
+							<td>1720</td>
+							<td>1930</td>
+							<td>2110</td>
+							<td>2100</td>
+							<td>2240</td>
+							<td>2380</td>
+						</tr>
+						<tr>
+							<td>Kippmaß / mm</td>
+							<td>1785</td>
+							<td>2005</td>
+							<td>2185</td>
+							<td>2185</td>
+							<td>2330</td>
+							<td>2480</td>
+						</tr>
+						<tr>
+							<td>Durchmesser / mm (o. Isolierung)</td>
+							<td>650</td>
+							<td>790</td>
+							<td>790</td>
+							<td>900</td>
+							<td>1000</td>
+							<td>1100</td>
+						</tr>
+						<tr>
+							<td>Art. Nr.</td>
+							<td>153001</td>
+							<td>153002</td>
+							<td>153003</td>
+							<td>153004</td>
+							<td>153005</td>
+							<td>153006</td>
+						</tr>
+					</table>
+
+					<i>Irrtümer / Technische Änderungen vorbehalten</i>
+				</div>
+				<!-- END TEXT -->
+
+				<div class="footer solarFourth">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
+				</div>
+			</div>
+			<!-- END FOURTH MAIN X -->
+
+			<div class="main x" id="fifth">
+				<div class="pvNavbar">
+					<div class="inner">
+						<ul>
+							<li>
+								<a class="act" onclick="change('first')">Produkte</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a  onclick="change('second')">Förderprogramm</a>
+								<div class="line"></div>
+							</li>
+						</ul>
+
+						<ul class="lower">
+							<li>
+								<a onclick="change('third')">Sonnenkollektoren</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a onclick="change('fourth')">Speicher</a>
+								<div class="line act"></div>
+							</li>
+
+							<li class="divider-vertical"></li>
+									
+							<li>
+								<a class="act" onclick="change('fifth')">Anbindungen und Zubehör</a>
+								<div class="line act"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- END INNER -->
+				</div>
+				<!-- END NAVBAR -->
+
+				<div class="text">
+					<div class="innerText">
+						<strong>ANBINDUNGEN UND ZUBEHÖR</strong>
+						<br><br>
+
+						<strong class="smallStrong">IKAFLEX - Anbindungsleitung für den Innen- und Außenbereich</strong>
+						<p>
+							für die einfache und schnelle Anbindung von Sonnenkollektoren.
+							<br>
+							<b>Schutzfolie:</b> UV-beständiger Außenmantel, sehr reißfest
+							<br>
+							<b>Dämmung:</b> Hochtemperaturkautschuk bis 150 ˚C (kurzfristig 175 ˚C),
+							<br>
+							UV-beständig nach DIN, Wärmeleitfähigkeit 0,039 W/mK
+							<br>
+							<b>Mediumrohr:</b> hochflexibles Edelstahlwellrohr
+							<br>
+							<b>Dämmdicken:</b> 13 und 19 mm
+							<br>
+							<b>Längen:</b> in 10, 15, 20 oder 25 lfm Bunde gerollt.
+						</p>
+					</div>
+					<!-- END INNER TEXT -->
+					<img class="pullRightText" src="images/doppelrohr.png" alt="Doppelrohr">
+
+					<table class="dark wide boldHead">
+						<tr>
+							<th>Dimension</th>
+							<th>Art. Nr.</th>
+						</tr>
+						<tr>
+							<td>2 x DN 16 mit 2x13 mm Dämmdicke</td>
+							<td>166101</td>
+						</tr>
+						<tr>
+							<td>2 x DN 16 mit 2x19 mm Dämmdicke</td>
+							<td>166104</td>
+						</tr>
+						<tr>
+							<td>2 x DN 20 mit 2x13 mm Dämmdicke</td>
+							<td>166102</td>
+						</tr>
+						<tr>
+							<td>2 x DN 20 mit 2x19 mm Dämmdicke</td>
+							<td>166105</td>
+						</tr>
+						<tr>
+							<td>2 x DN 25 mit 2x19 mm Dämmdicke</td>
+							<td>166106</td>
+						</tr>
+						<tr>
+							<td colspan="2">Andere Längen auf Anfrage.</td>
+						</tr>
+						<tr>
+							<td colspan="2"><b>ACHTUNG: Für die IKAFLEX-Anbindungsleitungen sind die Verschraubungen extra zu bestellen!</b></td>
+						</tr>
+					</table>
+
+					<div class="innerText marginTopMore">
+						<strong class="smallStrong">IKAFLEX - Verschraubungsset mit Außengewinde</strong>
+						<p>
+							bestehend aus je 1 Überwurfmutter, Einlegering, Montagescheibe, Dichtung und Einschraubteil mit breiter Dichtfläche, Verbindung bis DN 25, ohne Schlagset.<br>
+						</p>
+					</div>
+
+					<img class="pullRightText marginTopMore" src="images/Verschraubungsset_mit_Außengewinde.png" alt="Verschraubungsset mit Außengewinde">
+
+					<table class="dark wide boldHead">
+						<tr>
+							<th>EW Rohr - Überwurfmutter - AG – Reduzierung</th>
+							<th>Art. Nr.</th>
+						</tr>
+						<tr>
+							<td>EW Rohr DN 16 mit ÜWM 3/4" auf AG 1/2"</td>
+							<td>166181</td>
+						</tr>
+						<tr>
+							<td>EW Rohr DN 20 mit ÜWM 1" auf AG 3/4"</td>
+							<td>166182</td>
+						</tr>
+						<tr>
+							<td>EW Rohr DN 25 mit ÜWM 11/4" auf AG 1"</td>
+							<td>166183</td>
+						</tr>
+					</table>
+
+					<img class="pullLeftInfoImg" src="images/info-symbol.png" alt="information">
+					<div class="innerText pullRight">
+						<strong>TIPP</strong>
+						<p>Wir empfehlen unsere metallisch dichtenden Verschraubungen</p>
+					</div>
+
+					<br>
+
+					<div class="innerText wide marginTopMore">
+						<strong class="smallStrong">METALLISCH DICHTENDE VERSCHRAUBUNGEN</strong>
+					</div>
+					<div class="innerText">
+						<p>
+							Speziell in Kombination mit unseren Anbindungsleitungen entwickelt. Ihr Vorteil: 70% Zeitersparnis gegenüber der herkömmlichen Anwendung, sowie kaum Fehlerquellen bei der Montage.
+						</p>
+					</div>
+					<img class="pullRightText" src="images/Neu.png" alt="Neu">
+
+					<div class="wide">
+						<table class="dark boldHead pullLeft notSoWide">
+							<tr>
+								<th colspan="2">IKAFLEX - Verschraubungsset mit Außengewinde</th>
+							</tr>
+							<tr>
+								<th>EW Rohr - AG – Reduzierung</th>
+								<th>Art. Nr.</th>
+							</tr>
+							<tr>
+								<td>EW Rohr DN 16 auf AG 1/2"</td>
+								<td>166189</td>
+							</tr>
+							<tr>
+								<td>EW Rohr DN 20 auf AG 3/4"</td>
+								<td>166190</td>
+							</tr>
+							<tr>
+								<td>EW Rohr DN 25 auf AG 1"</td>
+								<td>166194</td>
+							</tr>
+						</table>
+						<img class="pullRightText marginTopNotALot" src="images/upper.gif" alt="Kupplungsset">
+					</div>
+
+					<div class="wide">
+						<table class="dark boldHead pullLeft notSoWide">
+							<tr>
+								<th>IKAFLEX – Kupplungsset</th>
+								<th>Art. Nr.</th>
+							</tr>
+							<tr>
+								<td>Kupplungsset DN 16</td>
+								<td>166195</td>
+							</tr>
+							<tr>
+								<td>Kupplungsset DN 20</td>
+								<td>166196</td>
+							</tr>
+							<tr>
+								<td>Kupplungsset DN 25</td>
+								<td>166197</td>
+							</tr>
+						</table>
+						<img class="pullRightText marginTopNotALot" src="images/lower.gif" alt="Kupplungsset">
+					</div>
+
+					<div class="wide">
+						<table class="dark boldHead pullLeft notSoWide">
+							<tr>
+								<th>IKAFLEX - Klemmringverschraubungsset auf Kupfer</th>
+								<th>Art. Nr.</th>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 16 auf CU 18</td>
+								<td>192117</td>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 16 auf CU 22</td>
+								<td>192118</td>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 20 auf CU 18</td>
+								<td>192119</td>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 20 auf CU 22</td>
+								<td>192120</td>
+							</tr>
+						</table>
+						<img class="pullRightText marginTopNotALot" src="images/Neu.png" alt="Neu">
+					</div>
+
+					<div class="wide">
+						<table class="dark boldHead pullLeft notSoWide">
+							<tr>
+								<th>IKAFLEX - Verschraubungsset mit Innengewinde und breiter Dichtfläche</th>
+								<th>Art. Nr.</th>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 16 auf IG 3/4", flexible Mutter</td>
+								<td>192121</td>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 20 auf IG 3/4", flexible Mutter</td>
+								<td>192122</td>
+							</tr>
+						</table>
+						<img class="pullRightText marginTopNotALot" src="images/Neu.png" alt="Neu">
+					</div>
+
+					<div class="wide">
+						<table class="dark boldHead pullLeft notSoWide">
+							<tr>
+								<th>IKAFLEX - Löt- und Pressverbindungsset auf Kupfer</th>
+								<th>Art. Nr.</th>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 16 auf CU 22 außen und CU 18 innen</td>
+								<td>192123</td>
+							</tr>
+							<tr>
+								<td>EW-Rohr DN 20 auf CU 22 außen und CU 18 innen</td>
+								<td>192124</td>
+							</tr>
+						</table>
+						<img class="pullRightText marginTopNotALot" src="images/Neu.png" alt="Neu">
+					</div>
+
+					<img class="pullLeftInfoImg marginTopMore" src="images/screw.png" alt="">
+					<div class="innerText pullRightText marginRightNone marginTopMore">
+						<strong class="smallStrong">Montageanleitung</strong>
+						<ol class="marginRightNone">
+							<li>Rohr mit Rohrabschneider auf die gewünschte Länge kürzen</li>
+							<li>Überwurfmutter auf das EW-Rohr schieben gem. Abbildung</li>
+							<li>WICHTIG: Einlegeteile zwischen letztem Wellental und vorletzter Welle einlegen gem. Abb. (es muss noch die letzte Welle zum Gegenpressen vorhanden sein)</li>
+							<li>Überwurfmutter bis zum Anschlag mit dem dazugehörigen Nippel fest verschrauben</li>
+						</ol>
+					</div>
+				</div>
+				<!-- END TEXT -->
+
+				<div class="footer solarFifth">
+					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
+					</p>
+				</div>
+			</div>
+			<!-- END FOURTH MAIN X -->
 		</div>
 		<!-- END CONTAINER -->
 	</center>
