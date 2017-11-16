@@ -12,6 +12,23 @@
 				<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 			</div>
 
+			<div class="language">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<ul class="nav">
+							<li>
+								<a href=""><img class="this" src="images/de.gif"></a>
+							</li>
+									
+							<li>
+								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Language end -->
+
 			<div class="navbar">
 				<div class="navbar-inner">
 					<nav>
@@ -104,23 +121,6 @@
 				<!-- Navbar inner end -->
 			</div>
 			<!-- Navbar end -->
-
-			<div class="language">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-							<li>
-								<a href=""><img class="this" src="images/de.gif"></a>
-							</li>
-									
-							<li>
-								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- Language dropdown end -->
 		</div>
 		<!-- END CONTENT -->
 
@@ -557,5 +557,57 @@
 		<!-- END MAIN -->
 	</div>
 	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 0;
+
+				setMaxWidth();
+
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
+					leftMargin = (containerWidth - width) / 2;
+					var height = $('.content > .navbar > .navbar-inner').height();
+					var containerHeight = $('.content > .navbar').height();
+					topMargin = (containerHeight - height) / 2;
+				}
+				else {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+	
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = $('.content').height();
+				$('.main').css('top', top);
+			}
+
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'width', width);
+			}
+		}(jQuery));
+	</script>
 </body>
 </html>

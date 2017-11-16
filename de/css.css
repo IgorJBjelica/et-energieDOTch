@@ -43,15 +43,14 @@
 }
 
 .logo {
-	max-width: 1020px;
+	float: left;
+	margin-left: 11%;
     max-height: 52px;
-    margin: 0 auto 0;
 	padding-top: .7%;
 }
 
 .logo > a > #logo {
-	margin: .3% 0 0 2%;
-	max-width: 12%;
+	max-width: 100%;
 	max-height: 46px;
 	float: left;
 }
@@ -113,6 +112,8 @@
 }
 
 .language {
+	float: right;
+	margin: 1.1% 11% 0 0;
 	position: relative;
 	display: block;
 	z-index: 4;
@@ -141,7 +142,6 @@ nav{
 
 .navbar > .navbar-inner > nav > .nav.top, .navbar > .navbar-inner > nav > .nav.bottom {
 	float: right;
-	margin-right: 8%;
 }
 
 .nav > li > a {
@@ -206,10 +206,9 @@ nav{
 }
 
 .navbar{
-	max-width: 808px;
+	max-width: 60%;
 	position: relative;
 	float: left;
-	/*margin-left: 35px;*/
 	overflow: visible;
 }
 
@@ -231,6 +230,7 @@ nav{
 
 .navbar-inner {
 	max-width: 900px;
+	width: min-content;
 
   display: inline-block;
   background-color: #ffffff;
