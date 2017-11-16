@@ -55,25 +55,6 @@
 	float: left;
 }
 
-#hamburger {
-	max-width: 20px;
-	padding-top: 66%;
-}
-
-#hamburger:hover, #hamburger.clicked, #hamburger:focus {
-	cursor: pointer;
-	padding-top: 58%;
-
-	-webkit-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
-	   -moz-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
-		    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.4);
-
-	-webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-}
-
 .five {
 	margin-left: 20%;
 	margin-top: 10px;
@@ -85,20 +66,6 @@
 #flags {
 	max-width: 23px;
 	padding-top: 20%;
-}
-
-#arrow {
-    width: 14.5px;
-}
-
-#arrow:hover, #arrow.clicked {
-	cursor: pointer;
-	opacity: 1;
-
-	-webkit-transition: all 0.3s ease-in-out;
-       -moz-transition: all 0.3s ease-in-out;
-         -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
 }
 
 #flags:hover, #flags.clicked {
@@ -218,16 +185,6 @@ nav{
 	padding-bottom: 0;
 }
 
-.mini{
-	padding: 0;
-	margin: 0;
-	/*margin-left: 52.9%; */
-}
-
-.mini > .navbar-inner {
-	padding-top: 1.5%;
-}
-
 .navbar-inner {
 	max-width: 900px;
 	width: min-content;
@@ -237,37 +194,6 @@ nav{
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-}
-
-#hiddenNB {
-	margin-top: -2%;
-	background-color: #ffffff;
-	opacity: 0;
-	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
-	/*visibility: hidden;*/
-
-	-webkit-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-       -moz-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-         -o-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-            transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-}
-
-#hiddenNB > nav > .nav {
-	margin: 0;
-}
-
-#hiddenL {
-	max-height: 36px;
-	margin-top: -16px;
-	background-color: #ffffff;
-	opacity: 0;
-	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
-	visibility: hidden;
-
-	-webkit-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-       -moz-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-         -o-transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
-            transition: visibility 2.1s, margin-top 2s ease-in-out, opacity 1.8s ease-in-out;
 }
 
 .navbar .nav > .four > a {
