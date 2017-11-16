@@ -13,6 +13,23 @@
 					<a class="none" href="#"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
 
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language end -->
+
 				<div class="navbar">
 					<div class="navbar-inner">
 						<nav>
@@ -105,23 +122,6 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END HEADER CONTENT -->
 
@@ -196,21 +196,65 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		(function ($) {
-			var x = $(window).width();
-			var bulletOLWidth = (x * 7/100).toFixed();
-			var bulletCount = $('#slider ol li').length;
-			var bulletWidth = bulletOLWidth / (bulletCount + 3);
-			var bulletHeight = bulletWidth;
-
-			$('#slider ol').css({ width: bulletOLWidth, height: bulletHeight });
-			$('#slider ol li').css({ width: bulletWidth, height: bulletHeight });
+			var slideCount = $('#slider ul li').length;
+			var slideWidth = $(window).width();
+			var slideHeight = $('#slider ul li').height();
+			var sliderUlWidth = slideCount * slideWidth;
 
 			setMargins();
+			setSlider();
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
 				setMargins();
+				setSlider();
 			});
 
+			function setSlider() {
+				setBullets();
+
+				slideWidth = $(window).width();
+				slideHeight = $('#slider ul li').height();
+				$('#slider').css({ height: slideHeight });
+				$('#slider ul').css({ marginLeft: - slideWidth });
+			    $('#slider ul li:last-child').prependTo('#slider ul');
+			    $('#slider ol li:first').addClass('active');
+			}
+
+			function setBullets() {
+				var bulletOLWidth = ($(window).width() * 7/100).toFixed();
+				var bulletCount = $('#slider ol li').length;
+				var bulletWidth = bulletOLWidth / (bulletCount + 3);
+				var bulletHeight = bulletWidth;
+
+				$('#slider ol').css({ width: bulletOLWidth, height: bulletHeight });
+				$('#slider ol li').css({ width: bulletWidth, height: bulletHeight });
+			}
+
 			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 0;
+
+				setMaxWidth();
+
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
+					leftMargin = (containerWidth - width) / 2;
+					var height = $('.content > .navbar > .navbar-inner').height();
+					var containerHeight = $('.content > .navbar').height();
+					topMargin = (containerHeight - height) / 2;
+				}
+				else {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+	
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = $('.content').height();
+				$('.stufs').css('margin-top', top);
+
 				width = $(window).width();
 				containerWidth = $("#slider ol").width();  
 				leftMargin = (width - containerWidth) / 2;
@@ -218,19 +262,24 @@
 				$("#slider ol").css("marginLeft", leftMargin);
 			}
 
-			var slideCount = $('#slider ul li').length;
-			var slideWidth = x;
-			var slideHeight = $('#slider ul li').height();
-			var sliderUlWidth = slideCount * slideWidth;
-	
-			$('#slider').css({ height: slideHeight });
-			$('#slider ul').css({ marginLeft: - slideWidth });
-	
-		    $('#slider ul li:last-child').prependTo('#slider ul');
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+				else {
 
-		    $('#slider ol li:first').addClass('active');
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'width', width);
+			}
 
 		    function moveLeft() {
+		    	slideWidth = $(window).width();
 		        $('#slider ul').stop().animate({
 		            left: + slideWidth
 		        }, 800, 'swing',
@@ -242,6 +291,7 @@
 		    };
 
 		    function moveRight() {
+		    	slideWidth = $(window).width();
 		        $('#slider ul').filter(':not(:animated)').animate({
 		            left: - slideWidth
 		        }, 800, 'swing',
@@ -265,6 +315,7 @@
 		    };
 
 		    function loopRight(cid) {
+		    	slideWidth = $(window).width();
 		    	if (cid != $('#slider ol li.active').attr('data-slide')) {
 		    		$('#slider ul').filter(':not(:animated)').animate({
 		            	left: - slideWidth
@@ -279,6 +330,7 @@
 		    };
 
 		    function loopLeft(cid) {
+		    	slideWidth = $(window).width();
 		    	if (cid != $('#slider ol li.active').attr('data-slide')) {
 		    		$('#slider ul').stop().animate({
 		            	left: + slideWidth
