@@ -186,10 +186,13 @@
 				<!-- END MAIN -->
 			</div>
 			<!-- END STUFS -->
-			<div class="footer" id="footer1">
-				<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-				</p>
-			</div>
+
+				<footer>
+					<div class="footer">
+						<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+						</p>
+					</div>
+				</footer>
 		</div>
 		<!-- END CONTAINER -->
 	</center>
@@ -362,6 +365,8 @@
 		    window.setInterval(function(){
 		    moveRight();
 		    }, 5000);
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
 		}(jQuery)); 
 	</script>
 </body>

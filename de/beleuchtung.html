@@ -3,35 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-	</script>
 </head>
 
 <body class="body2 nobcgr">
@@ -41,6 +12,23 @@
 				<div class="logo">
 					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
+
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language dropdown end -->
 
 				<div class="navbar">
 					<div class="navbar-inner">
@@ -134,23 +122,6 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END CONTENT -->
 
@@ -164,9 +135,13 @@
 					</p>
 
 					<b>Wir begleiten Sie in die Zukunft!</b>
-					<div class="shadow">
-					</div>
+				</div>
 
+				<div class="shadow">
+					<img src="images/LEDBeleuchtung.jpg" />
+				</div>
+
+				<div id="txt2" class="text">
 					<b>Was wir Ihnen bieten</b>
 					<p>
 						Mit uns haben Sie einen zuverlässigen Geschäftspartner für LED Beleuchtung, der Ihnen von Anfang an zur Seite steht und die passende Lösung für Sie findet.  Unser Service umfasst:Mit uns haben Sie einen zuverlässigen Geschäftspartner für LED Beleuchtung, der Ihnen von Anfang an zur Seite steht und die passende Lösung für Sie findet.
@@ -212,15 +187,74 @@
 						<li>• Hohe Effizienz, lange Lebensdauer und geringer Wartungsaufwand sorgen für beste Wirtschaftlichkeit.</li>
 					</ul>
 				</div>
-
-				<div class="footer">
-					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-					</p>
-				</div>
 			</div>
 			<!-- END MAIN -->
+
+				<footer>
+					<div class="footer">
+						<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+						</p>
+					</div>
+				</footer>
 		</div>
 		<!-- END CONTAINER -->
 	</center>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 0;
+
+				setMaxWidth();
+
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
+					leftMargin = (containerWidth - width) / 2;
+					var height = $('.content > .navbar > .navbar-inner').height();
+					var containerHeight = $('.content > .navbar').height();
+					topMargin = (containerHeight - height) / 2;
+				}
+				else {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+	
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = $('.content').height();
+				$('.main').css('top', top);
+
+				top += $('.main').height();
+				$('footer').css('top', top);
+			}
+
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>

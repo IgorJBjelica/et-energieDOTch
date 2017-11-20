@@ -17,7 +17,7 @@
 	max-height: 100%;
 	background-image: url("images/background.png");
 	background-size: 100%;
-	background-color: #ededed;
+	background-color: #ffffff;
 	background-repeat: no-repeat;
     background-position: 0 -8%;
 	margin: 0;
@@ -234,9 +234,6 @@ nav{
 
 .main.home{
 	background-color: white;
-	/*box-shadow: 0px -6px 10px 0 rgba(0, 0, 0, 0.88),
-				0px 6px 10px 0 rgba(0, 0, 0, 0.88);*/
-	/*margin: 44.2% 0 0;*/
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -246,7 +243,6 @@ nav{
 
 .main.home.second {
     margin-top: -1.5%;
-    /*box-shadow: 0px -6px 10px 0 rgba(0, 0, 0, 0.88);*/
 }
 
 .main.home > .row > img {
@@ -374,7 +370,7 @@ a.control_next {
 .main {
 	font-family: 'PT Sans', sans-serif;
 	font-size: .75em;
-	background-color: rgba(255, 255, 255, .9);
+	background-color: transparent;
 	position: absolute;
 	top: 67px;
 	left: 10%;
@@ -383,10 +379,14 @@ a.control_next {
 	z-index: 2;
 }
 
+.main > div:last-of-type {
+	margin-bottom: 8%;
+}
+
 .main1 {
 	font-family: 'PT Sans', sans-serif;
 	font-size: .75em;
-	background-color: rgba(255, 255, 255, .9);
+	background-color: transparent;
 	position: absolute;
 	left: 10%;
 	width: 80%;
@@ -647,24 +647,30 @@ textarea {
 
 /***************************************************************FOOTER**************************************************************************/
 
-.footer{
+footer{
 	text-align: center;
 	background-color: #1c1c1b;
-	color: #fff;
-    font-size: .8em;
-    position: relative;
+    position: absolute;
     width: 100%;
-    /*margin: 12.5% auto 0;*/
+    height: auto;
 	float: left;
+	z-index: 999;
+}
+
+.footer{
+	width: 77%;
+	margin: auto;
+    font-size: .62em;
+	color: #fff;
 }
 
 .footer > p {
-	margin-bottom: 1%;
+	margin: 1.5% 0 1.5% 0;
 }
 
-#footer1 {
+/*#footer1 {
 	font-size: .63em;
-}
+}*/
 
 /****************************************************************LOGIN***************************************************************************/
 
@@ -695,6 +701,14 @@ textarea {
 
 /****************************************************************SANITAR***************************************************************************/
 
+.backpic {
+	position: absolute;
+}
+
+.backpic img, .picSa img {
+	width: 100%;
+}
+
 .main > .text > ul{
 	margin-top: 0;
 }
@@ -704,9 +718,13 @@ textarea {
 	width: 90%;
 }
 
-.picSa > img {
-	width: 100%;
-	border-radius: 30px;
+#txt p {
+    margin-top: .5em;
+    line-height: 1.3em;
+}
+
+.picSa img:first-of-type {
+	margin-bottom: 3%;
 }
 
 .row {
@@ -716,13 +734,17 @@ textarea {
 }
 
 .lists {
-	width: 30%;
-	margin: 0 3%;
+	width: 25%;
+	margin: 0 4%;
 }
 
 .lists > img {
-	width: 80%;
+	width: 100%;
 	margin-bottom: 10%;
+}
+
+.lists > ul {
+	width: 90%;
 }
 
 .lists > ul > li {
@@ -730,7 +752,7 @@ textarea {
 }
 
 #uber {
-	margin-top: 10%;
+	margin-top: 4%;
 	width: 100%;
 	text-align: left;
 }
@@ -746,17 +768,8 @@ textarea {
 	width: 80%
 }
 
-.main > #txt1 > .shadow {
-	background-image: url('images/LEDBeleuchtung.jpg');
-	background-repeat: no-repeat;
-	background-size: 100%;
-	width: 1042px;
-	height: 408px;
-	margin: .8% auto 1% -6.4%;
-
-	-webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
-	   -moz-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
-		    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.4), inset 0px -10px 10px rgba(0, 0, 0, 0.4);
+.main > .shadow, .main .shadow img {
+	width: 100%
 }
 
 .main > #txt1 > ul > li {
@@ -862,13 +875,13 @@ td {
 	font-weight: 100;
 }
 
-#second > .footer {
+/*#second > .footer {
 	margin-top: 29.5%;
 }
 
 #third > .footer {
 	margin-top: 19.8%;
-}
+}*/
 
 /**********************************************************************GALLERY**********************************************************************/
 
@@ -958,9 +971,9 @@ td {
 	margin-left: 4%;
 }
 
-.textST ~ .footer {
+/*.textST ~ .footer {
 	margin-top: 8%;
-}
+}*/
 
 /******************************************************************DOWNLOAD***********************************************************************/
 
@@ -976,9 +989,9 @@ td {
 	margin-right: 8%;
 }
 
-.footer.download {
+/*.footer.download {
 	margin-top: 30.3%;
-}
+}*/
 
 /******************************************************************HEIZUNG***********************************************************************/
 

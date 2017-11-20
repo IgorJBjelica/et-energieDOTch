@@ -3,44 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-	</script>
 </head>
 
 <body class="body1 nobcgr">
-	<center>
 		<div class="container">
 			<div class="content">					
 				<div class="logo">
 					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
+
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language dropdown end -->
 
 				<div class="navbar">
 					<div class="navbar-inner">
@@ -59,7 +46,7 @@
 								<li class="divider-vertical"></li>
 
 								<li class="threee active">
-									<a href="#">Sanitär</a>
+									<a href="#">Sanit&auml;r</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -83,14 +70,14 @@
 								<li class="divider-vertical"></li>
 
 								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderlösungen</a>
+									<a href="inprogress.html">Neuheiten/Sonderl&ouml;sungen</a>
 								</li>
 							</ul>
 
 							<ul class="nav bottom">
 
 								<li class="eight">
-									<a href="inprogress.html">Förderprogramm</a>
+									<a href="inprogress.html">F&ouml;rderprogramm</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -134,42 +121,32 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END CONTENT -->
 
+			<div class="backpic">
+				<img src="images/Sanitaer.jpg">
+			</div>
 			<div class="main">
-
 				<strong class="title">GEHEN SIE MIT UNS IN DIE ZUKUNFT</strong>
 					
 				<div id="txt" class="text">
-					<b>Gönnen Sie sich modernes Design für Ihr Badezimmer.</b>
+					<b>G&ouml;nnen Sie sich modernes Design f&uuml;r Ihr Badezimmer.</b>
 					<p>
-						Als Alternative zum klassischen Duschablauf fangen unsere Duschrinnen das Wasser nicht nur punktuell auf, sondern nehmen es auf einer angemessenen  Breite auf. Durch die hohe Durchflussmenge und dem ausgezeichneten Geruchsverschluss entstehen keine unangenehmen Gerüche. Die Duschrinnen  sind leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb. Die Rostmuster sind in verschiedenen Ausführungen,  einschließlich populärem Flieseneinsatzrost erhältlich. Unsere Duschrinnen lassen sich nahtlos einbauen und ermöglichen Ihnen zudem noch ein  barrierefreies Duschen in angenehmer Atmosphäre.
+						Als Alternative zum klassischen Duschablauf fangen unsere Duschrinnen das Wasser nicht nur punktuell auf, sondern nehmen es auf einer angemessenen Breite auf. Durch die hohe Durchflussmenge und dem ausgezeichneten Geruchsverschluss entstehen keine unangenehmen Ger&uuml;che. Die Duschrinnen  sind leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb. Die Rostmuster sind in verschiedenen Ausf&uuml;hrungen,  einschlie&szlig;lich popul&auml;rem Flieseneinsatzrost erh&auml;ltlich. Unsere Duschrinnen lassen sich nahtlos einbauen und erm&ouml;glichen Ihnen zudem noch ein barrierefreies Duschen in angenehmer Atmosph&auml;re.
 					</p><br />
+				</div>
 
+				<div class="txt">
 					<div class="picSa">
-						<img src="images/duschrinnen.jpg">
+						<center>
+							<img src="images/Duschrinnen_all.jpg">
+							<img src="images/duschrinnen.jpg">
+						</center>
 					</div>
 
 					<div id="uber">
-						<b id="uber">Übersicht </b>
+						<b id="uber">&Uuml;bersicht</b>
 						<br />
 					</div>
 
@@ -178,13 +155,13 @@
 							<img src="images/bodenduschrinnen.png">
 							<b>Allgemeine Eigenschaften</b>
 							<ul>
-								<li>• Edelstahl 304 oder 316</li>
-								<li>• Hohe Durchflussmenge, mit Deodorant-Siphon</li>
-								<li>• Entspricht der EN1253 und EN274 Norm</li>
-								<li>• Dank Flanschkantenausführung rundum wasserdicht</li>
-								<li>• 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
-								<li>• Für die Montage höhenverstellbare Beine</li>
-								<li>• Sichere Installation und Gebrauch, mit glatten Seiten</li>
+								<li>&bull; Edelstahl 304 oder 316</li>
+								<li>&bull; Hohe Durchflussmenge, mit Deodorant-Siphon</li>
+								<li>&bull; Entspricht der EN1253 und EN274 Norm</li>
+								<li>&bull; Dank Flanschkantenausf&uuml;hrung rundum wasserdicht</li>
+								<li>&bull; 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
+								<li>&bull; F&uuml;r die Montage h&ouml;henverstellbare Beine</li>
+								<li>&bull; Sichere Installation und Gebrauch, mit glatten Seiten</li>
 							</ul>
 						</div>
 
@@ -194,14 +171,14 @@
 							<img src="images/quadratduschrinnen.png">
 							<b>Allgemeine Eigenschaften</b>
 							<ul>
-								<li>• Edelstahl 304 oder 316</li>
-								<li>• Entspricht der EN1253 und EN274 Norm</li>
-								<li>• Dank Flanschkantenausführung rundum wasserdicht</li>
-								<li>• Für die Montage höhenverstellbare Beine</li>
-								<li>• Sichere Installation und Gebrauch, mit glatten Seiten</li>
-								<li>• 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
-								<li>• Größe kann in 100 x 100, 130 x 130, 150 x 150, 200 x 200, 300 x 300 ..... 1000 x 1000mm hergestellt werden.</li>
-								<li>• Rostmuster in verschiedenen Ausführungen, einschließlich populärem Flieseneinsatzrost</li>
+								<li>&bull; Edelstahl 304 oder 316</li>
+								<li>&bull; Entspricht der EN1253 und EN274 Norm</li>
+								<li>&bull; Dank Flanschkantenausf&uuml;hrung rundum wasserdicht</li>
+								<li>&bull; F&uuml;r die Montage h&ouml;henverstellbare Beine</li>
+								<li>&bull; Sichere Installation und Gebrauch, mit glatten Seiten</li>
+								<li>&bull; 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
+								<li>&bull; Gr&ouml;&szlig;e kann in 100 x 100, 130 x 130, 150 x 150, 200 x 200, 300 x 300 ..... 1000 x 1000mm hergestellt werden.</li>
+								<li>&bull; Rostmuster in verschiedenen Ausf&uuml;hrungen, einschlie&szlig;lich popul&auml;rem Flieseneinsatzrost</li>
 							</ul>
 						</div>
 
@@ -211,14 +188,14 @@
 							<img src="images/wandnaheduschrinnen.png">
 							<b>Allgemeine Eigenschaften</b>
 							<ul>
-								<li>• Edelstahl 304 oder 316</li>
-								<li>• Hohe Durchflussmenge, mit Deodorant-Siphon</li>
-								<li>• Elegante Edelstahlrand-Grenze zwischen den Fliesen und dem Rost</li>
-								<li>• 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
-								<li>• Höhenverstellbare Kante ermöglicht einfache Montage</li>
-								<li>• Für die Montage höhenverstellbare Beine</li>
-								<li>• Sichere Installation und Gebrauch, mit glatten Seiten</li>
-								<li>• Komplettpaket inklusive Zubehör</li>
+								<li>&bull; Edelstahl 304 oder 316</li>
+								<li>&bull; Hohe Durchflussmenge, mit Deodorant-Siphon</li>
+								<li>&bull; Elegante Edelstahlrand-Grenze zwischen den Fliesen und dem Rost</li>
+								<li>&bull; 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
+								<li>&bull; H&ouml;henverstellbare Kante erm&ouml;glicht einfache Montage</li>
+								<li>&bull; F&uuml;r die Montage h&ouml;henverstellbare Beine</li>
+								<li>&bull; Sichere Installation und Gebrauch, mit glatten Seiten</li>
+								<li>&bull; Komplettpaket inklusive Zubeh&ouml;r</li>
 							</ul>
 						</div>
 					</div>
@@ -227,32 +204,111 @@
 						<br />
 
 						<div class="lists">
-							<img src="images/wandduschrinnen.png">
+							<img class="sample" src="images/wandduschrinnen.png">
 							<b>Allgemeine Eigenschaften</b>
 							<ul>
-								<li>• Für die Wandmontage entworfen, die Abdeckung wird mit der Wandfliese bestückt auf dem    Abflusskörper platziert</li>
-								<li>• Die Abdeckung ist aus rostfreiem Stahl, poliert</li>
-								<li>• Einsatzgebiete: belebte Bereiche wie Schwimmbäder, Thermen und Wellnesszentren</li>
-								<li>• Schnellablauf, entspricht der EN1253 und EN274 Norm</li>
-								<li>• Mit ausgezeichnetem Geruchsverschluss</li>
-								<li>• Edelstahl 304 oder 316</li>
-								<li>• Rostfläche: matt gebürstet, poliert</li>
-								<li>• 40 - 50mm Abflussanschluss für 50mm Drainagesystem</li>
-								<li>• Sparen Sie Bauzeit, behalten Sie die Integrität der Fliesen und das schöne Aussehen</li>
+								<li>&bull; F&uuml;r die Wandmontage entworfen, die Abdeckung wird mit der Wandfliese best&uuml;ckt auf dem    Abflussk&ouml;rper platziert</li>
+								<li>&bull; Die Abdeckung ist aus rostfreiem Stahl, poliert</li>
+								<li>&bull; Einsatzgebiete: belebte Bereiche wie Schwimmb&auml;der, Thermen und Wellnesszentren</li>
+								<li>&bull; Schnellablauf, entspricht der EN1253 und EN274 Norm</li>
+								<li>&bull; Mit ausgezeichnetem Geruchsverschluss</li>
+								<li>&bull; Edelstahl 304 oder 316</li>
+								<li>&bull; Rostfl&auml;che: matt geb&uuml;rstet, poliert</li>
+								<li>&bull; 40 - 50mm Abflussanschluss f&uuml;r 50mm Drainagesystem</li>
+								<li>&bull; Sparen Sie Bauzeit, behalten Sie die Integrit&auml;t der Fliesen und das sch&ouml;ne Aussehen</li>
+							</ul>
+						</div>
+						<br />
+
+						<div class="lists">
+							<img class="target" src="images/duschrinneslimline.jpg">
+							<b>Allgemeine Eigenschaften</b>
+							<ul>
+								<li>&bull; Edelstahl 304 oder 316</li>
+								<li>&bull; Hohe Durchflussmenge, mit Deodorant-Siphon</li>
+								<li>&bull; Entspricht der EN1253 und EN274 Norm</li>
+								<li>&bull; Dank Flanschkantenausf&uuml;hrung rundum wasserdicht</li>
+								<li>&bull; 100% leicht zu reinigen durch abnehmbaren Kunststoff-Geruchsverschluss, Siphon und Sieb</li>
+								<li>&bull; F&uuml;r die Montage h&ouml;henverstellbare Beine</li>
+								<li>&bull; Sichere Installation und Gebrauch, mit glatten Seiten</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<!-- END TEXT -->
-
-				<div class="footer">
-					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-					</p>
-				</div>
 			</div>
 			<!-- END MAIN -->
+
+				<footer>
+					<div class="footer">
+						<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+						</p>
+					</div>
+				</footer>
 		</div>
 		<!-- END CONTAINER -->
-	</center>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 0;
+
+				setMaxWidth();
+
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
+					leftMargin = (containerWidth - width) / 2;
+					var height = $('.content > .navbar > .navbar-inner').height();
+					var containerHeight = $('.content > .navbar').height();
+					topMargin = (containerHeight - height) / 2;
+				}
+				else {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+	
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = $('.content').height();
+				$('.backpic').css('top', top);
+				$('.main').css('top', top);
+
+				$('.picSa').css('margin-top', $('.backpic').height());
+				var upDown = ($('.sample').height() - $('.target').height()) / 2;
+				$('.target').css('padding-top', upDown);
+				$('.target').css('padding-bottom', upDown);
+
+				top += $('.main').height();
+				$('footer').css('top', top);
+			}
+
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = $(window).width() - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>
