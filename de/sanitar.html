@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
-<body class="body1 nobcgr">
+<body class="body">
 		<div class="container">
 			<div class="content">					
 				<div class="logo">
@@ -64,20 +64,20 @@
 								<li class="divider-vertical"></li>
 
 								<li class="six">
-									<a href="solarthermie.html">Solarthermie</a>
+									<a href="inprogress.html">Solarthermie</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderl&ouml;sungen</a>
+									<a href="ns.html">Neuheiten/Sonderl&ouml;sungen</a>
 								</li>
 							</ul>
 
 							<ul class="nav bottom">
 
 								<li class="eight">
-									<a href="inprogress.html">F&ouml;rderprogramm</a>
+									<a href="forderprogramm.html">F&ouml;rderprogramm</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -257,7 +257,7 @@
 
 			function setMargins() {
 				var leftMargin = 0;
-				var topMargin = 0;
+				var topMargin = 5;
 
 				setMaxWidth();
 
@@ -265,9 +265,6 @@
 					var width = $('.content > .navbar > .navbar-inner').width();
 					var containerWidth = $('.content > .navbar').width();  
 					leftMargin = (containerWidth - width) / 2;
-					var height = $('.content > .navbar > .navbar-inner').height();
-					var containerHeight = $('.content > .navbar').height();
-					topMargin = (containerHeight - height) / 2;
 				}
 				else {
 					var width = $('.content > .navbar > .navbar-inner').width();

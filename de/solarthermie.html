@@ -3,90 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-
-		function change(id){
-			var el = document.getElementById(id);
-			var c = document.getElementsByClassName('main x');
-
-			if(el.id == 'second')
-				document.body.style.position = "fixed";
-			else
-				document.body.style.position = "absolute";
-
-			for (var i = c.length - 1; i >= 0; i--) {
-				
-				if(c[i].id == el.id)
-					el.style.visibility = 'visible';
-				else
-					c[i].style.visibility = 'hidden';
-			}
-		}
-
-		function loadFirst(id){
-			document.getElementById(id).style.visibility = 'visible';
-		}
-
-		function testScroll(){
-			var el = document.getElementsByClassName('main x');
-
-			for(var i = 0; i < el.length; i++){
-				if(el[i].style.visibility == 'visible')
-					switch(el[i].id){
-						case 'first':{
-							if((document.body.scrollTop > 287) || (document.documentElement.scrollTop > 287))
-								document.documentElement.scrollTop = 286;
-						}break;
-
-						case 'fourth':{
-							if((document.body.scrollTop > 1879) || (document.documentElement.scrollTop > 1879))
-								document.documentElement.scrollTop = 1878;
-						}break;
-
-						case 'fifth':{
-							if((document.body.scrollTop > 1562) || (document.documentElement.scrollTop > 1562))
-								document.documentElement.scrollTop = 1561;
-						}break;
-					}
-			}
-		}
-	</script>
 </head>
 
-<body class="body1 nobcgr" onload="loadFirst('first')" onscroll="testScroll()">
+<body class="body1 nobcgr">
 	<center>
 		<div class="container">
 			<div class="content">					
 				<div class="logo">
 					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
+
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language dropdown end -->
 
 				<div class="navbar">
 					<div class="navbar-inner">
@@ -129,14 +71,14 @@
 								<li class="divider-vertical"></li>
 
 								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderlösungen</a>
+									<a href="ns.html">Neuheiten/Sonderlösungen</a>
 								</li>
 							</ul>
 
 							<ul class="nav bottom">
 
 								<li class="eight">
-									<a href="inprogress.html">Förderprogramm</a>
+									<a href="forderprogramm.html">Förderprogramm</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -180,67 +122,10 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END CONTENT -->
 
-			<div class="main x" id="first">
-				<div class="pvNavbar">
-					<div class="inner">
-						<ul>
-							<li>
-								<a class="act" onclick="change('first')">Produkte</a>
-								<div class="line act"></div>
-							</li>
-
-							<li class="divider-vertical"></li>
-									
-							<li>
-								<a  onclick="change('second')">Förderprogramm</a>
-								<div class="line"></div>
-							</li>
-						</ul>
-
-						<ul class="lower">
-							<li>
-								<a onclick="change('third')">Sonnenkollektoren</a>
-								<div class="line act"></div>
-							</li>
-
-							<li class="divider-vertical"></li>
-									
-							<li>
-								<a onclick="change('fourth')">Speicher</a>
-								<div class="line act"></div>
-							</li>
-
-							<li class="divider-vertical"></li>
-									
-							<li>
-								<a onclick="change('fifth')">Anbindungen und Zubehör</a>
-								<div class="line act"></div>
-							</li>
-						</ul>
-					</div>
-					<!-- END INNER -->
-				</div>
-				<!-- END NAVBAR -->
+			<div class="main" id="first">
 
 				<strong class="title">Solarthermie</strong>
 				<div class="text">

@@ -3,44 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-	</script>
 </head>
 
-<body class="body1">
-	<center>
+<body class="body">
 		<div class="container">
 			<div class="content">					
 				<div class="logo">
 					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
+
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language dropdown end -->
 
 				<div class="navbar">
 					<div class="navbar-inner">
@@ -77,20 +64,20 @@
 								<li class="divider-vertical"></li>
 
 								<li class="six">
-									<a href="solarthermie.html">Solarthermie</a>
+									<a href="inprogress.html">Solarthermie</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderlösungen</a>
+									<a href="ns.html">Neuheiten/Sonderlösungen</a>
 								</li>
 							</ul>
 
 							<ul class="nav bottom">
 
 								<li class="eight">
-									<a href="inprogress.html">Förderprogramm</a>
+									<a href="forderprogramm.html">Förderprogramm</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -134,23 +121,6 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END CONTENT -->
 
@@ -158,6 +128,7 @@
 				<strong class="title">STELLENANGEBOTE</strong>
 
 				<div class="textST">
+					<b>Stellenangebote</b>
 					<p>
 						Wir, die ET Energie und Handel GmbH am Standort Kempten (Allgäu), haben ständig viel zu tun und  brauchen daher tatkräftige, motivierte und zuverlässige Mitarbeiter auf langfristiger Basis für Projektplanung, Heizungsbau und Solarmontage in Festanstellung oder auf Subunternehmer-Basis.  (Arbeiten, wo andere Urlaub machen!) <br><br> Arbeiten Sie mit uns: Für die Umwelt und für den gemeinsamen Erfolg mit regenerativen Energien!  Wir freuen uns auf Ihre Bewerbung!
 					</p>
@@ -166,19 +137,19 @@
 					
 					<strong>Wir bieten Ihnen:</strong>
 					<ul>
-						<li>• eine sichere Position in einem expandierenden Unternehmen</li>
-						<li>• abwechslungsreiche und interessante Aufgabengebiete</li>
-						<li>• ein unbefristetes Arbeitsverhältnis in Vollzeit</li>
-						<li>• sehr gute Verdienstmöglichkeiten</li>
+						<li>&bull; eine sichere Position in einem expandierenden Unternehmen</li>
+						<li>&bull; abwechslungsreiche und interessante Aufgabengebiete</li>
+						<li>&bull; ein unbefristetes Arbeitsverhältnis in Vollzeit</li>
+						<li>&bull; sehr gute Verdienstmöglichkeiten</li>
 					</ul>
 
 					<br>
 
 					<strong>Zur Verstärkung unseres Teams suchen wir aktuell:</strong>
 					<ul>
-						<li>• Handelsvertreter</li>
-						<li>• Servicetechniker</li>
-						<li>• Handwerker</li>
+						<li>&bull; Handelsvertreter</li>
+						<li>&bull; Servicetechniker</li>
+						<li>&bull; Handwerker</li>
 					</ul>
 
 					<br>
@@ -193,17 +164,78 @@
 				</div>
 				<!-- END TEXTST -->
 				<img class="symbol" src="images/symbol.png" />
-
-
-
-				<div class="footer">
-					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-					</p>
-				</div>
 			</div>
 			<!-- END MAIN -->
-		</div>
-		<!-- END CONTAINER -->
-	</center>
+
+		<footer>
+			<div class="footer">
+				<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+				</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 5;
+				var win = parseFloat($(window).width());
+
+				setMaxWidth(win);
+
+				if (win >= 1049) {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+					leftMargin = (containerWidth - width) / 2;
+				}
+				else {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content').width());  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = parseFloat($('.content').height());
+				$('.main').css('top', top);
+
+				top += parseFloat($('.main').height());
+
+				if ((top + $('footer').height()) < $(window).height()) {
+
+					$('footer').css('top', ($(window).height() - $('footer').height()));
+				}
+				else {
+					$('footer').css('top', top);
+				}
+			}
+
+			function setMaxWidth(win) {
+				if (win >= 1049) {
+					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
+					var width = win - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = win - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'max-width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>

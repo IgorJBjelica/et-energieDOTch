@@ -19,7 +19,7 @@
 							<li>
 								<a href=""><img class="this" src="images/de.gif"></a>
 							</li>
-
+							
 							<li>
 								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
 							</li>
@@ -46,7 +46,7 @@
 							<li class="divider-vertical"></li>
 
 							<li class="threee">
-								<a href="sanitar.html">Sanitär</a>
+								<a href="sanitar.html">Sanit&auml;r</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -69,15 +69,15 @@
 
 							<li class="divider-vertical"></li>
 
-							<li class="seven">
-								<a href="ns.html">Neuheiten/Sonderlösungen</a>
+							<li class="seven active">
+								<a href="#">Neuheiten/Sonderl&ouml;sungen</a>
 							</li>
 						</ul>
 
 						<ul class="nav bottom">
 
 							<li class="eight">
-								<a href="forderprogramm.html">Förderprogramm</a>
+								<a href="forderprogramm.html">F&ouml;rderprogramm</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -112,8 +112,8 @@
 
 							<li class="divider-vertical"></li>
 
-							<li class="three active">
-								<a href="#">Login</a>
+							<li class="three">
+								<a href="login.html">Login</a>
 							</li>
 						</ul>
 					</nav>
@@ -123,21 +123,36 @@
 			<!-- Navbar end -->
 		</div>
 		<!-- END CONTENT -->
-		<center>
-			<div class="main1">
-				<div class="loginContainer">
-					<form class="loginForm">
-						<input type="text" name="benutzername" placeholder="Benutzername"><br />
-						<input type="text" name="passwort" required="true" placeholder="Passwort"><br />
 
-						<input type="submit" class="button" id="login" name="login" value="Login">
-						<input type="reset" class="linkButton" name="reset" value="Reset">
-					</form>
-					<a href="register.html">Noch nicht registriert?</a>
-				</div>
+		<div class="main">
+			<div class="text pullLeft">
+				<strong class="big orange">Achtung neu bei uns auf Lager:</strong><br><br><br><br>
+				<span class="big">Die neue Reflex SERVITEC MINI</span><br><br>
+				<span class="mediumer">Maximale Effizienz - kompakt, wirtschaftlich und klimaschonend</span><br><br>
+
 			</div>
-			<!-- END MAIN -->
-		</center>
+
+			<img class="pullMoreRight topMargin" src="images/HWEinfuehrungspreis.gif">
+
+			<div class="text nodown">
+				<span class="medium">Vorteile auf einen Blick:</span>
+				<ul class="medium sp">
+					<li>&bull; Vakuum-Spr&uuml;hrohrentgasung f&uuml;r Ein- und Zweifamilienh&auml;user</li>
+					<li>&bull; Energieeinsparpotential von bis zu 10,6 %</li>
+					<li>&bull; Einfache Installation und Inbetriebnahme</li>
+					<li>&bull; Wirtschaftlich, mit kurzer Amortisationszeit</li>
+					<li>&bull; Keine Verschlammung und somit l&auml;ngere Lebenszeit der Heizung</li>
+					<li class="orange">&bull; Bis zu 30 Prozent staatliche F&ouml;rderung (BAFA)</li>
+				</ul>
+
+				<p>Nehmen Sie mit uns Kontakt auf, <br> wir freuen uns auf Sie!</p>
+
+				<p>Reflex Servitec in einem Heiz- oder K&uuml;hlwassersystem mit MAG Servitec-Video</p>
+
+				<p>Abstrahierte Darstellung der Funktionsweise und des Zusammenspiels von Entgasung und Druckhaltung mit MAG.</p>
+			</div>
+		</div>
+		<!-- END MAIN -->
 
 		<footer>
 			<div class="footer">
@@ -147,6 +162,7 @@
 		</footer>
 	</div>
 	<!-- END CONTAINER -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		(function ($) {
@@ -158,25 +174,24 @@
 			function setMargins() {
 				var leftMargin = 0;
 				var topMargin = 5;
-				var win = parseFloat($(window).width());
 
-				setMaxWidth(win);
+				setMaxWidth();
 
-				if (win >= 1049) {
-					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
-					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
 					leftMargin = (containerWidth - width) / 2;
 				}
 				else {
-					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
-					var containerWidth = parseFloat($('.content').width());  
-					var leftMargin = (containerWidth - width) / 2;
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					leftMargin = (containerWidth - width) / 2;
 					topMargin = 25;
 				}
-
+				
 				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
 				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
-				var top = parseFloat($('.content').height());
+				var top = $('.content').height();
 				$('.main').css('top', top);
 
 				top += parseFloat($('.main').height());
@@ -190,20 +205,19 @@
 				}
 			}
 
-			function setMaxWidth(win) {
-				if (win >= 1049) {
-					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
-					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
-					var width = win - widthLogo - widthLanguage;
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
 				}
 				else {
-
 					var widthLogo = $('.logo').width();
 					var widthLanguage = $('.language').width();
-					var width = win - widthLogo - widthLanguage;
+					var width = $(window).width() - widthLogo - widthLanguage;
 				}
 
-				$( ".content > .navbar" ).css( 'max-width', width);
+				$( ".content > .navbar" ).css('width', width);
 			}
 
 			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));

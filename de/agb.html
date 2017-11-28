@@ -3,440 +3,472 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-	</script>
 </head>
 
-<body class="body1 nobcgr">
-	<center>
-		<div class="container">
-			<div class="content">					
-				<div class="logo">
-					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
-				</div>
+<body class="body">
+	<div class="container">
+		<div class="content">					
+			<div class="logo">
+				<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
+			</div>
 
+			<div class="language">
 				<div class="navbar">
 					<div class="navbar-inner">
-						<nav>
-							<ul class="nav top">
-								<li class="one">
-									<a class="navi" href="index.html">Home</a>
-								</li>
+						<ul class="nav">
+							<li>
+								<a href=""><img class="this" src="images/de.gif"></a>
+							</li>
 
-								<li class="divider-vertical"></li>
-
-								<li class="twoo">
-									<a href="heizung.html">Heizung</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="threee">
-									<a href="sanitar.html">Sanitär</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="fourr">
-									<a href="beleuchtung.html">Beleuchtung</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="fivee">
-									<a href="pv.html">PV</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="six">
-									<a href="solarthermie.html">Solarthermie</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderlösungen</a>
-								</li>
-							</ul>
-
-							<ul class="nav bottom">
-
-								<li class="eight">
-									<a href="inprogress.html">Förderprogramm</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="two">
-									<a href="kontakt.html">Kontakt</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="eight active">
-									<a href="#">AGB</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="nine">
-									<a href="impressum.html">Impressum</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="ten">
-									<a href="stellen.html">Stellenangebote</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="eleven">
-									<a href="download.html">Downloads</a>
-								</li>
-
-								<li class="divider-vertical"></li>
-
-								<li class="three">
-									<a href="login.html">Login</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<!-- Navbar inner end -->
-				</div>
-				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
+							<li>
+								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<!-- Language dropdown end -->
 			</div>
-			<!-- END CONTENT -->
+			<!-- Language dropdown end -->
 
-			<div class="main">
-				<strong class="title">ALLGEMEINE GESCHÄFTSBEDINGUNGEN (AGB) DER ET ENERGIE & HANDEL GMBH</strong>
-				<b class="textAGB">zur Verwendung im Geschäftsverkehr gegenüber Unternehmern und Verbrauchern</b>
+			<div class="navbar">
+				<div class="navbar-inner">
+					<nav>
+						<ul class="nav top">
+							<li class="one">
+								<a class="navi" href="index.html">Home</a>
+							</li>
 
-				<div class="text">
+							<li class="divider-vertical"></li>
 
-					<b>§ 1 Allgemeines</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Für unsere Geschäftsbeziehung mit Verbrauchern gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt des Vertragsschlusses gültigen Fassung. Für unsere Geschäftsbeziehung mit Unternehmern, auch für zukünftige, gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt des Vertragsschlusses gültigen Fassung.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Verbraucher im Sinne unserer Allgemeinen Geschäftsbedingungen sind natürliche Personen, mit denen in Geschäftsbeziehung getreten wird, ohne dass diesen eine gewerbliche oder selbständige berufliche Tätigkeit zugerechnet werden kann.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Unternehmer im Sinne unserer Allgemeinen Geschäftsbedingungen sind natürliche oder juristische Personen oder rechtsfähige Personengesellschaften, die bei 
-								Vertragsschluss in Ausübung einer gewerblichen oder selbständigen beruflichen Tätigkeit handeln.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>Kunden im Sinne unserer Allgemeinen Geschäftsbedingungen sind sowohl Verbraucher, als auch Unternehmer.</td>
-						</tr>
-						<tr>
-							<td>e)</td>
-							<td>
-								Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, wir haben ausdrücklich schriftlich ihrer Geltung zugestimmt.
-							</td>
-						</tr>
-					</table>
+							<li class="twoo">
+								<a href="heizung.html">Heizung</a>
+							</li>
 
-					<b>§ 2 Angebot, Vertragsgegenstand</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Unsere Angebote, mündlich oder schriftlich, sind hinsichtlich der Preise, Mengen, Lieferfristen, Liefermöglichkeiten und Nebenleistungen freibleibend. Aufträge werden für uns erst rechtsverbindlich, wenn wir diese innerhalb einer Frist von 14 Tagen bestätigt oder aber mit Zustimmung des Kunden vereinbarungsgemäß ausgeführt haben, wobei ein stillschweigendes Einverständnis des Kunden genügt.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Maßgebend für Art und Umfang der Lieferung oder Leistung ist unsere schriftliche Auftragsbestätigung. Abbildungen, Zeichnungen, Maße und Gewichtsangaben sowie sonstige technische Daten oder Angaben kennzeichnen lediglich den Vertragsgegenstand und stellen keine vereinbarte Beschaffenheit dar.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								An Kostenvoranschlägen, Zeichnungen und ähnlichen Unterlagen behalten wir uns Urheber-, Eigentums - sowie gewerbliche Leistungs- und Schutzrechte vor; derartige Unterlagen dürfen Dritten vom Kunden nicht zugänglich gemacht, nicht kopiert und zur Selbstanfertigung der Objekte verwendet werden. Sie sind uns, wenn der Auftrag nicht erteilt wird, auf Verlangen unverzüglich, spätestens nach sieben Tagen, zurückzugeben.
-							</td>
-						</tr>  
-					</table>
+							<li class="divider-vertical"></li>
 
-					<b>§ 3 Preise und Zahlung</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Berechnung und Zahlung erfolgen in Schweizer Franken. Die gesetzliche Umsatzsteuer ist in unseren Preisen nicht enthalten; sie wird in der Rechnung gesondert ausgewiesen. Alle Versandkosten, insbesondere Verpackungs-, Transport- und Transportversicherungskosten, gehen zu Lasten des Kunden, soweit nichts anderes vereinbart ist.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Sofern sich aus der Auftragsbestätigung nichts anderes ergibt, ist der Kaufpreis ohne Abzug ab Rechnungsstellung zur Zahlung fällig. Der Kunde kommt ohne weitere Erklärung 14 Tage nach Fälligkeit in Verzug, soweit er nicht bezahlt hat. Für die Folgen des Zahlungsverzuges gelten die gesetzlichen Regelungen.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Für jede nach Verzugseintritt ergehende Mahnung werden Kosten in Höhe von EUR 1,50 berechnet. Uns ist der Nachweis eines höheren Schadens gestattet. Dem Kunden ist der Nachweis eines geringeren Schadens gestattet.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Ein Recht zur Aufrechnung steht dem Kunden nur zu, wenn seine Gegenansprüche rechtskräftig festgestellt oder von uns anerkannt sind. Außerdem ist er zur Ausübung eines Zurückbehaltungsrechts nur insoweit befugt, als sein Gegenanspruch auf demselben Vertragsverhältnis beruht.
-							</td>
-						</tr>        
-					</table>
+							<li class="threee">
+								<a href="sanitar.html">Sanitär</a>
+							</li>
 
-					<b>§ 4 Lieferung</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">Sofern nicht anders vereinbart, erfolgt die Lieferung ab Werk an die vom Kunden angegebene Lieferadresse.</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Ist der Kunde Unternehmer, geht die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der Ware auf diesen über, sobald wir die Sache dem Spediteur, dem Frachtführer oder der sonst zur Ausführung der Versendung bestimmten Person oder Anstalt ausgeliefert haben. Der Übergabe steht es gleich, wenn der Unternehmer im Verzug der Annahme ist.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Nach Vertragsschluss eintretende unvorhergesehene Ereignisse, die wir nicht zu vertreten haben, verlängern die Lieferzeit angemessen, jedoch höchstens um zwei Monate.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Der Vertragsschluss erfolgt unter dem Vorbehalt der richtigen und rechtzeitigen Selbstbelieferung durch unsere Zulieferer. Dies gilt nur für den Fall, dass die Nichtlieferung nicht von uns zu vertreten ist, insbesondere bei Abschluss eines kongruenten Deckungsgeschäftes mit unserem Zulieferer.
-							</td>
-						</tr>
-						<tr>
-							<td>e)</td>
-							<td>
-								In den Fällen des Absatzes c) und d) werden wir den Kunden unverzüglich informieren. Die Gegenleistung wird unverzüglich zurückerstattet.
-							</td>
-						</tr>
-						<tr>
-							<td>f)</td>
-							<td>
-								Wir haften bei Verzögerung der Leistung in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. Unsere Haftung beschränkt sich bei Unternehmern in Fällen grober Fahrlässigkeit jedoch auf den nach Art der Ware oder Leistung vorhersehbaren, vertragstypischen Schaden, wenn kein in Satz 5 dieser Bestimmung aufgeführter Ausnahmefall vorliegt. In anderen Fällen der Verzögerung der Leistung wird unsere Haftung für den Schadenersatz neben der Leistung und den Schadenersatz statt der Leistung auf 0,5 % pro Woche, maximal jedoch auf 5 % des Wertes der Lieferung bzw. Leistung begrenzt. Weitergehende Ansprüche des Kunden sind ausgeschlossen. Die Beschränkungen gelten nicht bei Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit.
-							</td>
-						</tr>
-						<tr>
-							<td>g)</td>
-							<td>
-								Kommt der Kunde in Annahmeverzug oder wird der Versand der Lieferung auf Wunsch des Kunden um mehr als zwei Wochen über den vereinbarten Liefertermin oder, wenn kein genauer Liefertermin vereinbart war, nach der Anzeige der Versandbereitschaft verzögert, können wir pauschal für jeden Monat, auch zeitanteilig, ein Lagergeld in Höhe von 0,5 % des Wertes der Lieferung, höchstens jedoch 5 % berechnen. Dem Kunden ist der Nachweis gestattet, dass uns kein oder ein wesentlich niedrigerer Schaden entstanden ist. Uns ist der Nachweis gestattet, dass ein höherer Schaden entstanden ist.
-							</td>
-						</tr>             
-					</table>
+							<li class="divider-vertical"></li>
 
-					<b>§ 5 Mängelhaftung</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Ist der Kunde Unternehmer, leisten wir für Mängel der Ware zunächst nach unserer Wahl Gewähr durch Nachbesserung oder Ersatzlieferung.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Ist der Kunde Verbraucher, so hat er zunächst die Wahl, ob die Nacherfüllung durch Nachbesserung oder Ersatzlieferung erfolgen soll. Wir sind jedoch berechtigt, die Art der gewählten Nacherfüllung zu verweigern, wenn sie nur mit unverhältnismäßigen Kosten möglich ist und die andere Art der Nacherfüllung ohne erhebliche Nachteile für den Kunden bleibt. Die Kosten sind unverhältnismäßig hoch, wenn sie 25 % des Kaufpreises übersteigen.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Schlägt die Nacherfüllung fehl, kann der Kunde grundsätzlich nach seiner Wahl Herabsetzung der Vergütung (Minderung) oder Rückgängigmachung des Vertrags (Rücktritt) und Schadensersatz statt der Leistung im Rahmen der Haftungsbeschränkung (s. § 6) verlangen. Bei einer nur geringfügigen Vertragswidrigkeit, insbesondere bei nur geringfügigen Mängeln, steht dem Kunden jedoch kein Rücktrittsrecht zu.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Unternehmer müssen uns offensichtliche Mängel innerhalb einer Frist von zwei Wochen ab Empfang der Ware schriftlich anzeigen; andernfalls ist die Geltendmachung des Gewährleistungsanspruchs ausgeschlossen. Zur Fristwahrung genügt die rechtzeitige Absendung. Den Unternehmer trifft die volle Beweislast für sämtliche Anspruchsvoraussetzungen, insbesondere für den Mangel selbst, für den Zeitpunkt der Feststellung des Mangels und für die Rechtzeitigkeit der Mängelrüge.
-							</td>
-						</tr>
-						<tr>
-							<td>e)</td>
-							<td>
-								Die Verjährungsfrist beträgt für Unternehmer ein Jahr ab Ablieferung der Ware. Dies gilt nicht, wenn uns der Unternehmer offensichtliche Mängel nicht rechtzeitig angezeigt hat (Abs. d) dieser Bestimmung). Für Verbraucher beträgt die Verjährungsfrist zwei Jahre ab Ablieferung der Ware. Die Verjährungsfrist des § 479 BGB bleibt unberührt.
-							</td>
-						</tr>
-						<tr>
-							<td>f)</td>
-							<td>
-								Rückgriffsansprüche des Unternehmers gemäß § 478 BGB bestehen nur insoweit, als der Unternehmer mit seinem Abnehmer keine über die gesetzlichen Mängelansprüche hinausgehende Vereinbarung getroffen hat.
-							</td>
-						</tr>
-					</table>
+							<li class="fourr">
+								<a href="beleuchtung.html">Beleuchtung</a>
+							</li>
 
-					<b>§ 6 Haftungsbeschränkung</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Wir haften in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. Im Übrigen haften wir nur nach dem Produkthaftungsgesetz, wegen der Verletzung des Lebens, des Körpers oder der Gesundheit, oder wegen der schuldhaften Verletzung wesentlicher Vertragspflichten. Der Schadenersatzanspruch für die Verletzung wesentlicher Vertragspflichten ist jedoch auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Gegenüber Unternehmern ist unsere Haftung auch bei grober Fahrlässigkeit auf den vertragstypischen, vorhersehbaren Schaden begrenzt, soweit keiner der in Satz 2 aufgeführten Ausnahmefälle vorliegt. Die Haftung für Schäden durch den Liefergegenstand an Rechtsgütern des Kunden ist ganz ausgeschlossen. Die Regelungen der Sätze 3 und 5 gelten nicht, soweit Vorsatz oder grobe Fahrlässigkeit vorliegt oder wegen der Verletzung des Lebens, des Körpers oder der Gesundheit gehaftet wird.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Die Regelungen des Abs. a) erstrecken sich auf Schadenersatz neben der Leistung und Schadenersatz statt der Leistung, gleich aus welchem Rechtsgrund, insbesondere wegen Mängeln, der Verletzung von Pflichten aus dem Schuldverhältnis oder aus unerlaubter Handlung. Sie gilt auch für den Anspruch auf Ersatz vergeblicher Aufwendungen. Die Haftung für Verzug bestimmt sich jedoch nach § 4 Abs. f), die Haftung für Unmöglichkeit nach Abs. c) dieser Bestimmung.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Wie haften bei Unmöglichkeit der Leistung in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. In anderen Fällen der Unmöglichkeit wird unsere Haftung für den Schadenersatz neben oder statt der Leistung und auf Ersatz der vergeblichen Aufwendungen auf 15 % des Wertes der Lieferung oder Leistung begrenzt, der wegen der Unmöglichkeit nicht genutzt werden kann. Gegenüber Unternehmern ist unsere Haftung auch bei grober Fahrlässigkeit auf den vertragstypischen, vorhersehbaren Schaden begrenzt, soweit nicht wegen Vorsatz oder grober Fahrlässigkeit gehaftet wird und keiner der in Satz 5 aufgeführten Ausnahmefälle vorliegt. Weitergehende Ansprüche des Kunden sind ausgeschlossen. Die Beschränkungen gelten nicht bei Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit. Das Recht des Kunden zum Rücktritt vom Vertrag bleibt unberührt.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Der Kunde kann im Rahmen der gesetzlichen Bestimmungen vom Vertrag nur zurücktreten, wenn wir die Pflichtverletzung zu vertreten haben; im Falle von Mängeln verbleibt es jedoch bei den gesetzlichen Voraussetzungen. Der Kunde hat sich bei Pflichtverletzungen innerhalb einer Frist von zwei Wochen nach unserer Aufforderung zu erklären, ob er wegen der Pflichtverletzung vom Vertrag zurücktritt oder auf der Leistung besteht.
-							</td>
-						</tr>
-						<tr>
-							<td>e)</td>
-							<td>
-								Der Anspruch des Kunden auf Schadenersatz verjährt nach einem Jahr ab Gefahrenübergang. Dies gilt nicht, wenn uns Vorsatz oder grobes Verschulden vorwerfbar ist, sowie im Falle der Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit sowie nach dem Produkthaftungsgesetz
-							</td>
-						</tr>
-					</table>
+							<li class="divider-vertical"></li>
 
-					<b>§ 7 Eigentumsvorbehalt</b>
-					<table>
-						<tr>
-							<td>a)</td>
-							<td>
-								Bei Verträgen mit Verbrauchern behalten wir uns das Eigentum an der Ware bis zur vollständigen Zahlung des Kaufpreises vor.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>
-								Bei Verträgen mit Unternehmern behalten wir uns das Eigentum an der Ware bis zur vollständigen Begleichung aller Forderungen aus der Geschäftsbeziehung vor.
-							</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Der Kunde ist verpflichtet, uns einen Zugriff Dritter auf die Ware, etwa im Falle einer Pfändung, sowie etwaige Beschädigungen oder die Vernichtung der Ware unverzüglich mitzuteilen. Einen Besitzwechsel der Ware sowie den eigenen Geschäfts- oder Wohnsitzwechsel hat der Kunde unverzüglich anzuzeigen.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Wir sind berechtigt, bei vertragswidrigem Verhalten des Kunden, insbesondere bei Zahlungsverzug oder bei Verletzung einer Pflicht nach Abs. c) dieser Bestimmung vom Vertrag zurückzutreten und/oder die Ware herauszuverlangen. Der Kunde ist zur Herausgabe verpflichtet. Im Herausgabeverlangen der Ware liegt keine Rücktrittserklärung, es sei denn, dies wird von uns ausdrücklich erklärt.
-							</td>
-						</tr>
-						<tr>
-							<td>e)</td>
-							<td>
-								Ist der Kunde Unternehmer, ist er berechtigt, die Ware im ordentlichen Geschäftsgang weiterzuveräußern. Er tritt uns bereits jetzt alle Forderungen in Höhe des Rechnungsbetrages ab, die ihm durch die Weiterveräußerung gegen einen Dritten erwachsen. Wir nehmen die Abtretung an. Nach der Abtretung ist der Unternehmer zur Einziehung der Forderung ermächtigt. Wir behalten uns vor, die Weiterveräußerungsbefugnis und die Einziehungsermächtigung zu widerrufen sowie die Forderung selbst einzuziehen, sobald der Unternehmer seinen Zahlungsverpflichtungen aus der Geschäftsbeziehung nicht ordnungsgemäß nachkommt und in Zahlungsverzug gerät. Der Unternehmer hat in diesem Falle unverzüglich alle zur Einziehung erforderlichen Angaben zu machen und dem Dritten unverzüglich die Abtretung mitzuteilen.
-							</td>
-						</tr>
-						<tr>
-							<td>f)</td>
-							<td>
-								Die Be- und Verarbeitung der Ware durch den Kunden erfolgt stets im Namen und im Auftrag für uns. Erfolgt eine Verarbeitung mit uns nicht gehörenden Gegenständen, so erwerben wir an der neuen Sache das Miteigentum im Verhältnis zum Wert der von uns gelieferten Ware zu den sonstigen verarbeiteten Gegenständen. Dasselbe gilt, wenn die Ware mit anderen, uns nicht gehörenden Gegenständen vermischt ist.
-							</td>
-						</tr>
-					</table>
+							<li class="fivee">
+								<a href="pv.html">PV</a>
+							</li>
 
-					<b>§ 8 Schlussbestimmungen</b>
-					<table>
-						<tr colspan="8">
-							<td colspan="1">a)</td>
-							<td colspan="7">
-								Es gilt das Recht der Schweizer Eidgenossenschaft. Die Bestimmungen des UNKaufrechts finden keine Anwendung.
-							</td>
-						</tr>
-						<tr>
-							<td>b)</td>
-							<td>Erfüllungsort ist Buchs, Schweiz.</td>
-						</tr>
-						<tr>
-							<td>c)</td>
-							<td>
-								Sofern der Kunde Kaufmann oder juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist, gilt Buchs, Schweiz als Gerichtsstand vereinbart.
-							</td>
-						</tr>
-						<tr>
-							<td>d)</td>
-							<td>
-								Sollten einzelne Bestimmungen des Vertrages mit dem Kunden einschließlich dieser Allgemeinen Geschäftsbedingungen ganz oder teilweise unwirksam sein oder werden, so wird hierdurch die Gültigkeit der übrigen Bestimmungen nicht berührt.
-							</td>
-						</tr>
-					</table>
+							<li class="divider-vertical"></li>
+
+							<li class="six">
+								<a href="inprogress.html">Solarthermie</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="seven">
+								<a href="ns.html">Neuheiten/Sonderlösungen</a>
+							</li>
+						</ul>
+
+						<ul class="nav bottom">
+
+							<li class="eight">
+								<a href="forderprogramm.html">Förderprogramm</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="two">
+								<a href="kontakt.html">Kontakt</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="eight active">
+								<a href="#">AGB</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="nine">
+								<a href="impressum.html">Impressum</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="ten">
+								<a href="stellen.html">Stellenangebote</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="eleven">
+								<a href="download.html">Downloads</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="three">
+								<a href="login.html">Login</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<!-- END TEXT -->
-
-				<div class="footer">
-					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-					</p>
-				</div>
+				<!-- Navbar inner end -->
 			</div>
-			<!-- END MAIN -->
+			<!-- Navbar end -->
 		</div>
-		<!-- END CONTAINER -->
-	</center>
+		<!-- END CONTENT -->
+
+		<div class="main">
+			<strong class="title">ALLGEMEINE GESCHÄFTSBEDINGUNGEN (AGB) DER ET ENERGIE & HANDEL GMBH</strong>
+			<b class="text noup">zur Verwendung im Geschäftsverkehr gegenüber Unternehmern und Verbrauchern</b>
+
+			<div class="text">
+				<b>§ 1 Allgemeines</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Für unsere Geschäftsbeziehung mit Verbrauchern gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt des Vertragsschlusses gültigen Fassung. Für unsere Geschäftsbeziehung mit Unternehmern, auch für zukünftige, gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt des Vertragsschlusses gültigen Fassung.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Verbraucher im Sinne unserer Allgemeinen Geschäftsbedingungen sind natürliche Personen, mit denen in Geschäftsbeziehung getreten wird, ohne dass diesen eine gewerbliche oder selbständige berufliche Tätigkeit zugerechnet werden kann.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Unternehmer im Sinne unserer Allgemeinen Geschäftsbedingungen sind natürliche oder juristische Personen oder rechtsfähige Personengesellschaften, die bei 
+							Vertragsschluss in Ausübung einer gewerblichen oder selbständigen beruflichen Tätigkeit handeln.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>Kunden im Sinne unserer Allgemeinen Geschäftsbedingungen sind sowohl Verbraucher, als auch Unternehmer.</td>
+					</tr>
+					<tr>
+						<td>e)</td>
+						<td>
+							Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, wir haben ausdrücklich schriftlich ihrer Geltung zugestimmt.
+						</td>
+					</tr>
+				</table>
+
+				<b>§ 2 Angebot, Vertragsgegenstand</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Unsere Angebote, mündlich oder schriftlich, sind hinsichtlich der Preise, Mengen, Lieferfristen, Liefermöglichkeiten und Nebenleistungen freibleibend. Aufträge werden für uns erst rechtsverbindlich, wenn wir diese innerhalb einer Frist von 14 Tagen bestätigt oder aber mit Zustimmung des Kunden vereinbarungsgemäß ausgeführt haben, wobei ein stillschweigendes Einverständnis des Kunden genügt.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Maßgebend für Art und Umfang der Lieferung oder Leistung ist unsere schriftliche Auftragsbestätigung. Abbildungen, Zeichnungen, Maße und Gewichtsangaben sowie sonstige technische Daten oder Angaben kennzeichnen lediglich den Vertragsgegenstand und stellen keine vereinbarte Beschaffenheit dar.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							An Kostenvoranschlägen, Zeichnungen und ähnlichen Unterlagen behalten wir uns Urheber-, Eigentums - sowie gewerbliche Leistungs- und Schutzrechte vor; derartige Unterlagen dürfen Dritten vom Kunden nicht zugänglich gemacht, nicht kopiert und zur Selbstanfertigung der Objekte verwendet werden. Sie sind uns, wenn der Auftrag nicht erteilt wird, auf Verlangen unverzüglich, spätestens nach sieben Tagen, zurückzugeben.
+						</td>
+					</tr>  
+				</table>
+
+				<b>§ 3 Preise und Zahlung</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Berechnung und Zahlung erfolgen in Schweizer Franken. Die gesetzliche Umsatzsteuer ist in unseren Preisen nicht enthalten; sie wird in der Rechnung gesondert ausgewiesen. Alle Versandkosten, insbesondere Verpackungs-, Transport- und Transportversicherungskosten, gehen zu Lasten des Kunden, soweit nichts anderes vereinbart ist.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Sofern sich aus der Auftragsbestätigung nichts anderes ergibt, ist der Kaufpreis ohne Abzug ab Rechnungsstellung zur Zahlung fällig. Der Kunde kommt ohne weitere Erklärung 14 Tage nach Fälligkeit in Verzug, soweit er nicht bezahlt hat. Für die Folgen des Zahlungsverzuges gelten die gesetzlichen Regelungen.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Für jede nach Verzugseintritt ergehende Mahnung werden Kosten in Höhe von EUR 1,50 berechnet. Uns ist der Nachweis eines höheren Schadens gestattet. Dem Kunden ist der Nachweis eines geringeren Schadens gestattet.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Ein Recht zur Aufrechnung steht dem Kunden nur zu, wenn seine Gegenansprüche rechtskräftig festgestellt oder von uns anerkannt sind. Außerdem ist er zur Ausübung eines Zurückbehaltungsrechts nur insoweit befugt, als sein Gegenanspruch auf demselben Vertragsverhältnis beruht.
+						</td>
+					</tr>        
+				</table>
+
+				<b>§ 4 Lieferung</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">Sofern nicht anders vereinbart, erfolgt die Lieferung ab Werk an die vom Kunden angegebene Lieferadresse.</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Ist der Kunde Unternehmer, geht die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der Ware auf diesen über, sobald wir die Sache dem Spediteur, dem Frachtführer oder der sonst zur Ausführung der Versendung bestimmten Person oder Anstalt ausgeliefert haben. Der Übergabe steht es gleich, wenn der Unternehmer im Verzug der Annahme ist.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Nach Vertragsschluss eintretende unvorhergesehene Ereignisse, die wir nicht zu vertreten haben, verlängern die Lieferzeit angemessen, jedoch höchstens um zwei Monate.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Der Vertragsschluss erfolgt unter dem Vorbehalt der richtigen und rechtzeitigen Selbstbelieferung durch unsere Zulieferer. Dies gilt nur für den Fall, dass die Nichtlieferung nicht von uns zu vertreten ist, insbesondere bei Abschluss eines kongruenten Deckungsgeschäftes mit unserem Zulieferer.
+						</td>
+					</tr>
+					<tr>
+						<td>e)</td>
+						<td>
+							In den Fällen des Absatzes c) und d) werden wir den Kunden unverzüglich informieren. Die Gegenleistung wird unverzüglich zurückerstattet.
+						</td>
+					</tr>
+					<tr>
+						<td>f)</td>
+						<td>
+							Wir haften bei Verzögerung der Leistung in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. Unsere Haftung beschränkt sich bei Unternehmern in Fällen grober Fahrlässigkeit jedoch auf den nach Art der Ware oder Leistung vorhersehbaren, vertragstypischen Schaden, wenn kein in Satz 5 dieser Bestimmung aufgeführter Ausnahmefall vorliegt. In anderen Fällen der Verzögerung der Leistung wird unsere Haftung für den Schadenersatz neben der Leistung und den Schadenersatz statt der Leistung auf 0,5 % pro Woche, maximal jedoch auf 5 % des Wertes der Lieferung bzw. Leistung begrenzt. Weitergehende Ansprüche des Kunden sind ausgeschlossen. Die Beschränkungen gelten nicht bei Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit.
+						</td>
+					</tr>
+					<tr>
+						<td>g)</td>
+						<td>
+							Kommt der Kunde in Annahmeverzug oder wird der Versand der Lieferung auf Wunsch des Kunden um mehr als zwei Wochen über den vereinbarten Liefertermin oder, wenn kein genauer Liefertermin vereinbart war, nach der Anzeige der Versandbereitschaft verzögert, können wir pauschal für jeden Monat, auch zeitanteilig, ein Lagergeld in Höhe von 0,5 % des Wertes der Lieferung, höchstens jedoch 5 % berechnen. Dem Kunden ist der Nachweis gestattet, dass uns kein oder ein wesentlich niedrigerer Schaden entstanden ist. Uns ist der Nachweis gestattet, dass ein höherer Schaden entstanden ist.
+						</td>
+					</tr>             
+				</table>
+
+				<b>§ 5 Mängelhaftung</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Ist der Kunde Unternehmer, leisten wir für Mängel der Ware zunächst nach unserer Wahl Gewähr durch Nachbesserung oder Ersatzlieferung.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Ist der Kunde Verbraucher, so hat er zunächst die Wahl, ob die Nacherfüllung durch Nachbesserung oder Ersatzlieferung erfolgen soll. Wir sind jedoch berechtigt, die Art der gewählten Nacherfüllung zu verweigern, wenn sie nur mit unverhältnismäßigen Kosten möglich ist und die andere Art der Nacherfüllung ohne erhebliche Nachteile für den Kunden bleibt. Die Kosten sind unverhältnismäßig hoch, wenn sie 25 % des Kaufpreises übersteigen.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Schlägt die Nacherfüllung fehl, kann der Kunde grundsätzlich nach seiner Wahl Herabsetzung der Vergütung (Minderung) oder Rückgängigmachung des Vertrags (Rücktritt) und Schadensersatz statt der Leistung im Rahmen der Haftungsbeschränkung (s. § 6) verlangen. Bei einer nur geringfügigen Vertragswidrigkeit, insbesondere bei nur geringfügigen Mängeln, steht dem Kunden jedoch kein Rücktrittsrecht zu.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Unternehmer müssen uns offensichtliche Mängel innerhalb einer Frist von zwei Wochen ab Empfang der Ware schriftlich anzeigen; andernfalls ist die Geltendmachung des Gewährleistungsanspruchs ausgeschlossen. Zur Fristwahrung genügt die rechtzeitige Absendung. Den Unternehmer trifft die volle Beweislast für sämtliche Anspruchsvoraussetzungen, insbesondere für den Mangel selbst, für den Zeitpunkt der Feststellung des Mangels und für die Rechtzeitigkeit der Mängelrüge.
+						</td>
+					</tr>
+					<tr>
+						<td>e)</td>
+						<td>
+							Die Verjährungsfrist beträgt für Unternehmer ein Jahr ab Ablieferung der Ware. Dies gilt nicht, wenn uns der Unternehmer offensichtliche Mängel nicht rechtzeitig angezeigt hat (Abs. d) dieser Bestimmung). Für Verbraucher beträgt die Verjährungsfrist zwei Jahre ab Ablieferung der Ware. Die Verjährungsfrist des § 479 BGB bleibt unberührt.
+						</td>
+					</tr>
+					<tr>
+						<td>f)</td>
+						<td>
+							Rückgriffsansprüche des Unternehmers gemäß § 478 BGB bestehen nur insoweit, als der Unternehmer mit seinem Abnehmer keine über die gesetzlichen Mängelansprüche hinausgehende Vereinbarung getroffen hat.
+						</td>
+					</tr>
+				</table>
+
+				<b>§ 6 Haftungsbeschränkung</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Wir haften in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. Im Übrigen haften wir nur nach dem Produkthaftungsgesetz, wegen der Verletzung des Lebens, des Körpers oder der Gesundheit, oder wegen der schuldhaften Verletzung wesentlicher Vertragspflichten. Der Schadenersatzanspruch für die Verletzung wesentlicher Vertragspflichten ist jedoch auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Gegenüber Unternehmern ist unsere Haftung auch bei grober Fahrlässigkeit auf den vertragstypischen, vorhersehbaren Schaden begrenzt, soweit keiner der in Satz 2 aufgeführten Ausnahmefälle vorliegt. Die Haftung für Schäden durch den Liefergegenstand an Rechtsgütern des Kunden ist ganz ausgeschlossen. Die Regelungen der Sätze 3 und 5 gelten nicht, soweit Vorsatz oder grobe Fahrlässigkeit vorliegt oder wegen der Verletzung des Lebens, des Körpers oder der Gesundheit gehaftet wird.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Die Regelungen des Abs. a) erstrecken sich auf Schadenersatz neben der Leistung und Schadenersatz statt der Leistung, gleich aus welchem Rechtsgrund, insbesondere wegen Mängeln, der Verletzung von Pflichten aus dem Schuldverhältnis oder aus unerlaubter Handlung. Sie gilt auch für den Anspruch auf Ersatz vergeblicher Aufwendungen. Die Haftung für Verzug bestimmt sich jedoch nach § 4 Abs. f), die Haftung für Unmöglichkeit nach Abs. c) dieser Bestimmung.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Wie haften bei Unmöglichkeit der Leistung in Fällen des Vorsatzes oder der groben Fahrlässigkeit, auch für Vertreter oder Erfüllungsgehilfen, nach den gesetzlichen Bestimmungen. In anderen Fällen der Unmöglichkeit wird unsere Haftung für den Schadenersatz neben oder statt der Leistung und auf Ersatz der vergeblichen Aufwendungen auf 15 % des Wertes der Lieferung oder Leistung begrenzt, der wegen der Unmöglichkeit nicht genutzt werden kann. Gegenüber Unternehmern ist unsere Haftung auch bei grober Fahrlässigkeit auf den vertragstypischen, vorhersehbaren Schaden begrenzt, soweit nicht wegen Vorsatz oder grober Fahrlässigkeit gehaftet wird und keiner der in Satz 5 aufgeführten Ausnahmefälle vorliegt. Weitergehende Ansprüche des Kunden sind ausgeschlossen. Die Beschränkungen gelten nicht bei Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit. Das Recht des Kunden zum Rücktritt vom Vertrag bleibt unberührt.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Der Kunde kann im Rahmen der gesetzlichen Bestimmungen vom Vertrag nur zurücktreten, wenn wir die Pflichtverletzung zu vertreten haben; im Falle von Mängeln verbleibt es jedoch bei den gesetzlichen Voraussetzungen. Der Kunde hat sich bei Pflichtverletzungen innerhalb einer Frist von zwei Wochen nach unserer Aufforderung zu erklären, ob er wegen der Pflichtverletzung vom Vertrag zurücktritt oder auf der Leistung besteht.
+						</td>
+					</tr>
+					<tr>
+						<td>e)</td>
+						<td>
+							Der Anspruch des Kunden auf Schadenersatz verjährt nach einem Jahr ab Gefahrenübergang. Dies gilt nicht, wenn uns Vorsatz oder grobes Verschulden vorwerfbar ist, sowie im Falle der Haftung wegen der Verletzung des Lebens, des Körpers oder der Gesundheit sowie nach dem Produkthaftungsgesetz
+						</td>
+					</tr>
+				</table>
+
+				<b>§ 7 Eigentumsvorbehalt</b>
+				<table>
+					<tr>
+						<td>a)</td>
+						<td>
+							Bei Verträgen mit Verbrauchern behalten wir uns das Eigentum an der Ware bis zur vollständigen Zahlung des Kaufpreises vor.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>
+							Bei Verträgen mit Unternehmern behalten wir uns das Eigentum an der Ware bis zur vollständigen Begleichung aller Forderungen aus der Geschäftsbeziehung vor.
+						</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Der Kunde ist verpflichtet, uns einen Zugriff Dritter auf die Ware, etwa im Falle einer Pfändung, sowie etwaige Beschädigungen oder die Vernichtung der Ware unverzüglich mitzuteilen. Einen Besitzwechsel der Ware sowie den eigenen Geschäfts- oder Wohnsitzwechsel hat der Kunde unverzüglich anzuzeigen.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Wir sind berechtigt, bei vertragswidrigem Verhalten des Kunden, insbesondere bei Zahlungsverzug oder bei Verletzung einer Pflicht nach Abs. c) dieser Bestimmung vom Vertrag zurückzutreten und/oder die Ware herauszuverlangen. Der Kunde ist zur Herausgabe verpflichtet. Im Herausgabeverlangen der Ware liegt keine Rücktrittserklärung, es sei denn, dies wird von uns ausdrücklich erklärt.
+						</td>
+					</tr>
+					<tr>
+						<td>e)</td>
+						<td>
+							Ist der Kunde Unternehmer, ist er berechtigt, die Ware im ordentlichen Geschäftsgang weiterzuveräußern. Er tritt uns bereits jetzt alle Forderungen in Höhe des Rechnungsbetrages ab, die ihm durch die Weiterveräußerung gegen einen Dritten erwachsen. Wir nehmen die Abtretung an. Nach der Abtretung ist der Unternehmer zur Einziehung der Forderung ermächtigt. Wir behalten uns vor, die Weiterveräußerungsbefugnis und die Einziehungsermächtigung zu widerrufen sowie die Forderung selbst einzuziehen, sobald der Unternehmer seinen Zahlungsverpflichtungen aus der Geschäftsbeziehung nicht ordnungsgemäß nachkommt und in Zahlungsverzug gerät. Der Unternehmer hat in diesem Falle unverzüglich alle zur Einziehung erforderlichen Angaben zu machen und dem Dritten unverzüglich die Abtretung mitzuteilen.
+						</td>
+					</tr>
+					<tr>
+						<td>f)</td>
+						<td>
+							Die Be- und Verarbeitung der Ware durch den Kunden erfolgt stets im Namen und im Auftrag für uns. Erfolgt eine Verarbeitung mit uns nicht gehörenden Gegenständen, so erwerben wir an der neuen Sache das Miteigentum im Verhältnis zum Wert der von uns gelieferten Ware zu den sonstigen verarbeiteten Gegenständen. Dasselbe gilt, wenn die Ware mit anderen, uns nicht gehörenden Gegenständen vermischt ist.
+						</td>
+					</tr>
+				</table>
+
+				<b>§ 8 Schlussbestimmungen</b>
+				<table>
+					<tr colspan="8">
+						<td colspan="1">a)</td>
+						<td colspan="7">
+							Es gilt das Recht der Schweizer Eidgenossenschaft. Die Bestimmungen des UNKaufrechts finden keine Anwendung.
+						</td>
+					</tr>
+					<tr>
+						<td>b)</td>
+						<td>Erfüllungsort ist Buchs, Schweiz.</td>
+					</tr>
+					<tr>
+						<td>c)</td>
+						<td>
+							Sofern der Kunde Kaufmann oder juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist, gilt Buchs, Schweiz als Gerichtsstand vereinbart.
+						</td>
+					</tr>
+					<tr>
+						<td>d)</td>
+						<td>
+							Sollten einzelne Bestimmungen des Vertrages mit dem Kunden einschließlich dieser Allgemeinen Geschäftsbedingungen ganz oder teilweise unwirksam sein oder werden, so wird hierdurch die Gültigkeit der übrigen Bestimmungen nicht berührt.
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- END TEXT -->
+		</div>
+		<!-- END MAIN -->
+
+		<footer>
+			<div class="footer">
+				<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+				</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 5;
+				var win = parseFloat($(window).width());
+
+				setMaxWidth(win);
+
+				if (win >= 1049) {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+					leftMargin = (containerWidth - width) / 2;
+				}
+				else {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content').width());  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+	
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = parseFloat($('.content').height());
+				$('.main').css('top', top);
+
+				top += parseFloat($('.main').height());
+
+				if ((top + $('footer').height()) < $(window).height()) {
+
+					$('footer').css('top', ($(window).height() - $('footer').height()));
+				}
+				else {
+					$('footer').css('top', top);
+				}
+			}
+
+			function setMaxWidth(win) {
+				if (win >= 1049) {
+					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
+					var width = win - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = win - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'max-width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>

@@ -3,44 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
-	<script type="text/javascript">
-// SHOW AND HIDE NAVBARS //
-		function hideShow(id){
-			var element = document.getElementById(id);
-
-			if(element.style.opacity != 0){
-				element.style.opacity = 0;
-				element.style.visibility = "hidden";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-16px 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);";
-				}
-				else
-					element.style.margin = "-1% 0 0 0";
-			}
-			else {
-				element.style.opacity = 1;
-				element.style.visibility = "visible";
-
-				if (id == "hiddenL") {
-					element.style.margin = "-1% 0 0 0";
-					document.getElementById("arrow").style="-webkit-transform:rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);";
-				}
-				else
-					element.style.margin = 0;
-			}
-		}
-	</script>
 </head>
 
-<body class="body1">
-	<center>
+<body class="body">
 		<div class="container">
 			<div class="content">					
 				<div class="logo">
 					<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 				</div>
+
+				<div class="language">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li>
+									<a href=""><img class="this" src="images/de.gif"></a>
+								</li>
+									
+								<li>
+									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Language dropdown end -->
 
 				<div class="navbar">
 					<div class="navbar-inner">
@@ -77,20 +64,20 @@
 								<li class="divider-vertical"></li>
 
 								<li class="six">
-									<a href="solarthermie.html">Solarthermie</a>
+									<a href="inprogress.html">Solarthermie</a>
 								</li>
 
 								<li class="divider-vertical"></li>
 
 								<li class="seven">
-									<a href="inprogress.html">Neuheiten/Sonderlösungen</a>
+									<a href="ns.html">Neuheiten/Sonderlösungen</a>
 								</li>
 							</ul>
 
 							<ul class="nav bottom">
 
 								<li class="eight">
-									<a href="inprogress.html">Förderprogramm</a>
+									<a href="forderprogramm.html">Förderprogramm</a>
 								</li>
 
 								<li class="divider-vertical"></li>
@@ -134,47 +121,109 @@
 					<!-- Navbar inner end -->
 				</div>
 				<!-- Navbar end -->
-
-				<div class="language">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<ul class="nav">
-								<li>
-									<a href=""><img class="this" src="images/de.gif"></a>
-								</li>
-									
-								<li>
-									<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- Language dropdown end -->
 			</div>
 			<!-- END CONTENT -->
 
 			<div class="main">
 				<strong class="title">DOWNLOAD</strong>
 
-				<div class="textDO">
+				<div class="text pullLeft">
 					<p>Hier finden Sie eine Auswahl unserer aktuellen Kataloge und Produktinformationen zum Download in PDF Format.</p>
-					<br>
-					<p>• <a href="">LED-Technik - Ein Weg mit Zukunft (3.14 MB)</a></p>
-					<p>• <a href="">Verkaufsraum-  und Hallenbeleuchtung (1,46 MB)</a></p>
-					<p>• <a href="">LED Stehlampen (2,91 MB)</a></p>
 				</div>
+					
+				<a href="https://get.adobe.com/reader/" target="_blank"><img class="pullRightText" src="images/get_adobe_reader.png"></a>
 
-				<a href="https://get.adobe.com/reader/" target="_blank"><img class="pullRight" src="images/get_adobe_reader.png"></a>
-
-				<div class="footer download">
-					<p>ET Energie & Handel GmbH • Sonnenbergstraße 18 • CH - 6060 Sarnen • Telefon +41(0) 41 51 10 302 • Büro Deutschland • Dieselstraße 45 • D - 87437 Kempten • Telefon +49(0) 831 575 00 0 <br /> Copyright © 2015 – 2017
-					</p>
+				<div class="text">			
+					<p>&bull; <a href="">Fernwärmeleitungen DE (4,65 MB)</a></p>
+					<p>&bull; <a href="">Endkundenprospekt (3,32 MB)</a></p>
+					<p>&bull; <a href="">Rohrschellen (4,04 MB)</a></p>
+					<p>&bull; <a href="">Pila Katalog DE (2,88 MB)</a></p>
+					<p>&bull; <a href="">1009 PV Prospekt (2,01 MB)</a></p>
+					<p>&bull; <a href="">Frischwasserstation - Technische Dokumentation (1,28 MB)</a></p>
+					<p>&bull; <a href="">Heatpipe DE - Technische Dokumentation (1,13 MB)</a></p>
+					<p>&bull; <a href="">Heatpipe DE (1,68 MB)</a></p>
+					<p>&bull; <a href="">ET Duschrinnen ()</a></p>
+					<p>&bull; <a href="">Navi+ 25 - Datenblatt (989 KB)</a></p>
+					<p>&bull; <a href="">LED Display (1,52 MB)</a></p>
+					<p>&bull; <a href="">LED Hallenstrahler - Technische Dokumentation (1,13 MB)</a></p>
+					<p>&bull; <a href="">LED Panel (1,58 MB)</a></p>
+					<p>&bull; <a href="">LED-Technik - Ein Weg mit Zukunft (4.06 MB)</a></p>
+					<p>&bull; <a href="">LED Stehlampen (3,03MB)</a></p>
+					<p>&bull; <a href="">Verkaufsraum-  und Hallenbeleuchtung (1,99 MB) </a></p>
+					<p>&bull; <a href="">Werbeblatt Stehlampen (720 KB)</a></p>
 				</div>
 			</div>
 			<!-- END MAIN -->
-		</div>
-		<!-- END CONTAINER -->
-	</center>
+
+		<footer>
+			<div class="footer">
+				<p>ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
+				</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 5;
+				var win = parseFloat($(window).width());
+
+				setMaxWidth(win);
+
+				if (win >= 1049) {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+					leftMargin = (containerWidth - width) / 2;
+				}
+				else {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content').width());  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = parseFloat($('.content').height());
+				$('.main').css('top', top);
+
+				top += parseFloat($('.main').height());
+
+				if ((top + $('footer').height()) < $(window).height()) {
+
+					$('footer').css('top', ($(window).height() + 4 - $('footer').height()));
+				}
+				else {
+					$('footer').css('top', top);
+				}
+			}
+
+			function setMaxWidth(win) {
+				if (win >= 1049) {
+					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
+					var width = win - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = win - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'max-width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>

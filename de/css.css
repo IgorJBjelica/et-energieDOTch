@@ -1,28 +1,16 @@
-.body2{
+.body{
 	width: 100%;
-	height: 100%;
-	background-image: url("images/background.png"), url("images/background2.jpg");
+	max-height: 100%;
 	background-size: 100%;
-	background-color: #ededed;
-	background-repeat: no-repeat, no-repeat;
-	background-position: 0% -171%, 0 -13.2%;
+	background-color: #ffffff;
 	margin: 0;
 	font-size: 1.17em;
 	font-family: 'PT Sans', sans-serif;
 	scroll-behavior: smooth;
 }
 
-.body1{
-	width: 100%;
-	max-height: 100%;
-	background-image: url("images/background.png");
-	background-size: 100%;
-	background-color: #ffffff;
-	background-repeat: no-repeat;
-    background-position: 0 -8%;
-	margin: 0;
-	font-size: 1.17em;
-	font-family: 'PT Sans', sans-serif;
+.bcgrYellow{
+	background-color: #fefbd4;
 }
 
 .container {
@@ -35,7 +23,7 @@
 	font-size: .914em;
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	height: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.50);
 	background: #ffffff;
@@ -370,6 +358,7 @@ a.control_next {
 .main {
 	font-family: 'PT Sans', sans-serif;
 	font-size: .75em;
+    line-height: 1.3em;
 	background-color: transparent;
 	position: absolute;
 	top: 67px;
@@ -432,21 +421,19 @@ br {
 }
 
 .locations > .loc {
+	max-width: 30%;
 	display: block;
-	margin: 3% 5.2% 1%;
+	/*margin: 3% 1% 1%;*/
 	float: left;
 }
 
 .map {
-	max-width: 30%;
     margin: 0 0 5% 2%;
     float: left;
 }
 
-.map img {
-	max-width: 45%;
-	border-radius: 20px;
-	border: 1px solid black;
+.loc img {
+	max-width: 100%;
 
 	-webkit-transition: all 0.3s ease-in-out;
        -moz-transition: all 0.3s ease-in-out;
@@ -454,131 +441,43 @@ br {
             transition: all 0.3s ease-in-out;
 }
 
-.map > img:hover {
-	cursor: pointer;
+.loc > img:hover {
+	cursor: zoom-in;
 	opacity: .7;
 	box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-.modal {
-    display: none;
+.lightbox {
+	cursor: zoom-out;
     position: fixed;
-    margin-top: 4%;
-    padding-top: 5%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
-}
-
-.modalContent {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 580px;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
     text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+    z-index: 999999;
 }
 
-.modalContent, #caption {    
-    -webkit-animation-name: zoom;
-       -moz-animation-name: zoom;
-         -o-animation-name: zoom;
-            animation-name: zoom;
-
-    -webkit-animation-duration: 0.6s;
-       -moz-animation-duration: 0.6s;
-         -o-animation-duration: 0.6s;
-            animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
-
-@-moz-keyframes zoom {
-    from {-moz-transform:scale(0)} 
-    to {-moz-transform:scale(1)}
-}
-
-@-o-keyframes zoom {
-    from {-o-transform:scale(0)} 
-    to {-o-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 3em;
-    font-weight: lighter;
-
-	-webkit-transition: 0.3s;
-       -moz-transition: 0.3s;
-         -o-transition: 0.3s;
-            transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modalContent {
-        width: 100%;
-    }
+.lightbox img {
+	margin-top: 6vh;
+    box-shadow: 0 0 25px #111111;
+    -webkit-box-shadow: 0 0 25px #111111;
+    -moz-box-shadow: 0 0 25px #111111;
+    max-width: 80vw;
+    max-height: 90vh;
 }
 
 .text {
 	width: 90%;
 	position: relative;
 	float: left;
-	margin: 5% auto 0 5.2%;
-	text-align: left;
+	margin: 3% auto 0 5.2%;
 }
 
-.space {
-	margin-left: 9em;
-}
-
-.moreSpace {
-	margin-left: 15.9em;
-}
-
-#moreSpace0 {
-	margin-left: 15.3em;
-}
-
-#space1 {
-	margin-left: 8.5em;
-}
-
-#moreSpace1 {
-	margin-left: 16.2em;
+.locations {
+	width: 100%;
+	margin-left: 2%;
 }
 
 .ulKontakt {
@@ -588,6 +487,10 @@ br {
 
 .sp {
 	margin-left: 1.6%;
+}
+
+.ed {
+	background-color: #ededed;
 }
 
 /********************************************************KONTAKT FORMULAR***********************************************************************/
@@ -654,7 +557,6 @@ footer{
     width: 100%;
     height: auto;
 	float: left;
-	z-index: 999;
 }
 
 .footer{
@@ -667,10 +569,6 @@ footer{
 .footer > p {
 	margin: 1.5% 0 1.5% 0;
 }
-
-/*#footer1 {
-	font-size: .63em;
-}*/
 
 /****************************************************************LOGIN***************************************************************************/
 
@@ -758,93 +656,26 @@ footer{
 }
 
 /****************************************************************BELEUCHTUNG************************************************************************/
-
-.nobcgr {
-	background-image: none;
+#belimg {
+    width: 90%;
+    margin: 3% 0 3% 4%;
 }
 
-#txt1 {
-	margin-top: 3%;
-	width: 80%
-}
-
-.main > .shadow, .main .shadow img {
-	width: 100%
-}
-
-.main > #txt1 > ul > li {
-	margin-left: 4%;
-}
-
-.main > #txt1 > ul {
+.main > #txt2 > ul {
 	margin-bottom: 5%;
+	margin-top: 0;
 }
+
+.main > #txt2 ul li {
+	margin-left: 2%;
+}
+
+/*.bcgrpic {
+	background-image: url('images/new pics/lightpic.jpg');
+	background-repeat: no-repeat;
+}*/
 
 /*********************************************************************PV*****************************************************************************/
-
-#second {
-	visibility: hidden;
-}
-
-#third {
-	visibility: hidden;
-}
-
-.pvNavbar {
-	margin-top: 2%;
-	width: 100%;
-	display: inline-block;
-}
-
-.pvNavbar > .inner {
-	max-width: 900px;
-	display: inline-block;
-}
-
-.pvNavbar > .inner > ul:nth-child(-n+1) {
-	margin: 1% 0;
-	padding-bottom: 3%;
-	border-bottom: 1px #000 dashed;
-}
-
-.pvNavbar > .inner > ul > li {
-	display: inline-block;
-	padding: 2px;
-}
-
-.pvNavbar > .inner > ul > li > a {
-	float: none;
-	margin-left: 5px;
-	cursor: pointer;
-}
-
-.pvNavbar > .inner > ul > li > .line {
-	width: 0;
-	height: 1px;
-	margin-left: 5px;
-	background-color: #023778;
-}
-
-.inner > ul > li > a:hover ~ .line, .inner > ul > li > a:focus ~ .line {
-	width: 90%;
-
-	-webkit-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
-       -moz-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
-         -o-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
-            transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
-}
-
-.pvNavbar > .inner > ul > .divider-vertical {
-	margin: -4px 0;
-}
-
-a.act {
-	color: #ef7926;
-}
-
-div.act {
-	background-color: #ef7926;
-}
 
 table {
 	margin: 2% 0 5% 0;
@@ -857,31 +688,86 @@ td {
 	vertical-align: text-top;
 }
 
-.pics {
+.pics, .gal {
 	width: 100%;
 }
 
 .pic {
 	display: inline-block;
-	width: 22%;
-	margin-right: 2.686%;
+	width: 22.5%;
 }
 
 .pic > img {
 	width: 100%;
 }
 
+.gal:nth-child(1) {
+	margin-bottom: 8%;
+}
+
+.piece {
+	display: inline-block;
+	width: 30%;
+    height: fit-content;
+
+	-webkit-transition: all 1s ease;
+    		transition: all 1s ease;
+}
+
+.piece img {
+	width: 100%;
+}
+
+.piece:hover {
+    transform: scale(1.3);
+}
+
 .smallStrong {
 	font-weight: 100;
 }
 
-/*#second > .footer {
-	margin-top: 29.5%;
+/******************************************************************Neuheiten/Sonderlösungen*********************************************************/
+
+.big {
+	margin: 5% 0;
+	font-size: 2em;
+	font-weight: 800;
 }
 
-#third > .footer {
-	margin-top: 19.8%;
-}*/
+.mediumer {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+.medium {
+	font-size: 1.25em;
+}
+
+.topMargin {
+	margin-top: 3%;
+}
+
+.orange {
+	color: orange;
+}
+
+.noMargin {
+	margin: 0 !important;
+}
+
+.notWide {
+	width: auto;
+}
+
+/******************************************************************FORDERPROGRAMM*********************************************************/
+
+.textMargin {
+	margin-bottom: 8%;
+}
+
+.wide30 {
+	width: 30%;
+}
 
 /**********************************************************************GALLERY**********************************************************************/
 
@@ -963,6 +849,11 @@ td {
 	margin-right: 22%;
 }
 
+.pullMoreRight {
+	float: right;
+	margin-right: 8%;
+}
+
 .pullLeft {
 	float: left;
 }
@@ -970,10 +861,6 @@ td {
 .textST > ul > li {
 	margin-left: 4%;
 }
-
-/*.textST ~ .footer {
-	margin-top: 8%;
-}*/
 
 /******************************************************************DOWNLOAD***********************************************************************/
 
@@ -1014,8 +901,8 @@ div.pullLeft p:last-of-type {
 }
 
 .hSep {
-	width: 100%;
-	height: 1px;
+	width: 100vw;
+	margin-left: -14.298%;
 }
 
 .textHe {
@@ -1161,7 +1048,7 @@ ul.soul > li {
 }
 
 .nodown {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 .portion {

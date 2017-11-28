@@ -19,7 +19,7 @@
 							<li>
 								<a href=""><img class="this" src="images/de.gif"></a>
 							</li>
-
+							
 							<li>
 								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
 							</li>
@@ -46,7 +46,7 @@
 							<li class="divider-vertical"></li>
 
 							<li class="threee">
-								<a href="sanitar.html">Sanitär</a>
+								<a href="sanitar.html">Sanit&auml;r</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -70,14 +70,14 @@
 							<li class="divider-vertical"></li>
 
 							<li class="seven">
-								<a href="ns.html">Neuheiten/Sonderlösungen</a>
+								<a href="ns.html">Neuheiten/Sonderl&ouml;sungen</a>
 							</li>
 						</ul>
 
 						<ul class="nav bottom">
 
-							<li class="eight">
-								<a href="forderprogramm.html">Förderprogramm</a>
+							<li class="eight active">
+								<a href="#">F&ouml;rderprogramm</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -112,8 +112,8 @@
 
 							<li class="divider-vertical"></li>
 
-							<li class="three active">
-								<a href="#">Login</a>
+							<li class="three">
+								<a href="login.html">Login</a>
 							</li>
 						</ul>
 					</nav>
@@ -123,21 +123,54 @@
 			<!-- Navbar end -->
 		</div>
 		<!-- END CONTENT -->
-		<center>
-			<div class="main1">
-				<div class="loginContainer">
-					<form class="loginForm">
-						<input type="text" name="benutzername" placeholder="Benutzername"><br />
-						<input type="text" name="passwort" required="true" placeholder="Passwort"><br />
 
-						<input type="submit" class="button" id="login" name="login" value="Login">
-						<input type="reset" class="linkButton" name="reset" value="Reset">
-					</form>
-					<a href="register.html">Noch nicht registriert?</a>
-				</div>
+		<div class="main">
+			<div class="text textMargin">
+				<strong>Informationen zu den aktuellen Heizungs Förderprogrammen</strong>
+
+				<br><br>
+
+				<p>Hier können Sie sich über die aktuellen Förderrichtlinien in Deutschland informieren: </p>
+				<a href="http://www.bafa.de/DE/Home/home_node.html;jsessionid=AF404B3386106A992A80E55CBD7B60E8.2_cid362">Zur Webseite des Bundesamtes für Wirtschaft und Ausfuhrkontrolle (BAFA)...</a>
 			</div>
-			<!-- END MAIN -->
-		</center>
+
+			<hr class="hSep">
+
+			<div class="text textMargin">
+				<strong>Informationen zu den aktuellen Photovoltaik Förderprogrammen</strong>
+
+				<br><br>
+
+				<p>Zu den aktuellen Förderrichtlinien für Deutschland informieren Sie sich unter:<br><a href="https://www.kfw.de/kfw.de.html">Webseite der KFW Bankengruppe</a></p>
+
+				<br>
+
+				<p>Zu den aktuellen Förderrichtlinien für die Schweiz informieren Sie sich unter:<br><a href="http://www.swissolar.ch/topthemen/kev-und-eiv/">KEV</a></p>
+
+				<img class="wide30" src="images/photovol_01.jpg">
+			</div>
+
+			<hr class="hSep">
+ 
+			<div class="text textMargin">
+				<strong>Informationen zu den aktuellen Solarthermie Förderprogrammen</strong>
+
+				<br><br>
+
+				<p>Hier können Sie sich über die aktuellen Förderrichtlinien in Deutschland informieren:</p>
+				<a href="http://www.bafa.de/DE/Home/home_node.html;jsessionid=AF404B3386106A992A80E55CBD7B60E8.2_cid362">Zur Webseite des Bundesamtes für Wirtschaft und Ausfuhrkontrolle (BAFA) </a>
+
+				<br><br>
+
+				<p>...Hier können geht’s zum aktuellen Fördergeldrechner für die Schweiz:</p>
+				<a href="http://kollektorliste.ch/">Zur Webseite des Institut für Solartechnik...</a>
+
+				<br><br><br>
+
+				<a href="http://www.swissolar.ch/fuer-bauherren/foerderung/">Solarwärme Swissolar Förderung...</a>
+			</div>
+		</div>
+		<!-- END MAIN -->
 
 		<footer>
 			<div class="footer">
@@ -147,6 +180,7 @@
 		</footer>
 	</div>
 	<!-- END CONTAINER -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		(function ($) {
@@ -158,52 +192,55 @@
 			function setMargins() {
 				var leftMargin = 0;
 				var topMargin = 5;
-				var win = parseFloat($(window).width());
 
-				setMaxWidth(win);
+				setMaxWidth();
 
-				if (win >= 1049) {
-					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
-					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+				if ($(window).width() >= 1049) {
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content > .navbar').width();  
 					leftMargin = (containerWidth - width) / 2;
+					
+					width = $('.pics .pic').width();
+					containerWidth = $('.pics').width();
+					leftMarginPics = (containerWidth - width * 4) / 2;
 				}
 				else {
-					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
-					var containerWidth = parseFloat($('.content').width());  
-					var leftMargin = (containerWidth - width) / 2;
+					var width = $('.content > .navbar > .navbar-inner').width();
+					var containerWidth = $('.content').width();  
+					leftMargin = (containerWidth - width) / 2;
 					topMargin = 25;
 				}
-
+				
 				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
 				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
-				var top = parseFloat($('.content').height());
+				$('.pics > .pic:first-of-type').css('margin-left', leftMarginPics);
+				var top = $('.content').height();
 				$('.main').css('top', top);
 
 				top += parseFloat($('.main').height());
 
 				if ((top + $('footer').height()) < $(window).height()) {
 
-					$('footer').css('top', ($(window).height() + 4 - $('footer').height()));
+					$('footer').css('top', ($(window).height() - $('footer').height()));
 				}
 				else {
 					$('footer').css('top', top);
 				}
 			}
 
-			function setMaxWidth(win) {
-				if (win >= 1049) {
-					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
-					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
-					var width = win - widthLogo - widthLanguage;
+			function setMaxWidth() {
+				if ($(window).width() >= 1049) {
+					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
+					var width = $(window).width() - widthLogo - widthLanguage;
 				}
 				else {
-
 					var widthLogo = $('.logo').width();
 					var widthLanguage = $('.language').width();
-					var width = win - widthLogo - widthLanguage;
+					var width = $(window).width() - widthLogo - widthLanguage;
 				}
 
-				$( ".content > .navbar" ).css( 'max-width', width);
+				$( ".content > .navbar" ).css('width', width);
 			}
 
 			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
