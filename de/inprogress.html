@@ -4,24 +4,207 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
 </head>
-<body class="progress">
-	<center>
-		<div class="wrapper">
-			<div class="up"></div>
-			<div class="left"></div>
-			<div class="down"></div>
-			<div class="right"></div>
 
-			<div class="candy">
-				<h2>Die Seite befindet sich noch im Aufbau.</h2>
+<body class="body">
+	<div class="container">
+		<div class="content">					
+			<div class="logo">
+				<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 			</div>
 
-			<br><br>
+			<div class="language">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<ul class="nav">
+							<li>
+								<a href=""><img class="this" src="images/de.gif"></a>
+							</li>
 
-			<div>
-				<a href="index.html">Zurück zur Startseite</a>
+							<li>
+								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Language dropdown end -->
+
+			<div class="navbar">
+				<div class="navbar-inner">
+					<nav>
+						<ul class="nav top">
+							<li class="one">
+								<a class="navi" href="index.html">Home</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="twoo">
+								<a href="heizung.html">Heizung</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="threee">
+								<a href="sanitar.html">Sanit&auml;r</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="fourr">
+								<a href="beleuchtung.html">Beleuchtung</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="fivee">
+								<a href="pv.html">PV</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="six active">
+								<a href="#">Solarthermie</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="seven">
+								<a href="ns.html">Neuheiten/Sonderl&ouml;sungen</a>
+							</li>
+						</ul>
+
+						<ul class="nav bottom">
+
+							<li class="eight">
+								<a href="forderprogramm.html">F&ouml;rderprogramm</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="two">
+								<a href="kontakt.html">Kontakt</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="eight">
+								<a href="agb.html">AGB</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="nine">
+								<a href="impressum.html">Impressum</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="ten">
+								<a href="stellen.html">Stellenangebote</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="eleven">
+								<a href="download.html">Downloads</a>
+							</li>
+
+							<li class="divider-vertical"></li>
+
+							<li class="three">
+								<a href="inprogress.html">Login</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- Navbar inner end -->
+			</div>
+			<!-- Navbar end -->
+		</div>
+		<!-- END CONTENT -->
+
+		<div class="main" style="width: 50%; margin: 3% 0 0 16%">
+			<strong class="title">ET Energie & Handel Gmbh</strong>
+			<br><br><br><br>
+			<div class="text">
+				<b>Wir begleiten Sie in die Zukunft!</b>
+				<p>Diese Seite befindet sich noch im Aufbau.</p>
+				<a href="index.html">Zur&uuml;ck zur Startseite</a>
 			</div>
 		</div>
-	</center>
+		<!-- END MAIN -->
+
+		<footer>
+			<div class="footer">
+				<p>
+					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 415110302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 83152387070 <br /> Copyright &copy; 2015 – 
+				</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			setMargins();
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				var leftMargin = 0;
+				var topMargin = 5;
+				var win = parseFloat($(window).width());
+
+				setMaxWidth(win);
+
+				if (win >= 1049) {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content > .navbar').css('max-width'));  
+					leftMargin = (containerWidth - width) / 2;
+				}
+				else {
+					var width = parseFloat($('.content > .navbar > .navbar-inner').width());
+					var containerWidth = parseFloat($('.content').width());  
+					var leftMargin = (containerWidth - width) / 2;
+					topMargin = 25;
+				}
+
+				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
+				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
+				var top = parseFloat($('.content').height());
+				$('.main').css('top', top);
+
+				top += parseFloat($('.main').height());
+
+				if ((top + $('footer').height()) < $(window).height()) {
+
+					$('footer').css('top', ($(window).height() + 4 - $('footer').height()));
+				}
+				else {
+					$('footer').css('top', top);
+				}
+			}
+
+			function setMaxWidth(win) {
+				if (win >= 1049) {
+					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
+					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
+					var width = win - widthLogo - widthLanguage;
+				}
+				else {
+
+					var widthLogo = $('.logo').width();
+					var widthLanguage = $('.language').width();
+					var width = win - widthLogo - widthLanguage;
+				}
+
+				$( ".content > .navbar" ).css( 'max-width', width);
+			}
+
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+		}(jQuery));
+	</script>
 </body>
 </html>

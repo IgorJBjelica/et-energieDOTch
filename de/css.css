@@ -13,6 +13,10 @@
 	background-color: #fefbd4;
 }
 
+.grey {
+	background-color: #ededed;
+}
+
 .container {
 	width: 100%;
 	/*height: 100%;*/
@@ -221,7 +225,7 @@ nav{
 }
 
 .main.home{
-	background-color: white;
+	background-color: transparent;
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -389,7 +393,7 @@ a {
 }
 
 ul {
-	list-style: none;
+	list-style: disc;
 	padding: 0;
 }
 
@@ -647,6 +651,8 @@ footer{
 
 .lists > ul > li {
 	margin: 2% 0;
+	list-style-type: disc;
+	list-style-position: outside;
 }
 
 #uber {
@@ -730,7 +736,7 @@ td {
 
 .big {
 	margin: 5% 0;
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: 800;
 }
 
@@ -740,7 +746,7 @@ td {
 }
 
 .medium {
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
 
 .topMargin {
@@ -767,6 +773,48 @@ td {
 
 .wide30 {
 	width: 30%;
+}
+
+.wide60 {
+	width: 60%;
+}
+
+.flag {
+	width: 33%;
+	margin-bottom: 5%;
+	float: left;
+}
+
+.flag img {
+	float: left;
+	width: 30%;
+}
+
+.flagText {
+	width: 65%;
+	float: left;
+	margin: 0 0 0 3%;
+	word-wrap: break-word;
+}
+
+.flagText td {
+	padding: 0;
+}
+
+@media all and (max-width: 915px) and (min-width: 480px) {
+	.flag {
+		width: 49%;
+		margin-bottom: 5%;
+		float: left;
+	}
+}
+
+@media all and (max-width: 479px) {
+	.flag {
+		width: 89%;
+		margin-bottom: 10%;
+		float: left;
+	}
 }
 
 /**********************************************************************GALLERY**********************************************************************/
@@ -942,6 +990,7 @@ table.dark {
 	display: table;
 	border-collapse: collapse;
 	width: 100%;
+    margin-top: 5%;
 	margin-bottom: 2%;
 }
 
@@ -954,7 +1003,6 @@ table.dark > tbody > tr > td{
 }
 
 table.dark > tbody > tr > th {
-	font-weight: 100;
 	background-color: rgba(255, 255, 255, 1);
 }
 
