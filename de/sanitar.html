@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="css.css?version=50">
 </head>
 
-<body class="body">
+<body class="body blueish">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -64,7 +64,7 @@
 							<li class="divider-vertical"></li>
 
 							<li class="six">
-								<a href="inprogress.html">Solarthermie</a>
+								<a href="solarthermie.html">Solarthermie</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -127,7 +127,7 @@
 		<div class="backpic">
 			<img src="images/Sanitaer.jpg">
 		</div>
-		<div class="main">
+		<div class="main marginTop3">
 			<strong class="title">GEHEN SIE MIT UNS IN DIE ZUKUNFT</strong>
 			
 			<div id="txt" class="text">
@@ -140,8 +140,8 @@
 			<div class="txt">
 				<div class="picSa">
 					<center>
-						<img src="images/Duschrinnen_all.jpg">
-						<img src="images/duschrinnen.jpg">
+						<img src="images/Duschrinnen_all.png">
+						<img src="images/duschrinnen.png">
 					</center>
 				</div>
 
@@ -221,7 +221,7 @@
 					<br />
 
 					<div class="lists">
-						<img class="target" src="images/duschrinneslimline.jpg">
+						<img class="target" src="images/duschrinneslimline.png">
 						<b>Allgemeine Eigenschaften</b>
 						<ul>
 							<li>Edelstahl 304 oder 316</li>
@@ -242,7 +242,7 @@
 		<footer>
 			<div class="footer">
 				<p>
-					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 415110302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 83152387070 <br /> Copyright &copy; 2015 – 
+					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
 				</p>
 			</div>
 		</footer>
@@ -278,15 +278,14 @@
 				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
 				var top = $('.content').height();
 				$('.backpic').css('top', top);
-				$('.main').css('top', top);
 
-				$('.picSa').css('margin-top', $('.backpic').height());
-				var upDown = ($('.sample').height() - $('.target').height()) / 2;
-				$('.target').css('padding-top', upDown);
-				$('.target').css('padding-bottom', upDown);
-
-				top += $('.main').height();
-				$('footer').css('top', top);
+				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
+				var mainHeight = $(window).height();
+				var footerHeight = $('footer').height();
+				var footerTop = $('footer').position().top + footerHeight;
+				if (footerTop < mainHeight) {
+					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
+				}
 			}
 
 			function setMaxWidth() {

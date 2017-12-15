@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="css.css?version=50">
 </head>
 
 <body class="body ed">
@@ -64,7 +64,7 @@
 							<li class="divider-vertical"></li>
 
 							<li class="six">
-								<a href="inprogress.html">Solarthermie</a>
+								<a href="solarthermie.html">Solarthermie</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -126,7 +126,7 @@
 
 		<div class="main">
 			<strong class="title">KONTAKT</strong>
-			<div class="locations">
+			<div class="locations marginTopMore">
 				<div class="loc">
 					<ul>
 						<li><b>Firmensitz Schweiz / Kanton Obwalden</b></li>
@@ -140,10 +140,9 @@
 						<li>&nbsp;</li>
 						<li>Servicetelefon rund um die Uhr:</li>
 						<li>+41 (0)76 57 99 465</li>
-						<li>&nbsp;</li>
 					</ul>
 
-					<img class="lightbox_trigger" id="map1" src="images/map-sarnen.jpg" alt="Map of Sarnen" />
+					<img class="lightbox_trigger" id="map1" src="images/Map-Sarnen.png" alt="Map of Sarnen" />
 				</div>
 				<!-- loc1 end -->
 				<div class="loc">
@@ -159,10 +158,9 @@
 						<li>&nbsp;</li>
 						<li>Servicetelefon:</li>
 						<li>+49 (0)171 33 25 346</li>
-						<li>&nbsp;</li>
 					</ul>
 
-					<img class="lightbox_trigger" id="map2" src="images/map-kempten.jpg" alt="Map of Kampten" />
+					<img class="lightbox_trigger" id="map2" src="images/Map-Kempten.png" alt="Map of Kampten" />
 				</div>
 				<!-- loc2 end -->
 				<div class="loc">
@@ -178,10 +176,9 @@
 						<li>&nbsp;</li>
 						<li>Servicetelefon:</li>
 						<li>+39 339 81 93 901</li>
-						<li>&nbsp;</li>
 					</ul>
 
-					<img class="lightbox_trigger" id="map3" src="images/map-meran.jpg" alt="Map of Merano" />
+					<img class="lightbox_trigger" id="map3" src="images/Map-Meran.png" alt="Map of Merano" />
 				</div>
 				<!-- loc3 end -->
 			</div>
@@ -299,7 +296,7 @@
 		<footer>
 			<div class="footer">
 				<p>
-					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 415110302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 83152387070 <br /> Copyright &copy; 2015 – 
+					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
 				</p>
 			</div>
 		</footer>
@@ -353,16 +350,14 @@
 				$('.locations > .loc').css('margin-left', leftMarginLoc);
 
 				var top = $('.content').height();
-				$('.main').css('top', top);
+				
 
-				top += parseFloat($('.main').height());
-
-				if ((top + $('footer').height()) < $(window).height()) {
-
-					$('footer').css('top', ($(window).height() - $('footer').height()));
-				}
-				else {
-					$('footer').css('top', top);
+				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
+				var mainHeight = $(window).height();
+				var footerHeight = $('footer').height();
+				var footerTop = $('footer').position().top + footerHeight;
+				if (footerTop < mainHeight) {
+					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
 				}
 			}
 

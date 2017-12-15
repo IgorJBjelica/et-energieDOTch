@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="css.css?version=50">
 </head>
 
-<body class="body">
+<body class="body greenish">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -64,7 +64,7 @@
 							<li class="divider-vertical"></li>
 
 							<li class="six">
-								<a href="inprogress.html">Solarthermie</a>
+								<a href="solarthermie.html">Solarthermie</a>
 							</li>
 
 							<li class="divider-vertical"></li>
@@ -124,13 +124,13 @@
 		</div>
 		<!-- END CONTENT -->
 
-		<div class="main x" id="first">
+		<div class="main" id="first">
 			<strong class="title">BAFA f&ouml;rderf&auml;hige Holzkessel bei uns erh&auml;ltlich.</strong>
 			<div class="pullLeft">
 				<p>Gerne beraten wir Sie pers&ouml;nlich, telefonisch unter der Nummer +49 (0) 831 575 00 0 oder <a href="mailto:info@et-energie.ch" target="_blank">per E-Mail.</a></p>
 
 				<a href="#hSep1"><img src="images/attackSLX.jpg" /></a>
-				<a href="#hSep2"><img src="images/pellet.jpg" /></a>
+				<a href="#hSep2"><img src="images/Pellet.jpg" /></a>
 
 				<p>Die Zusch&uuml;sse f&uuml;r Solarthermieanlagen, Biomasseanlagen und W&auml;rmepumpen wurden deutlich erh&ouml;ht.Hier k&ouml;nnen Sie sich &uuml;ber die aktuellen F&ouml;rderrichtlinien in Deutschland informieren:</p>
 				<p id="hSep1"><a href="http://www.bafa.de/DE/Home/home_node.html;jsessionid=F9A9E521041D8CA67BE47D73373DE5AE.2_cid387" target="_blank">Zur Webseite des Bundesamtes f&uuml;r Wirtschaft und Ausfuhrkontrolle (BAFA)...</a></p>
@@ -158,7 +158,7 @@
 				</div>
 
 				<div class="image">
-					<img src="images/attackSLX_holz.jpg">
+					<img src="images/AttackSLX_holz.png">
 				</div>
 
 				<br><br>
@@ -375,8 +375,8 @@
 						<td colspan="4">2/230</td>
 					</tr>
 				</table>
-				<p class="sp nodown">Weitere Modelle auf Anfrage.</p>
-				<i id="hSep2">Irrt&uuml;mer / Technische &Auml;nderungen vorbehalten</i>
+				<p class="sp nodown noleft">Weitere Modelle auf Anfrage.</p>
+				<i id="hSep2" class="noleft">Irrt&uuml;mer / Technische &Auml;nderungen vorbehalten</i>
 			</div>
 			<!-- END TEXT1 -->
 
@@ -404,7 +404,7 @@
 				</div>
 
 				<div class="image">
-					<img src="images/pellet.gif">
+					<img src="images/Pellet.png">
 				</div>
 
 				<br><br>
@@ -536,7 +536,7 @@
 						<td colspan="4">230 / 50</td>
 					</tr>
 				</table>
-				<i>Technische Angaben k&ouml;nnen leicht abweichen. Alle hier gemachten Angaben sind ohne Gew&auml;hr.</i>
+				<i class="noleft">Technische Angaben k&ouml;nnen leicht abweichen. Alle hier gemachten Angaben sind ohne Gew&auml;hr.</i>
 			</div>
 			<!-- END TEXT2 -->
 		</div>
@@ -545,7 +545,7 @@
 		<footer>
 			<div class="footer">
 				<p>
-					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 415110302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 83152387070 <br /> Copyright &copy; 2015 – 
+					ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0 <br /> Copyright &copy; 2015 – 
 				</p>
 			</div>
 		</footer>
@@ -580,10 +580,14 @@
 				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
 				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
 				var top = $('.content').height();
-				$('.main').css('top', top);
 
-				top += $('.main').height();
-				$('footer').css('top', top);
+				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
+				var mainHeight = $(window).height();
+				var footerHeight = $('footer').height();
+				var footerTop = $('footer').position().top + footerHeight;
+				if (footerTop < mainHeight) {
+					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
+				}
 			}
 
 			function setMaxWidth() {
