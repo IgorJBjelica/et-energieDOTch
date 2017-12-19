@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=50">
+	<link rel="stylesheet" type="text/css" href="css.css?version=51">
 </head>
 
-<body class="body greenish">
+<body id="body" class="body greenish">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -377,12 +377,20 @@
 				</table>
 				<p class="sp nodown noleft">Weitere Modelle auf Anfrage.</p>
 				<i id="hSep2" class="noleft">Irrt&uuml;mer / Technische &Auml;nderungen vorbehalten</i>
+
+				<div class="floatRight wide10">
+					<a href="#body">
+						<img class="floatRight" src="images/nachoben.png">
+						<br>
+						<span class="floatRight marginTop1">nach oben</span>
+					</a>
+				</div>
 			</div>
 			<!-- END TEXT1 -->
 
 			<hr class="hSep">
 
-			<div class="textHe">
+			<div class="textHe marginTop4 nodown">
 				<div class="innerText">
 					<strong>ATTACK PELLET 30 AUTOMATIC</strong>
 					<p>
@@ -537,6 +545,14 @@
 					</tr>
 				</table>
 				<i class="noleft">Technische Angaben k&ouml;nnen leicht abweichen. Alle hier gemachten Angaben sind ohne Gew&auml;hr.</i>
+
+				<div class="floatRight wide10 marginBot5 marginTop3">
+					<a href="#body">
+						<img class="floatRight" src="images/nachoben.png">
+						<br>
+						<span class="floatRight marginTop1">nach oben</span>
+					</a>
+				</div>
 			</div>
 			<!-- END TEXT2 -->
 		</div>
@@ -557,6 +573,17 @@
 			setMargins();
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
 				setMargins();
+			});
+
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
 			});
 
 			function setMargins() {

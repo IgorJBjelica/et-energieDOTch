@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=50">
+	<link rel="stylesheet" type="text/css" href="css.css?version=51">
 </head>
 
-<body class="body blueish">
+<body id="body" class="body blueish">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -234,6 +234,14 @@
 						</ul>
 					</div>
 				</div>
+
+				<div class="pullRightText wide10 marginTop3">
+					<a href="#body">
+						<img class="floatRight" src="images/nachoben.png">
+						<br>
+						<span class="floatRight marginTop1">nach oben</span>
+					</a>
+				</div>
 			</div>
 			<!-- END TEXT -->
 		</div>
@@ -254,6 +262,17 @@
 			setMargins();
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
 				setMargins();
+			});
+
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
 			});
 
 			function setMargins() {

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css.css?version=50">
 </head>
 
-<body class="body bcgrYellow">
+<body id="body" class="body bcgrYellow">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -137,7 +137,7 @@
 
 			<img id="belimg" src="images/beleuchtung.png" />
 
-			<div id="txt2" class="text">
+			<div id="txt2" class="text nodown">
 				<b>Was wir Ihnen bieten</b>
 				<p>
 					Mit uns haben Sie einen zuverl&auml;ssigen Gesch&auml;ftspartner f&uuml;r LED Beleuchtung, der Ihnen von Anfang an zur Seite steht und die passende L&ouml;sung f&uuml;r Sie findet.
@@ -182,7 +182,16 @@
 					<li>Umweltfreundlich</li>
 					<li>Hohe Effizienz, lange Lebensdauer und geringer Wartungsaufwand sorgen f&uuml;r beste Wirtschaftlichkeit.</li>
 				</ul>
+
+				<div class="pullRightText wide10 marginBot2">
+					<a href="#body">
+						<img class="floatRight" src="images/nachoben.png">
+						<br>
+						<span class="floatRight marginTop1">nach oben</span>
+					</a>
+				</div>
 			</div>
+			<!-- END TEXT -->
 		</div>
 		<!-- END MAIN -->
 
@@ -201,6 +210,17 @@
 			setMargins();
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
 				setMargins();
+			});
+
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
 			});
 
 			function setMargins() {

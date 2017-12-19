@@ -381,11 +381,9 @@ a.control_next {
 	line-height: 1.3em;
 	background-color: transparent;
 	position: relative;
-	/*top: 67px;*/
-	/*left: 10%;*/
 	width: 80vw;
 	min-height: 100%;
-	padding-top: 5%;
+	padding-top: 68px;
 	margin-left: 10vw;
 	z-index: 2;
 }
@@ -401,7 +399,6 @@ a {
 
 ul {
 	list-style: disc;
-	/*padding: 0;*/
 }
 
 pre {
@@ -431,10 +428,10 @@ br {
 	float: left;
 }
 
-.locations > .loc {
-	max-width: 30%;
+.loc {
+	max-width: 26%;
 	display: block;
-	/*margin: 3% 1% 1%;*/
+	margin: 3% 6% 1% 0;
 	float: left;
 }
 
@@ -495,11 +492,6 @@ br {
 	margin: 3% auto 0 5.2%;
 }
 
-.locations {
-	width: 100%;
-	margin-left: 2%;
-}
-
 .ulKontakt {
 	line-height: 1.6em;
 }
@@ -530,6 +522,32 @@ br {
 
 .ed {
 	background-color: #ededed;
+}
+
+@media all and (max-width: 915px) and (min-width: 480px) {
+	.main {
+		padding-top: 150px;
+	}
+
+	.loc {
+		max-width: 40%;
+		display: block;
+		margin: 3% 6% 1% 0;
+		float: left;
+	}
+}
+
+@media all and (max-width: 560px) {
+	.main {
+		padding-top: 150px;
+	}
+
+	.loc {
+		max-width: 76%;
+		display: block;
+		margin: 3% 6% 1% 0;
+		float: left;
+	}
 }
 
 /********************************************************KONTAKT FORMULAR***********************************************************************/
@@ -1311,8 +1329,16 @@ img.pullLeft {
 	margin-top: 3%;
 }
 
+.marginTop4 {
+	margin-top: 4%;
+}
+
 .marginTop6 {
 	margin-top: 6%;
+}
+
+.marginTop7 {
+	margin-top: 7%;
 }
 
 .marginTopMore {

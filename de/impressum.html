@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=50">
+	<link rel="stylesheet" type="text/css" href="css.css?version=51">
 </head>
 
-<body class="body">
+<body id="body" class="body">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -284,6 +284,14 @@
 				<p>Quelle: <a href="https://www.e-recht24.de" target="_blank">https://www.e-recht24.de</a></p>
 			</div>
 			<!-- END TEXT -->
+
+			<div class="pullRightText wide10 marginBot2">
+				<a href="#body">
+					<img class="floatRight" src="images/nachoben.png">
+					<br>
+					<span class="floatRight marginTop1">nach oben</span>
+				</a>
+			</div>
 		</div>
 		<!-- END MAIN -->
 
@@ -302,6 +310,17 @@
 			setMargins();
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
 				setMargins();
+			});
+
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
 			});
 
 			function setMargins() {

@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=50">
+	<link rel="stylesheet" type="text/css" href="css.css?version=51">
 </head>
 
-<body class="body ed">
+<body id="body" class="body ed">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
@@ -126,7 +126,7 @@
 
 		<div class="main">
 			<strong class="title">KONTAKT</strong>
-			<div class="locations marginTopMore">
+			<div class="text wide">
 				<div class="loc">
 					<ul>
 						<li><b>Firmensitz Schweiz / Kanton Obwalden</b></li>
@@ -152,8 +152,8 @@
 						<li>ET Energie &amp; Handel GmbH</li>
 						<li>Gesch&auml;ftsf&uuml;hrer Rainer Berkmann</li>
 						<li>Dieselstra&szlig;e 45 &bull; D - 87437 Kempten</li>
-						<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 52 38 707 0</li>
-						<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 52 38 707 70</li>
+						<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 0</li>
+						<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 70</li>
 						<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&commat;et-energie.ch</li>
 						<li>&nbsp;</li>
 						<li>Servicetelefon:</li>
@@ -170,9 +170,9 @@
 						<li>W&Auml;RME-LICHT-B&Auml;DERWELT SRL</li>
 						<li>Gesch&auml;ftsf&uuml;hrer Rainer Berkmann</li>
 						<li>Winkelweg 29 &bull; I - 39012 Meran</li>
-						<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 0</li>
-						<li>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+49 (0)831 575 00 70</li>
-						<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&commat;et-energie.ch</li>
+						<li>Tel.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+39 339 81 93 901</li>
+						<li>Oder:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+41 (0)76 200 19 15</li>
+						<li>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&commat;et-energie.ch</li>
 						<li>&nbsp;</li>
 						<li>Servicetelefon:</li>
 						<li>+39 339 81 93 901</li>
@@ -290,6 +290,14 @@
 				</form>
 			</div>
 			<!-- FORM END -->
+
+			<div class="pullRightText wide10 marginTop3 marginBot2">
+				<a href="#body">
+					<img class="floatRight" src="images/nachoben.png">
+					<br>
+					<span class="floatRight marginTop1">nach oben</span>
+				</a>
+			</div>
 		</div>
 		<!-- END MAIN -->
 
@@ -311,6 +319,17 @@
 				setMargins();
 			});
 
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
+			});
+
 			function setMargins() {
 				var leftMargin = 0;
 				var topMargin = 5;
@@ -328,9 +347,9 @@
 					containerWidth = $('.pics').width();
 					leftMarginPics = (containerWidth - width * 4) / 2;
 
-					width = $('.loc').width();
-					containerWidth = $('.locations').width();
-					leftMarginLoc = (containerWidth - width * 3) / 3;
+					// width = $('.loc').width();
+					// containerWidth = $('.locations').width();
+					// leftMarginLoc = (containerWidth - width * 3) / 3;
 				}
 				else {
 					var width = $('.content > .navbar > .navbar-inner').width();
@@ -338,16 +357,16 @@
 					leftMargin = (containerWidth - width) / 2;
 					topMargin = 25;
 
-					width = $('.loc').width();
-					containerWidth = $('.locations').width();
+					// width = $('.loc').width();
+					// containerWidth = $('.locations').width();
 
-					leftMarginLoc = (containerWidth - width) / 2;
+					// leftMarginLoc = (containerWidth - width) / 2;
 				}
 				
 				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
 				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
 				$('.pics > .pic:first-of-type').css('margin-left', leftMarginPics);
-				$('.locations > .loc').css('margin-left', leftMarginLoc);
+				// $('.locations > .loc').css('margin-left', leftMarginLoc);
 
 				var top = $('.content').height();
 				
