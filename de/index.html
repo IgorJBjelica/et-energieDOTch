@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=51">
+	<link rel="stylesheet" type="text/css" href="css.css?version=52">
 </head>
 
 <body id="body" class="body grey"> <!-- MAKE GREY with grey -->
@@ -127,8 +127,8 @@
 
 			<div id="slideshow">
 				<div id="slider">
-					<a href="#" class="control_next">></a>
-					<a href="#" class="control_prev"><</a>
+					<a class="control_next">></a>
+					<a class="control_prev"><</a>
 					<center>
 						<ol>
 							<li id="1" data-slide="1"></li>
@@ -137,6 +137,8 @@
 							<li id="4" data-slide="4"></li>
 							<li id="5" data-slide="5"></li>
 							<li id="6" data-slide="6"></li>
+							<li id="7" data-slide="7"></li>
+							<li id="8" data-slide="8"></li>
 						</ol>
 					</center>
 					<ul>
@@ -146,6 +148,8 @@
 						<li><img id="4" src="images/slideshow-4.jpg" alt="Slider images" /></li>
 						<li><img id="5" src="images/slideshow-5.jpg" alt="Slider images" /></li>
 						<li><img id="6" src="images/slideshow-6.jpg" alt="Slider images" /></li>
+						<li><img id="7" src="images/slideshow-7.jpg" alt="Slider images" /></li>
+						<li><img id="8" src="images/slideshow-8.jpg" alt="Slider images" /></li>
 					</ul>
 				</div>
 			</div>
@@ -279,7 +283,7 @@
 			function setMaxWidth(win) {
 				if (win >= 1049) {
 					var widthLogo = parseFloat($('.logo').width()) + parseFloat($('.logo').css('margin-left'));
-					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));
+					var widthLanguage = parseFloat($('.language').width()) + parseFloat($('.language').css('margin-right'));///////////////////These two...
 					var width = win - widthLogo - widthLanguage;
 				}
 				else {
@@ -320,7 +324,7 @@
 				$('#slider ol li').removeClass('active');
 				var id = $('#slider ul li :nth-child(1)').attr('id');
 
-				if(id < 6)
+				if(id < 8)
 					id++;
 				else
 					id=1;
@@ -366,7 +370,7 @@
 				moveRight();
 			});
 
-		    $('#slider ol li').click(function(){                                      //And this fucker needs to work!!
+		    $('#slider ol li').click(function(){
 		    	if($(this).attr('data-slide') > $('#slider ol li.active').attr('data-slide'))
 		    		loopRight($(this).attr('data-slide'));
 		    	else if ($(this).attr('data-slide') < $('#slider ol li.active').attr('data-slide'))

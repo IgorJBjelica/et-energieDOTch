@@ -287,7 +287,7 @@ nav{
 #slider ul {
 	list-style: none;
 	position: relative;
-	width: calc(100% * 6);
+	width: calc(100% * 8);
 	margin: 0;
 	padding: 0;
 }
@@ -295,7 +295,7 @@ nav{
 #slider ul li {
 	position: relative;
 	display: block;
-	width: calc(100% / 6);
+	width: calc(100% / 8);
 	float: left;
 	margin: 0;
 	padding: 0;
