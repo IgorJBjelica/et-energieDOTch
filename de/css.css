@@ -31,6 +31,11 @@
 	min-height: 100%; 
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .marginBot2 {
 	margin-bottom: 2% !important;
 }
@@ -68,7 +73,7 @@
 	display: inline-block;
 	float: right;
 	width: 18%;
-	margin-top: 1.6%;
+	margin-top: 20px;
 	position: relative;
 	z-index: 4;
 }
@@ -100,6 +105,10 @@
 
 nav{
 	display: block;
+	padding-top: 7px;
+	width: 547px;
+	margin-left: calc((100% - 547px) / 2);
+	height: -webkit-fill-available;
 }
 
 .nav{
@@ -185,10 +194,8 @@ nav{
 }
 
 .navbar-inner {
-	max-width: 900px;
-	width: 70%;
-	margin-top: 5px;
-	margin-left: calc(30% / 2);
+	width: 100%;
+	/*margin-top: 5px;*/
 	display: inline-block;
 	background-color: #ffffff;
 	-webkit-border-radius: 4px;
@@ -651,10 +658,11 @@ footer {
 
 .backpic {
 	position: absolute;
+	width: 100%;
 }
 
-.backpic img, .picSa img {
-	width: 100%;
+.backpic img {
+	width: 100vw;
 }
 
 .picSa img:first-of-type {
