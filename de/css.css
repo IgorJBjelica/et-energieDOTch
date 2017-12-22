@@ -1229,7 +1229,7 @@ table.darkWide tr td:last-of-type:after {
 }
 
 .noleft {
-	margin-left: 0;
+	margin-left: 0 !important;
 }
 
 table.noup {
