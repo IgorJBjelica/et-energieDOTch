@@ -2,32 +2,24 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=52">
+	<link rel="stylesheet" type="text/css" href="css.css?version=53">
 </head>
 
 <body class="body">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
-				<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
+				<a class="floatRight" href="#"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 			</div>
 
 			<div class="language">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-							<li>
-								<a href=""><img class="this" src="images/de.gif"></a>
-							</li>
-							
-							<li>
-								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-							</li>
-						</ul>
-					</div>
+				<div class="floatLeft">
+					<a href=""><img class="this" src="images/de.gif"></a>
+					<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
 				</div>
-			</div>
-			<!-- Language dropdown end -->
+			</ul>
+		</div>
+		<!-- Language end -->
 
 			<div class="navbar">
 				<div class="navbar-inner">
@@ -177,50 +169,14 @@
 			});
 
 			function setMargins() {
-				var leftMargin = 0;
-				var topMargin = 5;
-
-				setMaxWidth();
-
-				if ($(window).width() >= 1049) {
-					var width = $('.content > .navbar > .navbar-inner').width();
-					var containerWidth = $('.content > .navbar').width();  
-					leftMargin = (containerWidth - width) / 2;
-				}
-				else {
-					var width = $('.content > .navbar > .navbar-inner').width();
-					var containerWidth = $('.content').width();  
-					leftMargin = (containerWidth - width) / 2;
-					topMargin = 25;
-				}
-				
-				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
-				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
-				var top = $('.content').height();
-				
-
 				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
 				var mainHeight = $(window).height();
 				var footerHeight = $('footer').height();
 				var footerTop = $('footer').position().top + footerHeight;
+
 				if (footerTop < mainHeight) {
 					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
 				}
-			}
-
-			function setMaxWidth() {
-				if ($(window).width() >= 1049) {
-					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
-					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
-					var width = $(window).width() - widthLogo - widthLanguage;
-				}
-				else {
-					var widthLogo = $('.logo').width();
-					var widthLanguage = $('.language').width();
-					var width = $(window).width() - widthLogo - widthLanguage;
-				}
-
-				$( ".content > .navbar" ).css('width', width);
 			}
 
 			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));

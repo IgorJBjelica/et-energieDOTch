@@ -45,7 +45,7 @@
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	height: auto;
+	height: 68px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.50);
 	background: #ffffff;
 	z-index: 999999;
@@ -53,7 +53,7 @@
 
 .logo {
 	float: left;
-	margin-left: 11%;
+	width: 22%;
 	max-height: 52px;
 	padding-top: .7%;
 }
@@ -64,47 +64,38 @@
 	float: left;
 }
 
-.five {
-	margin-left: 20%;
-	margin-top: 10px;
-	float: left;
-	display: block;
-	height: 25px;
-}
-
-#flags {
-	max-width: 23px;
-	padding-top: 20%;
-}
-
-#flags:hover, #flags.clicked {
-	cursor: pointer;
-	margin-bottom: 5%;
-
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
 .language {
+	display: inline-block;
 	float: right;
-	margin: 1.1% 11% 0 0;
+	width: 18%;
+	margin-top: 1.6%;
 	position: relative;
-	display: block;
 	z-index: 4;
 }
 
-.language > .navbar {
-	margin: .53% 0 0 -2.45%;
-}
-
-.language > .navbar > .navbar-inner > .nav > li > a {
+.language .nostyle.nodown {
+	margin: 0;
 	padding: 0;
+	display: inline-block;
 }
 
-.nav > li > a > .this {
+.language a {
+	display: inline-block;
+	height: 20px;
+}
+
+.language img {
+	display: inline;
+	max-width: 30px;
+	opacity: .4;
+}
+
+.language .this {
 	opacity: 1;
+}
+
+.nostyle {
+	list-style: none;
 }
 
 nav{
@@ -135,9 +126,9 @@ nav{
 }
 
 .navbar .nav {
-	margin: -1.095% auto 0;
+	margin: 0;
 	position: relative;
-	left: 0;
+	/*left: 0;*/
 	display: inline-flex;
 	float: left;
 }
@@ -148,7 +139,7 @@ nav{
 
 .navbar .nav > li > a {
 	float: none;
-	padding: 10px 10px 10px;
+	padding: 5px;
 	color: #1c1c1b;
 	font-size: .81em;
 	text-decoration: none;
@@ -160,8 +151,7 @@ nav{
 	text-decoration: none;
 	background-color: transparent;
 	text-shadow: 0 4px 1px rgba(0, 0, 0, 0.4);
-	padding-top: 8px;
-	/*font-size: .9em;*/
+	padding-top: 4px;
 
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -173,7 +163,7 @@ nav{
 .navbar .nav > .active > a:focus {
 	text-decoration: none;
 	text-shadow: 0 4px 1px rgba(0, 0, 0, 0.4);
-	padding-top: 8px;
+	padding-top: 4px;
 
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -182,7 +172,7 @@ nav{
 }
 
 .navbar{
-	max-width: 60%;
+	width: 60%;
 	position: relative;
 	float: left;
 	overflow: visible;
@@ -196,13 +186,14 @@ nav{
 
 .navbar-inner {
 	max-width: 900px;
-	width: min-content;
-
+	width: 70%;
+	margin-top: 5px;
+	margin-left: calc(30% / 2);
 	display: inline-block;
 	background-color: #ffffff;
 	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	   -moz-border-radius: 4px;
+			border-radius: 4px;
 }
 
 .navbar .nav > .four > a {
@@ -219,7 +210,7 @@ nav{
 
 .divider-vertical {
 	height: 16px;
-	margin: 10px 0;
+	margin-top: 5px;
 	border-right: 1px solid #000;
 	border-left: none;
 }
@@ -267,6 +258,10 @@ nav{
 	line-height: 1.5em;
 }
 
+.middle {
+	margin-left: calc(30% / 2);
+}
+
 /*******************************GALERY HOME*/
 
 #slideshow {
@@ -290,6 +285,7 @@ nav{
 	width: calc(100% * 8);
 	margin: 0;
 	padding: 0;
+    line-height: 1em;
 }
 
 #slider ul li {
@@ -355,6 +351,7 @@ a.control_next {
 	width: 100%;
 	z-index: 999;
 	padding: 0;
+    line-height: 1em;
 }
 
 #slider ol li{
@@ -765,9 +762,10 @@ td {
 	display: inline-block;
 	width: 30%;
 	height: fit-content;
+	z-index: 1;
 
-	-webkit-transition: all 1s ease;
-	transition: all 1s ease;
+	-webkit-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out;
 }
 
 .piece img {
@@ -776,6 +774,7 @@ td {
 
 .piece:hover {
 	transform: scale(1.3);
+	z-index: 9;
 }
 
 .smallStrong {

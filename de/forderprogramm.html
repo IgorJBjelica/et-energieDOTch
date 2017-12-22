@@ -2,32 +2,24 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=52">
+	<link rel="stylesheet" type="text/css" href="css.css?version=53">
 </head>
 
-<body class="body">
+<body id="body" class="body">
 	<div class="container">
 		<div class="content">					
 			<div class="logo">
-				<a class="none" href="index.html"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
+				<a class="floatRight" href="#"><img id="logo" src="images/logo.png" alt="ET energie & handel"/></a>
 			</div>
 
 			<div class="language">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-							<li>
-								<a href=""><img class="this" src="images/de.gif"></a>
-							</li>
-							
-							<li>
-								<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
-							</li>
-						</ul>
-					</div>
+				<div class="floatLeft">
+					<a href=""><img class="this" src="images/de.gif"></a>
+					<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
 				</div>
-			</div>
-			<!-- Language dropdown end -->
+			</ul>
+		</div>
+		<!-- Language end -->
 
 			<div class="navbar">
 				<div class="navbar-inner">
@@ -521,6 +513,9 @@
 						</tr>
 						<tr>
 							<td>6000 Luzern</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
@@ -1029,6 +1024,14 @@
 					</p>
 				</div>
 			</div>
+
+			<div class="pullRightText wide20 marginTop4 marginBot2">
+				<a href="#body">
+					<img class="floatRight" src="images/nachoben.png">
+					<br>
+					<span class="floatRight marginTop3">nach oben</span>
+				</a>
+			</div>
 		</div>
 		<!-- END MAIN -->
 
@@ -1050,56 +1053,26 @@
 				setMargins();
 			});
 
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+
+				if( target.length ) {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top
+					}, 1000);
+				}
+			});
+
 			function setMargins() {
-				var leftMargin = 0;
-				var topMargin = 5;
-
-				setMaxWidth();
-
-				if ($(window).width() >= 1049) {
-					var width = $('.content > .navbar > .navbar-inner').width();
-					var containerWidth = $('.content > .navbar').width();  
-					leftMargin = (containerWidth - width) / 2;
-					
-					width = $('.pics .pic').width();
-					containerWidth = $('.pics').width();
-					leftMarginPics = (containerWidth - width * 4) / 2;
-				}
-				else {
-					var width = $('.content > .navbar > .navbar-inner').width();
-					var containerWidth = $('.content').width();  
-					leftMargin = (containerWidth - width) / 2;
-					topMargin = 25;
-				}
-				
-				$('.content > .navbar > .navbar-inner').css('margin-left', leftMargin);
-				$('.content > .navbar > .navbar-inner').css('margin-top', topMargin);
-				$('.pics > .pic:first-of-type').css('margin-left', leftMarginPics);
-				var top = $('.content').height();
-				
-
 				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
 				var mainHeight = $(window).height();
 				var footerHeight = $('footer').height();
 				var footerTop = $('footer').position().top + footerHeight;
+
 				if (footerTop < mainHeight) {
 					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
 				}
-			}
-
-			function setMaxWidth() {
-				if ($(window).width() >= 1049) {
-					var widthLogo = $('.logo').width() + parseFloat($('.logo').css('margin-left'));
-					var widthLanguage = $('.language').width() + parseFloat($('.language').css('margin-right'));
-					var width = $(window).width() - widthLogo - widthLanguage;
-				}
-				else {
-					var widthLogo = $('.logo').width();
-					var widthLanguage = $('.language').width();
-					var width = $(window).width() - widthLogo - widthLanguage;
-				}
-
-				$( ".content > .navbar" ).css('width', width);
 			}
 
 			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
