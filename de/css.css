@@ -49,6 +49,10 @@ img {
 		width: 59vw !important;
 		margin-left: calc((100vw - 59vw) / 2) !important;
 	}
+
+	.picSa img:first-of-type {
+		margin-top: 25%; 
+	}
 }
 
 /*************************************************************Navbar**************************************************************/
