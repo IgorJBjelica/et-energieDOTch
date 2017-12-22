@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=55">
+	<link rel="stylesheet" type="text/css" href="css.css?version=56">
 </head>
 
 <body class="body">
@@ -175,7 +175,7 @@
 				var footerTop = $('footer').position().top + footerHeight;
 
 				if (footerTop < mainHeight) {
-					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
+					$('footer').css('margin-top', (mainHeight - footerTop));
 				}
 			}
 
