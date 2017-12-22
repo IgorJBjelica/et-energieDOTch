@@ -51,7 +51,7 @@ img {
 	}
 
 	.picSa img:first-of-type {
-		margin-top: 25%; 
+		margin-top: 25% !important; 
 	}
 }
 
