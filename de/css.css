@@ -44,6 +44,16 @@ img {
 	margin-bottom: 5% !important;
 }
 
+div.line {
+    height: 0px;
+    border: 0;
+    border-bottom: 1px solid #373737;
+    position: relative;
+    width: 200vw;
+    margin-left: -90vw;
+    clear: both;
+}
+
 @media all and (min-width: 1400px) {
 	.main.morph {
 		width: 59vw !important;
@@ -1067,10 +1077,8 @@ div.pullLeft p:last-of-type {
 	margin: 8% 0;
 }
 
-.hSep {
-	width: 200vw;
-	margin-left: -90vw;
-}
+/*.hSep {
+}*/
 
 .textHe {
 	width: 70%;
@@ -1139,14 +1147,14 @@ i {
 	width: 20%
 }
 
-ul.lower > li > a:hover ~ .line, ul.lower > li > a:focus ~ .line {
+/*ul.lower > li > a:hover ~ .line, ul.lower > li > a:focus ~ .line {
 	width: 90%;
 
 	-webkit-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
 	-moz-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
 	-o-transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
 	transition: all 1s cubic-bezier(0.63,-0.04, 0.24, 1);
-}
+}*/
 
 ul.lower > .divider-vertical {
 	margin: -4px 0;
