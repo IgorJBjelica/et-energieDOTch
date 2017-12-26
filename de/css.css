@@ -210,8 +210,8 @@ nav{
 	display: inline-block;
 	background-color: #ffffff;
 	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-			border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .navbar .nav > .four > a {
@@ -251,7 +251,7 @@ nav{
 }
 
 .nopad{
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .main.home.second {
@@ -303,7 +303,7 @@ nav{
 	width: calc(100% * 8);
 	margin: 0;
 	padding: 0;
-    line-height: 1em;
+	line-height: 1em;
 }
 
 #slider ul li {
@@ -371,7 +371,7 @@ a.control_next {
 	width: 100%;
 	z-index: 999;
 	padding: 0;
-    line-height: 1em;
+	line-height: 1em;
 }
 
 #slider ol li{
@@ -786,7 +786,7 @@ td {
 	z-index: 1;
 
 	-webkit-transition: all 1s ease-in-out;
-			transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 .piece img {
@@ -906,8 +906,7 @@ td {
 .flag:nth-child(n+3):after{
 	content: ".";
 	visibility: hidden; 
-	display: block; 
-	height: 0; 
+	display: block;
 	clear: both;
 }
 
@@ -916,6 +915,13 @@ td {
 		width: 49%;
 		margin-bottom: 5%;
 		float: left;
+	}
+
+	.flag:nth-child(n+2):after{
+		content: ".";
+		visibility: hidden; 
+		display: block;
+		clear: both;
 	}
 }
 
