@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=57">
+	<link rel="stylesheet" type="text/css" href="css.css?version=60">
 </head>
 
 <body id="body" class="body greenish">
@@ -17,9 +17,8 @@
 					<a href=""><img class="this" src="images/de.gif"></a>
 					<a title="...IN PRODUCTION..."><img src="images/en.gif"></a>
 				</div>
-			</ul>
-		</div>
-		<!-- Language end -->
+			</div>
+			<!-- Language end -->
 
 			<div class="navbar">
 				<div class="navbar-inner">
@@ -286,13 +285,13 @@
 				</div>
 			</center>
 
-				<div class="pullRightText wide10 marginBot2">
-					<a href="#body">
-						<img class="floatRight" src="images/nachoben.png">
-						<br>
-						<span class="floatRight marginTop1">nach oben</span>
-					</a>
-				</div>
+			<div class="pullRightText wide10 marginBot2">
+				<a href="#body">
+					<img class="floatRight" src="images/nachoben.png">
+					<br>
+					<span class="floatRight marginTop1">nach oben</span>
+				</a>
+			</div>
 			<!-- END GALLERY -->
 
 			<hr class="hSep">
@@ -326,13 +325,13 @@
 			</center>
 			<!-- END GALLERY -->
 
-				<div class="pullRightText wide10 marginBot2">
-					<a href="#body">
-						<img class="floatRight" src="images/nachoben.png">
-						<br>
-						<span class="floatRight marginTop1">nach oben</span>
-					</a>
-				</div>
+			<div class="pullRightText wide10 marginBot2">
+				<a href="#body">
+					<img class="floatRight" src="images/nachoben.png">
+					<br>
+					<span class="floatRight marginTop1">nach oben</span>
+				</a>
+			</div>
 		</div>
 		<!-- END MAIN -->
 
@@ -349,6 +348,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		(function ($) {
+			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
+
 			setMargins();
 
 			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
@@ -384,12 +385,9 @@
 				var footerTop = $('footer').position().top + footerHeight;
 				
 				if (footerTop < mainHeight) {
-					$('footer').css('margin-top', 10 + (mainHeight - footerTop));
+					$('footer').css('margin-top', (mainHeight - footerTop));
 				}
-
 			}
-
-			$(".footer p").text( $('.footer p').text().concat((new Date).getFullYear()));
 		}(jQuery));
 	</script>
 </body>
