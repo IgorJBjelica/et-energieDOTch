@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<title>Et-Events</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css?version=63">
+</head>
+
+<body class="body">
+	<div class="container">
+		<center>
+			<div>
+				<img src="images/ET_Event-LOGO_2018.jpg" alt="ET-Events Logo" style="min-height: 113px;">
+				<div class="text">
+					<b>Die Seite befindet sich im Aufbau</b>
+					<p>
+						In K&uuml;rze ist der &uuml;berarbeitete Internetauftritt online.<br>
+						Bis dahin stehen wir gerne telefonisch zur Verf&uuml;gung.<br>
+						Wir freuen uns auf Ihre Anfragen.
+					</p>
+				</div>
+			</div>
+			<!-- END MAIN -->
+
+			<footer>
+				<div class="footer">
+					<p>
+						ET Energie &amp; Handel GmbH &bull; Sonnenbergstra&szlig;e 18 &bull; CH - 6060 Sarnen &bull; Telefon +41(0) 41 51 10 302 &bull; B&uuml;ro Deutschland &bull; Dieselstra&szlig;e 45 &bull; D - 87437 Kempten &bull; Telefon +49(0) 831 575 00 0
+					</p>
+					<span>Copyright &copy; 2015 – </span>
+				</div>
+			</footer>
+		</center>
+	</div>
+	<!-- END CONTAINER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		(function ($) {
+			$(".footer span").text( $('.footer span').text().concat((new Date).getFullYear()));
+
+			setMargins();
+
+			$(window).resize(function() {////////////////////////////////////Odradi za ostalo da bude responsive!!!!!
+				setMargins();
+			});
+
+			function setMargins() {
+				// $('.main').css('top', top);// Make main padding top responsive////////////////////////////////////////////////////////////////
+				var mainHeight = $(window).height();
+				var footerHeight = $('footer').outerHeight();
+				var footerTop = $('footer').position().top + footerHeight;
+
+				if (footerTop < mainHeight) {
+					$('footer').css('margin-top', (mainHeight - footerTop));
+				}
+			}
+		}(jQuery));
+	</script>
+</body>
+</html>
