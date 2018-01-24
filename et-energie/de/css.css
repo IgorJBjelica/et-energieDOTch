@@ -600,7 +600,12 @@ label {
 	width: 10%;
 	margin-right: 2%;
 	text-align: right;
-	padding-top: .6%;
+	/*padding-top: .6%;*/
+}
+
+select {
+	margin-bottom: 1%;
+	background-color: rgba(218, 218, 218, .9); 
 }
 
 input {
