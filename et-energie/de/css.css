@@ -126,8 +126,8 @@ div.line {
 
 nav{
 	display: block;
-	padding-top: 7px;
-	width: 547px;
+	padding-top: 17px;
+	width: 580px;
 	margin-left: calc((100% - 547px) / 2);
 	height: -webkit-fill-available;
 }
@@ -137,8 +137,22 @@ nav{
 	list-style: none;
 }
 
-.navbar > .navbar-inner > nav > .nav.top, .navbar > .navbar-inner > nav > .nav.bottom {
+.drop:hover {
+	cursor: pointer;
+	background-color: #d9d9d9 !important;
+	border-radius: 8%;
+}
+
+.navbar .nav.top {
 	float: right;
+}
+
+.nav.bottom {
+	margin-left: 9.6% !important;
+	margin-top: -1% !important;
+	background-color: #d9d9d9;
+	border-radius: 4%;
+	/*display: none !important;*/
 }
 
 .nav > li > a {
@@ -158,7 +172,6 @@ nav{
 .navbar .nav {
 	margin: 0;
 	position: relative;
-	/*left: 0;*/
 	display: inline-flex;
 	float: left;
 }
@@ -169,7 +182,7 @@ nav{
 
 .navbar .nav > li > a {
 	float: none;
-	padding: 5px;
+	padding: 5px 8px;
 	color: #1c1c1b;
 	font-size: .81em;
 	text-decoration: none;
