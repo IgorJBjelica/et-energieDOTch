@@ -851,6 +851,10 @@ td {
 	font-size: 1.1em;
 }
 
+.small {
+	font-size: .82em;
+}
+
 .topMargin {
 	margin-top: 3%;
 }
