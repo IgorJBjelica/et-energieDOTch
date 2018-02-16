@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=66">
+	<link rel="stylesheet" type="text/css" href="css.css?version=73">
 </head>
 
 <body class="body">
@@ -25,37 +25,27 @@
 					<nav>
 						<ul class="nav top">
 							<li class="one">
-								<a class="navi" href="index.html">Home</a>
+								<a href="index.html">Home</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="twoo">
 								<a class="drop">Produkte...</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="eight">
 								<a href="forderprogramm.html">F&ouml;rderprogramm</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="seven active">
 								<a href="#">Neuheiten/Sonderl&ouml;sungen</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="two">
 								<a href="kontakt.html">Kontakt</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="three">
-								<a href="inprogress.html">ET-Shop</a>
+								<a href="http://www.oem-service-shop.de/" target="_blank">ET-Shop</a>
 							</li>
 						</ul>
 
@@ -64,25 +54,17 @@
 								<a href="heizung.html">Heizung</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="threee">
 								<a href="sanitar.html">Sanit&auml;r</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="fourr">
 								<a href="beleuchtung.html">Beleuchtung</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="fivee">
 								<a href="pv.html">PV</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="six">
 								<a href="solarthermie.html">Solarthermie</a>
@@ -103,7 +85,9 @@
 				<span class="mediumer">Maximale Effizienz - kompakt, wirtschaftlich und <br> klimaschonend</span><br>
 			</div>
 
-			<img class="pullMoreRight topMargin" src="images/HWEinfuehrungspreis.png">
+			<div class="wide30 topMargin floatRight">
+				<img class="bird birdRight" src="images/Reflex_Servitec_Mini_klein.png">
+			</div>
 
 			<div class="text nodown">
 				<span class="medium">Vorteile auf einen Blick:</span>
@@ -200,14 +184,29 @@
 			});
 
 			$('.bottom').hide();
-
 			$('.top .drop').on('click', function(event) {
-				$('.bottom').toggle();
-				
-				if($('.bottom').is(':visible'))
-					$('.top .drop').css('background-color', '#d9d9d9');
-				else
-					$('.top .drop').css('background-color', 'transparent');					
+
+				$('.bottom').toggle(400, function() {
+					if($('.bottom').is(':visible')) {
+						$('.top a.drop').css('border', '').animate({borderBottomWidth: 5}, 400);
+						$('.navbar-inner').css('box-shadow', '0px 8px 16px -10px rgba(0,0,0,0.50)');
+					}
+					else {
+						$('.top a.drop').css('border', '').animate({borderBottomWidth: 2}, 400);
+						$('.navbar-inner').css('box-shadow', 'none');
+					}
+				});
+			});
+
+			var win = $(window);
+			var viewportB;
+			var birds = $('.bird');
+
+			$( window ).on('load', function(event) {
+				birds.each(function(i, el) {
+					var el = $(el);
+						el.addClass('fadeInRight');
+				});
 			});
 
 			function setMargins() {

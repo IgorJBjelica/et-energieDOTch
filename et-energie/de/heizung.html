@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css.css?version=66">
+	<link rel="stylesheet" type="text/css" href="css.css?version=73">
 </head>
 
 <body id="body" class="body greenish">
@@ -25,37 +25,27 @@
 					<nav>
 						<ul class="nav top">
 							<li class="one">
-								<a class="navi" href="index.html">Home</a>
+								<a href="#">Home</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="twoo">
 								<a class="drop">Produkte...</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="eight">
 								<a href="forderprogramm.html">F&ouml;rderprogramm</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="seven">
 								<a href="ns.html">Neuheiten/Sonderl&ouml;sungen</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="two">
 								<a href="kontakt.html">Kontakt</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="three">
-								<a href="inprogress.html">ET-Shop</a>
+								<a href="http://www.oem-service-shop.de/" target="_blank">ET-Shop</a>
 							</li>
 						</ul>
 
@@ -64,25 +54,17 @@
 								<a href="#">Heizung</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="threee">
 								<a href="sanitar.html">Sanit&auml;r</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="fourr">
 								<a href="beleuchtung.html">Beleuchtung</a>
 							</li>
 
-							<li class="divider-vertical"></li>
-
 							<li class="fivee">
 								<a href="pv.html">PV</a>
 							</li>
-
-							<li class="divider-vertical"></li>
 
 							<li class="six">
 								<a href="solarthermie.html">Solarthermie</a>
@@ -101,8 +83,8 @@
 			<div class="pullLeft">
 				<p>Gerne beraten wir Sie pers&ouml;nlich, telefonisch unter der Nummer +49 (0) 831 575 00 0 oder <a href="mailto:info@et-energie.ch" target="_blank">per E-Mail.</a></p>
 
-				<a href="downloads/waermeerzeuger_AttackSLX.pdf" target="_blank"><img src="images/attackSLX.jpg" /></a>
-				<a class="" href="downloads/waermeerzeuger_Pellet30.pdf" target="_blank"><img src="images/Pellet.jpg" /></a>
+				<a href="downloads/waermeerzeuger_AttackSLX.pdf" target="_blank"><img class="bird load" src="images/attackSLX.jpg" /></a>
+				<a class="" href="downloads/waermeerzeuger_Pellet30.pdf" target="_blank"><img class="bird birdRight load" src="images/Pellet.jpg" /></a>
 				<div class="row" style="display: inline-block;">
 					<a href="#hSep1"><img src="images/down.png" style="max-width: 28px; float: left; margin: 1% auto 1% 23%;" /></a>
 					<a href="#hSep2"><img src="images/down.png" style="max-width: 28px; float: left; margin: 1% auto 1% 45%;" /></a>
@@ -134,7 +116,7 @@
 				</div>
 
 				<div class="image">
-					<img src="images/AttackSLX_holz.png">
+					<img class="bird birdRight" src="images/AttackSLX_holz.png">
 				</div>
 
 				<br><br>
@@ -388,7 +370,7 @@
 				</div>
 
 				<div class="image">
-					<img src="images/Pellet.png">
+					<img class="bird birdRight" src="images/Pellet.png">
 				</div>
 
 				<br><br>
@@ -603,14 +585,49 @@
 			});
 
 			$('.bottom').hide();
-
 			$('.top .drop').on('click', function(event) {
-				$('.bottom').toggle();
-				
-				if($('.bottom').is(':visible'))
-					$('.top .drop').css('background-color', '#d9d9d9');
-				else
-					$('.top .drop').css('background-color', 'transparent');					
+
+				$('.bottom').toggle(400, function() {
+					if($('.bottom').is(':visible')) {
+						$('.top a.drop').css('border', '').animate({borderBottomWidth: 5}, 400);
+						$('.navbar-inner').css('box-shadow', '0px 8px 16px -10px rgba(0,0,0,0.50)');
+					}
+					else {
+						$('.top a.drop').css('border', '').animate({borderBottomWidth: 2}, 400);
+						$('.navbar-inner').css('box-shadow', 'none');
+					}
+				});
+			});
+
+			var birdRight = $('.birdRight').offset().top;
+
+			$( window ).on('load', function(event) {
+
+				$('.bird.load').css({ 
+					opacity: '1',
+					marginLeft: '0',
+					marginRight: '0'
+				});
+				setMargins();
+			});
+
+			var win = $(window);
+			var viewportB;
+			var birds = $('.bird');
+
+			$( window ).on('scroll', function(event) {
+				viewportB = win.scrollTop() + win.height();
+
+				birds.each(function(i, el) {
+					var el = $(el);
+					if (viewportB > el.offset().top + 100)
+						el.addClass("fadeInRight");
+
+					else if (win.scrollTop() == 0) {
+						if(el.css('opacity') == 1)
+							el.removeClass('fadeInRight');
+					}
+				});
 			});
 
 			$('a[href^="#"]').on('click', function(event) {
